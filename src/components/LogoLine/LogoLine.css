@@ -1,0 +1,13 @@
+/* Add this to your CSS file (e.g., App.css or LogoLine.css) */
+.logo-line {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: rgba(138, 61, 176, 0.063);
+}
+
+.logo-image {
+  max-width: 60px;
+  height: auto;
+}

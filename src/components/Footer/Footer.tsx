@@ -13,43 +13,12 @@ const Layout: React.FC = () => {
       <footer id="contact">
         <div className="contact">
           <div className="contact-text">
-            {/* <h4> Selecting the right insurance can benefint you and your family. </h4> */}
-            <div className="contact-people">
-              {currentLanguage === "pl" ? (
-                <div className="contact-people-pl">
-                  <p className="people-name">
-                    <b>{t("lukaszBergel")}</b>
-                  </p>
-                  <a href={`tel:${t("lukaszPhone")}`}>{t("lukaszPhone")}</a>
-                  <p>{t("lukaszMail")}</p>
-                </div>
-              ) : currentLanguage === "el" ? (
-                <div>
-                  <p className="people-name">
-                    <b>{t("ioannisSarafidis")}</b>
-                  </p>
-                  <a href={`tel:${t("ioannisPhone")}`}>{t("ioannisPhone")}</a>
-                  <p>{t("ioannisMail")}</p>
-                </div>
-              ) : (
-                <div className="contact-people-en">
-                  <div>
-                    <p className="people-name">
-                      <b>{t("ioannisSarafidis")}</b>
-                    </p>
-                    <a href={`tel:${t("ioannisPhone")}`}>{t("ioannisPhone")}</a>
-                    <p>{t("ioannisMail")}</p>
-                  </div>
-                  <div>
-                    <p className="people-name">
-                      <b>{t("lukaszBergel")}</b>
-                    </p>
-                    <a href={`tel:${t("lukaszPhone")}`}>{t("lukaszPhone")}</a>
-                    <p>{t("lukaszMail")}</p>
-                  </div>
-                </div>
-              )}
-            </div>
+            <h2>{t("contactH2")}</h2>
+            <h3>{t("contactH3")}</h3>
+          </div>
+          <div className="contact-people">
+            <a href={`tel:${t("famaPhone")}`}>{t("famaPhone")}</a>
+            <p>{t("famaMail")}</p>
           </div>
         </div>
       </footer>

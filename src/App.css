@@ -79,6 +79,7 @@ body {
   text-align: center;
   margin-bottom: 5rem;
   color: #f5f3f5;
+  height: 70vh;
 }
 
 .text-container {
@@ -106,7 +107,7 @@ body {
 /* NAVIGATION */
 
 .nar-bar {
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
 }
 
 /* .links {
@@ -147,7 +148,13 @@ nav ul li a:hover {
 h1 {
   font-size: 40px;
 }
-
+.language-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2% 3%;
+  color: white;
+}
 .language-switcher {
   display: flex;
   gap: 10px;
@@ -315,18 +322,7 @@ a {
   pointer-events: auto;
   transition: opacity 0.3s ease-out;
 }
-.contact-people {
-  justify-content: end;
-  width: 70%;
-}
-.contact-people-pl {
-  justify-content: end;
-}
-.contact-people-en {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
+
 .contact-box-container {
   display: flex;
   justify-content: center;
@@ -397,14 +393,6 @@ a {
     left: 2%;
   }
 
-  .contact-people {
-    flex-wrap: wrap;
-    gap: 2rem;
-    width: 80%;
-    margin: 1.5rem 0;
-    display: flex;
-  }
-
   .logo-image {
     width: 8%;
   }
@@ -420,6 +408,7 @@ a {
     margin: 5rem 0;
   }
   .contact {
+    display: block;
     padding: 1rem;
   }
   .people-name {
@@ -446,16 +435,7 @@ a {
   .contact-text h2 {
     text-align: center;
   }
-  .contact-text {
-    width: 100%;
-  }
 
-  .contact-people div p {
-    margin: 0.5rem 0;
-  }
-  .people-container {
-    gap: 0;
-  }
   .ioannis-container {
     margin-bottom: 2rem;
   }
@@ -670,4 +650,41 @@ a {
 
 .close-button:hover {
   color: red;
+}
+/* Dot styles */
+.nav-left .links ul li {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* .nav-left .links .dot {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #fff; 
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+} */
+
+.nav-left .links li a {
+  text-decoration: none;
+  color: #fff; /* Change to your preferred color */
+}
+
+.nav-left .links li a:hover {
+  color: #555; /* Change to your preferred hover color */
+}
+
+.nav-left .links li span.dot {
+  opacity: 1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }

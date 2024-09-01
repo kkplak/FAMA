@@ -26,15 +26,9 @@ const Home: React.FC = () => {
       setLoading(false);
       setContentVisible(true);
     }, 1500);
-    setTimeout(() => {
-      setLoading(false);
-      setContentVisible(true);
-    }, 1500);
 
-    // Lock scrolling while loading
     document.body.classList.toggle("no-scroll", loading);
 
-    // Cleanup function
     return () => {
       clearTimeout(timer);
       document.body.classList.remove("no-scroll");
@@ -78,10 +72,13 @@ const Home: React.FC = () => {
   return (
     <div className="homepage">
       <div className={`loader ${loading ? "" : "hidden"}`}>
-        <h1 className="hero-title">FAMA</h1>
+        <h1 className="hero-title">{t("FAMA")}</h1>
       </div>
 
-      <div className={`hero-section ${contentVisible ? "visible" : ""}`}>
+      <div
+        id="home"
+        className={`hero-section ${contentVisible ? "visible" : ""}`}
+      >
         <iframe
           src="https://www.youtube.com/embed/kSRejZAZepk?autoplay=1&mute=1&loop=1&playlist=kSRejZAZepk"
           frameBorder="0"
@@ -92,18 +89,15 @@ const Home: React.FC = () => {
         ></iframe>
         <div className="overlay">
           <Sticky offset={20}>
-            <h1 className="hero-title">FAMA</h1>
+            <h1 className="hero-title">{t("FAMA")}</h1>
           </Sticky>
         </div>
       </div>
 
-      <div className={`content ${!loading ? "visible" : ""}`}>
+      <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
         <div className="container-home home">
           <div className="text-container">
             <h1>{t("homeH1")}</h1>
-          </div>
-          <div className="language-container">
-            <LanguageSwitcher />
           </div>
 
           <div className="video-portfolio">
@@ -160,12 +154,8 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="button-box-container">
-          <h1 className="insurances-header">
-            Wszystko czego potrzebujesz w jednym miejscu
-          </h1>
-          <p>tekst</p>
-          <p>tekst</p> <p>tekst</p> <p>tekst</p> <p>tekst</p>
+        <div id="content" className="button-box-container">
+          <h1 className="insurances-header">{t("offertH1")}</h1>
         </div>
       </div>
 

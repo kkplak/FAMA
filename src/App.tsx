@@ -15,8 +15,6 @@ import translationEN from "./locales/en.json";
 import translationPL from "./locales/pl.json";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import Arrow from "./components/Arrow/ScrollArrow";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 import "./App.css";
 import Contact from "./pages/Contact";
@@ -28,15 +26,15 @@ const resources = {
 
 i18next.use(initReactI18next).init({
   resources,
-  lng: "en",
-  fallbackLng: "en",
+  lng: "pl",
+  fallbackLng: "pl",
   interpolation: { escapeValue: false },
 });
 
 const RedirectToDefaultLanguage = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    const defaultLanguage = "en";
+    const defaultLanguage = "pl";
     navigate(`/${defaultLanguage}/home`);
   }, [navigate]);
   return null;

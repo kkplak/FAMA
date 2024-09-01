@@ -18,6 +18,29 @@ const Home: React.FC = () => {
   const [currentVideo, setCurrentVideo] = useState("");
   const videoRefs = useRef<Array<HTMLDivElement | null>>([]);
 
+  const offersData = [
+    {
+      title: t("offer1H2"),
+      items: [t("offer1Item1"), t("offer1Item2"), t("offer1Item3")],
+    },
+    {
+      title: t("offer2H2"),
+      items: [t("offer2Item1"), t("offer2Item2"), t("offer2Item3")],
+    },
+    {
+      title: t("offer3H2"),
+      items: [t("offer3Item1"), t("offer3Item2"), t("offer3Item3")],
+    },
+    {
+      title: t("offer4H2"),
+      items: [t("offer4Item1"), t("offer4Item2"), t("offer4Item3")],
+    },
+    {
+      title: t("offer5H2"),
+      items: [t("offer5Item1")],
+    },
+  ];
+
   useEffect(() => {
     if (lang && i18n.language !== lang) {
       i18n.changeLanguage(lang);
@@ -109,35 +132,38 @@ const Home: React.FC = () => {
             {[
               {
                 href: "https://www.youtube.com/embed/zSWdZVtXT7E",
-                title: "Interstellar",
-                thumbnail: "https://www.imcdb.org/i000444.jpg",
+                title: "port1", // Use JSON key
+                thumbnail: "https://i.redd.it/50x5fvtqk0u71.jpg",
               },
               {
                 href: "https://www.youtube.com/embed/2LqzF5WauAw",
-                title: "Mad Max",
-                thumbnail: "https://i.imgur.com/JrPmQe4.jpg",
+                title: "port2", // Use JSON key
+                thumbnail:
+                  "https://demarchelier.com/wp-content/uploads/2021/06/328-3286987_cinematography.jpg",
               },
               {
                 href: "https://www.youtube.com/embed/aEtmu3jA5x8",
-                title: "Blade Runner",
+                title: "port3", // Use JSON key
                 thumbnail:
-                  "https://www.thedrive.com/wp-content/uploads/content-b/message-editor/1635541968988-40764_going_to_the_chapel_in_a_volvo_s60.jpg?strip=all&quality=95",
+                  "https://wallpapercrafter.com/desktop1/651631-turkey-ankara-trkiye-night-street-truck-cinematic.jpg",
               },
               {
                 href: "https://www.youtube.com/embed/6ZfuNTqbHE8",
-                title: "Infinity War",
+                title: "port4", // Use JSON key
                 thumbnail:
-                  "https://media.gq-magazine.co.uk/photos/5dd7f7dbf5e41800082f05cd/master/pass/225617_Roger_Moore_as_Simon_Templar_in_The_Saint_TV_Series.jpg",
+                  "https://theblackandwhite.net/wp-content/uploads/2024/02/Screen-Shot-2024-02-15-at-11.58.17-PM.jpg",
               },
               {
                 href: "https://www.youtube.com/embed/w8ok__kQxMM",
-                title: "Nomadland",
-                thumbnail: "https://pbs.twimg.com/media/B0X5qgLCIAE2KU8.jpg",
+                title: "port5", // Use JSON key
+                thumbnail:
+                  "https://e1.pxfuel.com/desktop-wallpaper/875/48/desktop-wallpaper-road-in-black-and-white-%E2%9D%A4-for-ultra-black.jpg",
               },
               {
                 href: "https://www.youtube.com/embed/wr7oWInxT_8",
-                title: "Dune",
-                thumbnail: "https://www.imcdb.org/i002724.jpg",
+                title: "port6", // Use JSON key
+                thumbnail:
+                  "https://e0.pxfuel.com/wallpapers/662/400/desktop-wallpaper-black-swan.jpg",
               },
             ].map((video, index) => (
               <div
@@ -153,7 +179,7 @@ const Home: React.FC = () => {
                     cursor: "pointer",
                   }}
                 ></div>
-                <h3>{video.title}</h3>
+                <h3>{t(video.title)}</h3>
               </div>
             ))}
           </div>
@@ -161,6 +187,20 @@ const Home: React.FC = () => {
 
         <div id="content" className="button-box-container">
           <h1 className="insurances-header">{t("offerH1")}</h1>
+          <div className="offers-container">
+            {offersData.map((offer, index) => (
+              <div key={index} className="offer-card">
+                <h2 className="offer-title">{offer.title}</h2>
+                <ul className="offer-list">
+                  {offer.items.map((item, idx) => (
+                    <li key={idx} className="offer-item">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

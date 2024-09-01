@@ -6,7 +6,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import Home from "./pages/Home";
-import Info from "./pages/Info";
+
 import AboutUs from "./pages/AboutUs";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
@@ -48,9 +48,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<RedirectToDefaultLanguage />} />
           <Route path="/:lang/home" element={<Home />} />
-          <Route path="/:lang/info" element={<Info />} />
-          <Route path="/:lang/contact" element={<Contact />} />
-          <Route path="/:lang/about-us" element={<AboutUs />} />
+          {/* <Route path="/:lang/contact" element={<Contact />} />
+          <Route path="/:lang/about-us" element={<AboutUs />} /> */}
         </Routes>
         <Footer />
       </Router>

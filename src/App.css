@@ -79,7 +79,6 @@ body {
   text-align: center;
   margin-bottom: 5rem;
   color: #f5f3f5;
-  height: 70vh;
 }
 
 .text-container {
@@ -640,12 +639,13 @@ a {
 /* Close Button */
 .close-button {
   position: absolute;
-  top: 4%;
-  right: 3%;
+  top: -2%;
+  right: -2%;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
+  color: #fff;
 }
 
 .close-button:hover {
@@ -693,4 +693,48 @@ html {
   position: absolute;
   bottom: 5%;
   width: 100%;
+}
+
+.offers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.offer-card {
+  background-color: #7e7e7e35;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+  opacity: 1;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.offer-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.offer-list {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.offer-item {
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .offer-card {
+    width: calc(100% - 20px);
+  }
 }

@@ -34,7 +34,7 @@ const NavLeft = ({ language, activeSection }) => {
                   .scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Portfolio
+              {t("portfolio")}
             </Link>
             {activeSection === "portfolio" && <span className="dot" />}
           </li>
@@ -48,7 +48,7 @@ const NavLeft = ({ language, activeSection }) => {
                   .scrollIntoView({ behavior: "smooth" });
               }}
             >
-              {t("aboutUs")}
+              {t("offer")}
             </Link>
             {activeSection === "content" && <span className="dot" />}
           </li>

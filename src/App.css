@@ -688,3 +688,9 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+.subtitles-container {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+}

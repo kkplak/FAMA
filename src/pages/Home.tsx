@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ButtonBox from "../components/ButtonBox/ButtonBox";
 import Sticky from "../components/Sticky/Sticky";
 import LanguageSwitcher from "../components/LanguageSwitcher/LanguageSwitcher";
+import Subtitles from "../components/Subtitles/Subtitles";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -80,7 +81,7 @@ const Home: React.FC = () => {
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
         <iframe
-          src="https://www.youtube.com/embed/kSRejZAZepk?autoplay=1&mute=1&loop=1&playlist=kSRejZAZepk"
+          src="https://www.youtube.com/embed/-1VtDOV7BcQ?autoplay=1&mute=1&loop=1&playlist=-1VtDOV7BcQ"
           frameBorder="0"
           allow="autoplay; loop; muted"
           allowFullScreen
@@ -91,6 +92,10 @@ const Home: React.FC = () => {
           <Sticky offset={20}>
             <h1 className="hero-title">{t("FAMA")}</h1>
           </Sticky>
+        </div>
+        <div className="subtitles-container">
+          {" "}
+          <Subtitles />
         </div>
       </div>
 
@@ -155,7 +160,7 @@ const Home: React.FC = () => {
         </div>
 
         <div id="content" className="button-box-container">
-          <h1 className="insurances-header">{t("offertH1")}</h1>
+          <h1 className="insurances-header">{t("offerH1")}</h1>
         </div>
       </div>
 

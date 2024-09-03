@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FAMA/static/css/main.550615a7.css",
+    "main.js": "/FAMA/static/js/main.9b477c90.js",
+    "index.html": "/FAMA/index.html",
+    "main.550615a7.css.map": "/FAMA/static/css/main.550615a7.css.map",
+    "main.9b477c90.js.map": "/FAMA/static/js/main.9b477c90.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.550615a7.css",
+    "static/js/main.9b477c90.js"
+  ]
+}

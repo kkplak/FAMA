@@ -114,7 +114,7 @@ const Home: React.FC = () => {
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
         <iframe
-          src="https://www.youtube.com/embed/-1VtDOV7BcQ?autoplay=1&mute=1&loop=1&playlist=-1VtDOV7BcQ"
+          src="https://www.youtube.com/embed/5_feKjmTpSE?autoplay=1&mute=1&loop=1&playlist=5_feKjmTpSE"
           frameBorder="0"
           allow="autoplay; loop; muted"
           allowFullScreen
@@ -126,11 +126,11 @@ const Home: React.FC = () => {
             <h1 className="hero-title">{t("FAMA")}</h1>
           </Sticky>
         </div>
-        <div className="subtitles-container">
-          {" "}
+        {/* <div className="subtitles-container">
           <Subtitles />
-        </div>
+        </div> */}
       </div>
+      <h3>{t("homeP")}</h3>
 
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
         <div className="container-home home">
@@ -141,21 +141,19 @@ const Home: React.FC = () => {
           <div className="video-portfolio">
             {[
               {
-                href: "https://www.youtube.com/embed/zSWdZVtXT7E",
-                title: "port1", // Use JSON key
-                thumbnail: "https://i.redd.it/50x5fvtqk0u71.jpg",
+                href: "https://youtu.be/5_feKjmTpSE",
+                title: "port1",
+                thumbnail: "/media/DerwiszBMW.png",
               },
               {
-                href: "https://www.youtube.com/embed/2LqzF5WauAw",
+                href: "https://www.youtube.com/watch?v=-1VtDOV7BcQ",
                 title: "port2", // Use JSON key
-                thumbnail:
-                  "https://demarchelier.com/wp-content/uploads/2021/06/328-3286987_cinematography.jpg",
+                thumbnail: "/media/ratownik.png",
               },
               {
-                href: "https://www.youtube.com/embed/aEtmu3jA5x8",
+                href: "https://www.youtube.com/watch?v=lU7ccvRv-BU",
                 title: "port3", // Use JSON key
-                thumbnail:
-                  "https://wallpapercrafter.com/desktop1/651631-turkey-ankara-trkiye-night-street-truck-cinematic.jpg",
+                thumbnail: "/media/drutex.png",
               },
               {
                 href: "https://www.youtube.com/embed/6ZfuNTqbHE8",

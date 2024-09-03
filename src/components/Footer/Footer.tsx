@@ -12,13 +12,9 @@ const Layout: React.FC = () => {
       <Outlet />
       <footer id="contact">
         <div className="contact">
-          <div className="contact-text">
-            <h2>{t("contactH2")}</h2>
-            <h3>{t("contactH3")}</h3>
-          </div>
           <div className="contact-people">
             <a href={`tel:${t("famaPhone")}`}>{t("famaPhone")}</a>
-            <p>{t("famaMail")}</p>
+            <a href="mailto:fama@famafilm.com">{t("famaMail")}</a>
           </div>
         </div>
       </footer>

@@ -1,6 +1,7 @@
 {
-  "name": "insurance-swiss",
+  "name": "FAMA-FILM",
   "version": "0.1.0",
+  "homepage": "https://kkplak.github.io/FAMA",
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.5.1",
@@ -12,6 +13,7 @@
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.23",
     "axios": "^1.6.8",
+    "framer-motion": "^11.3.31",
     "i18next": "^23.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -29,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-hash-link": "^2.4.9"
+    "@types/react-router-hash-link": "^2.4.9",
+    "gh-pages": "^6.1.1"
   }
 }

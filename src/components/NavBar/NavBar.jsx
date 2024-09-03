@@ -124,7 +124,7 @@ const NavBar = () => {
     zIndex: 1000,
     transition: "0.3s ease-out",
     backdropFilter: "blur(5px)",
-    width: "-moz-available",
+    width: "100%",
   };
 
   return (

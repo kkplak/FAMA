@@ -26,6 +26,8 @@
 }
 
 .contact-text {
+  margin: 7rem 0 5rem;
+  color: #fff;
   z-index: 15;
   width: 100%;
   display: block;

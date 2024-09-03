@@ -5,6 +5,7 @@ import ButtonBox from "../components/ButtonBox/ButtonBox";
 import Sticky from "../components/Sticky/Sticky";
 import LanguageSwitcher from "../components/LanguageSwitcher/LanguageSwitcher";
 import Subtitles from "../components/Subtitles/Subtitles";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -17,7 +18,9 @@ const Home: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState("");
   const videoRefs = useRef<Array<HTMLDivElement | null>>([]);
-
+  const offersRefs = useRef<Array<HTMLDivElement | null>>([]); // Ref for offers
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
   const offersData = [
     {
       title: t("offer1H2"),
@@ -76,9 +79,16 @@ const Home: React.FC = () => {
       if (ref) observer.observe(ref);
     });
 
+    offersRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref); // Observe the offers section
+    });
+
     return () => {
       if (videoRefs.current) {
         videoRefs.current.forEach((ref) => ref && observer.unobserve(ref));
+      }
+      if (offersRefs.current) {
+        offersRefs.current.forEach((ref) => ref && observer.unobserve(ref)); // Unobserve the offers section
       }
     };
   }, [contentVisible]);
@@ -185,22 +195,50 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div id="content" className="button-box-container">
+        <div
+          id="content"
+          className={`button-box-container ${!loading ? "visible" : ""}`}
+        >
           <h1 className="insurances-header">{t("offerH1")}</h1>
           <div className="offers-container">
             {offersData.map((offer, index) => (
-              <div key={index} className="offer-card">
-                <h2 className="offer-title">{offer.title}</h2>
-                <ul className="offer-list">
-                  {offer.items.map((item, idx) => (
-                    <li key={idx} className="offer-item">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <div className="card-wrapper">
+                <div
+                  key={index}
+                  className="offer-card"
+                  ref={(el) => (offersRefs.current[index] = el)} // Add ref to offers
+                >
+                  <h2 className="offer-title">{offer.title}</h2>
+                  <ul className="offer-list">
+                    {offer.items.map((item, idx) => (
+                      <li key={idx} className="offer-item">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
+        </div>
+        {/* <div className="wrapper">
+          <motion.div
+            className="container"
+            style={{
+              scale,
+            }}
+          >
+            <motion.div
+              className="item"
+              style={{
+                scaleY: scrollYProgress,
+              }}
+            />
+          </motion.div>
+        </div> */}
+        <div className="contact-text">
+          <h1>{t("contactH2")}</h1>
+          <h2>{t("contactH3")}</h2>
         </div>
       </div>
 

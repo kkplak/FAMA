@@ -68,7 +68,7 @@ const NavLeft = ({ language, activeSection }) => {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/nickonick_?igsh=MTZhYjZuMzg3bGNm"
+              href="https://www.instagram.com/fama_film/"
               target="_blank"
               rel="noopener noreferrer"
             >

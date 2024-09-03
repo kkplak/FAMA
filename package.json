@@ -1,7 +1,7 @@
 {
   "name": "FAMA-FILM",
   "version": "0.1.0",
-  "homepage": "https://kkplak.github.io/FAMA",
+  "homepage": "https://kkplak.github.io/FAMA/",
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.5.1",

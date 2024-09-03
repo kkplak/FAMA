@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FAMA/pl/home/static/css/main.550615a7.css",
-    "main.js": "/FAMA/pl/home/static/js/main.9b477c90.js",
-    "index.html": "/FAMA/pl/home/index.html",
-    "main.550615a7.css.map": "/FAMA/pl/home/static/css/main.550615a7.css.map",
-    "main.9b477c90.js.map": "/FAMA/pl/home/static/js/main.9b477c90.js.map"
+    "main.css": "/FAMA/static/css/main.550615a7.css",
+    "main.js": "/FAMA/static/js/main.5bfabccf.js",
+    "index.html": "/FAMA/index.html",
+    "main.550615a7.css.map": "/FAMA/static/css/main.550615a7.css.map",
+    "main.5bfabccf.js.map": "/FAMA/static/js/main.5bfabccf.js.map"
   },
   "entrypoints": [
     "static/css/main.550615a7.css",
-    "static/js/main.9b477c90.js"
+    "static/js/main.5bfabccf.js"
   ]
 }

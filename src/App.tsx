@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 
-import AboutUs from "./pages/AboutUs";
+import Animations from "./pages/Animations";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
@@ -54,6 +54,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<RedirectToDefaultLanguage />} />
           <Route path="/:lang/home" element={<Home />} />
+          <Route path="/:lang/animations" element={<Animations />} />
         </Routes>
         <Footer />
       </Router>

@@ -49,7 +49,7 @@ const Sticky: React.FC<StickyProps> = ({ children, offset }) => {
   return (
     <div
       ref={elementRef}
-      className={isSticky ? "sticky" : ""}
+      className={isSticky ? "sticky-fama" : ""}
       style={{
         position: isSticky ? "fixed" : "absolute",
         top: isSticky ? `${offset}px` : "50%",

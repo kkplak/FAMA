@@ -11,6 +11,7 @@
   display: block;
   color: white;
   z-index: 10000;
+  margin-top: 10rem;
 }
 
 .contact::before {
@@ -26,7 +27,7 @@
 }
 
 .contact-text {
-  margin: 7rem 0 5rem;
+  margin: 5rem 0;
   color: #fff;
   z-index: 15;
   width: 100%;
@@ -35,7 +36,7 @@
 }
 
 .contact-people {
-  font-size: 1rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-around;
   width: 100%;

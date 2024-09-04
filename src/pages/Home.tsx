@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
-import ButtonBox from "../components/ButtonBox/ButtonBox";
+import TextReveal from "../components/TextReveal/TextReveal";
+import HeroVideoDialog from "../components/HeroDialog/HeroVideoDialog";
+
 import Sticky from "../components/Sticky/Sticky";
-import LanguageSwitcher from "../components/LanguageSwitcher/LanguageSwitcher";
-import Subtitles from "../components/Subtitles/Subtitles";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -19,8 +18,7 @@ const Home: React.FC = () => {
   const [currentVideo, setCurrentVideo] = useState("");
   const videoRefs = useRef<Array<HTMLDivElement | null>>([]);
   const offersRefs = useRef<Array<HTMLDivElement | null>>([]); // Ref for offers
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+
   const offersData = [
     {
       title: t("offer1H2"),
@@ -130,7 +128,9 @@ const Home: React.FC = () => {
           <Subtitles />
         </div> */}
       </div>
-      <h3>{t("homeP")}</h3>
+      <div className="homep-container">
+        <h3>{t("homeP")}</h3>
+      </div>
 
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
         <div className="container-home home">
@@ -156,22 +156,19 @@ const Home: React.FC = () => {
                 thumbnail: "/media/drutex.png",
               },
               {
-                href: "https://www.youtube.com/embed/6ZfuNTqbHE8",
+                href: "https://www.youtube.com/watch?v=SHPrruFKpug",
                 title: "port4", // Use JSON key
-                thumbnail:
-                  "https://theblackandwhite.net/wp-content/uploads/2024/02/Screen-Shot-2024-02-15-at-11.58.17-PM.jpg",
+                thumbnail: "/media/creme.png",
               },
               {
-                href: "https://www.youtube.com/embed/w8ok__kQxMM",
+                href: "https://www.youtube.com/watch?v=3xwy-0rYLZQ",
                 title: "port5", // Use JSON key
-                thumbnail:
-                  "https://e1.pxfuel.com/desktop-wallpaper/875/48/desktop-wallpaper-road-in-black-and-white-%E2%9D%A4-for-ultra-black.jpg",
+                thumbnail: "/media/one-gog.png",
               },
               {
-                href: "https://www.youtube.com/embed/wr7oWInxT_8",
+                href: "https://www.youtube.com/watch?v=qmKGNlvvNxM",
                 title: "port6", // Use JSON key
-                thumbnail:
-                  "https://e0.pxfuel.com/wallpapers/662/400/desktop-wallpaper-black-swan.jpg",
+                thumbnail: "/media/timberfast.png",
               },
             ].map((video, index) => (
               <div
@@ -191,6 +188,11 @@ const Home: React.FC = () => {
               </div>
             ))}
           </div>
+          <div className="portfolio-cta">
+            <a href="https://www.youtube.com/@fama_film">
+              link do yt - and more?
+            </a>
+          </div>
         </div>
 
         <div
@@ -200,21 +202,19 @@ const Home: React.FC = () => {
           <h1 className="insurances-header">{t("offerH1")}</h1>
           <div className="offers-container">
             {offersData.map((offer, index) => (
-              <div className="card-wrapper">
-                <div
-                  key={index}
-                  className="offer-card"
-                  ref={(el) => (offersRefs.current[index] = el)} // Add ref to offers
-                >
-                  <h2 className="offer-title">{offer.title}</h2>
-                  <ul className="offer-list">
-                    {offer.items.map((item, idx) => (
-                      <li key={idx} className="offer-item">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div
+                key={index}
+                className="offer-card"
+                ref={(el) => (offersRefs.current[index] = el)} // Add ref to offers
+              >
+                <h2 className="offer-title">{offer.title}</h2>
+                <ul className="offer-list">
+                  {offer.items.map((item, idx) => (
+                    <li key={idx} className="offer-item">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -234,10 +234,6 @@ const Home: React.FC = () => {
             />
           </motion.div>
         </div> */}
-        <div className="contact-text">
-          <h1>{t("contactH2")}</h1>
-          <h2>{t("contactH3")}</h2>
-        </div>
       </div>
 
       {isOpen && (

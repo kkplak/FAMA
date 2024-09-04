@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import HeroVideoDialog from "../components/HeroDialog/HeroVideoDialog";
 import TextReveal from "../components/TextReveal/TextReveal";
+import { Dock, DockIcon } from "../components/Dock/Dock";
 
 const Animations = () => {
   const { t, i18n } = useTranslation();
@@ -9,6 +10,24 @@ const Animations = () => {
 
   return (
     <div className="animations-container">
+      <div className="animations-dock">
+        <div className="relative">
+          <Dock direction="middle">
+            <DockIcon>
+              <p className="dock-p">Home</p>
+            </DockIcon>
+            <DockIcon>
+              <p className="dock-p">Portfolio</p>
+            </DockIcon>
+            <DockIcon>
+              <p className="dock-p">Oferta</p>
+            </DockIcon>
+            <DockIcon>
+              <p className="dock-p">Kontakt</p>
+            </DockIcon>
+          </Dock>
+        </div>
+      </div>
       <div>
         <div className="relative ">
           <HeroVideoDialog

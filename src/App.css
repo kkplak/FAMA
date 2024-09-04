@@ -814,3 +814,12 @@ html {
   margin: 0;
   transition: background-color 0.3s ease;
 }
+
+.dock-p {
+  font-size: 1rem;
+  color: white;
+}
+
+.animations-dock {
+  margin: 15rem 0;
+}

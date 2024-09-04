@@ -104,7 +104,7 @@ const Home: React.FC = () => {
   return (
     <div className="homepage">
       <div className={`loader ${loading ? "" : "hidden"}`}>
-        <h1 className="hero-title">{t("FAMA")}</h1>
+        <h1 className="hero-title">{t("fama")}</h1>
       </div>
 
       <div
@@ -121,7 +121,7 @@ const Home: React.FC = () => {
         ></iframe>
         <div className="overlay">
           <Sticky offset={20}>
-            <h1 className="hero-title">{t("FAMA")}</h1>
+            <h1 className="hero-title">{t("fama")}</h1>
           </Sticky>
         </div>
         {/* <div className="subtitles-container">

@@ -480,6 +480,7 @@ a {
   color: white;
   font-family: "Artega";
   transition: top 0.3s ease-in-out; /* Only transition the top property */
+  width: max-content;
 }
 
 .sticky-fama {

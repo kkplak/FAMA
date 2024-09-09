@@ -82,7 +82,7 @@ export default function HeroVideoDialog({
   return (
     <div className={cn("relative", className)}>
       <div
-        className="relative cursor-pointer group hero-container"
+        className='relative cursor-pointer group hero-container'
         onClick={() => setIsVideoOpen(true)}
       >
         <img
@@ -90,16 +90,16 @@ export default function HeroVideoDialog({
           alt={thumbnailAlt}
           width={400}
           height={250}
-          className="w-full transition-all duration-200 group-hover:brightness-[0.8] ease-out rounded-md shadow-lg"
+          className='w-full transition-all duration-200 group-hover:brightness-[0.8] ease-out rounded-md shadow-lg'
         />
-        <div className="absolute inset-0 flex items-center justify-center group-hover:scale-100 scale-[0.9] transition-all duration-200 ease-out rounded-2xl">
+        <div className='absolute inset-0 flex items-center justify-center group-hover:scale-100 scale-[0.9] transition-all duration-200 ease-out rounded-2xl'>
           {/* Render Play Button only on screens smaller than 840px */}
-          <div className="md:hidden bg-primary/10 flex items-center justify-center rounded-full backdrop-blur-md size-28">
+          <div className='md:hidden bg-primary/10 flex items-center justify-center rounded-full backdrop-blur-md size-28'>
             <div
               className={`flex items-center justify-center bg-gradient-to-b from-primary/30 to-primary shadow-md rounded-full size-20 transition-all ease-out duration-200 relative group-hover:scale-[1.2] scale-100`}
             >
               <Play
-                className=" md:visible size-8 text-white fill-white group-hover:scale-105 scale-100 transition-transform duration-200 ease-out"
+                className=' md:visible size-8 text-white fill-white group-hover:scale-105 scale-100 transition-transform duration-200 ease-out'
                 style={{
                   filter:
                     "drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))",
@@ -108,7 +108,7 @@ export default function HeroVideoDialog({
             </div>
           </div>
         </div>
-        <div className="video-title">
+        <div className='video-title'>
           <h3>{title}</h3>
         </div>
       </div>
@@ -119,22 +119,22 @@ export default function HeroVideoDialog({
             animate={{ opacity: 1 }}
             onClick={() => setIsVideoOpen(false)}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md"
+            className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md'
           >
             <motion.div
               {...selectedAnimation}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="relative w-full max-w-4xl aspect-video mx-4 md:mx-0"
+              className='relative w-full max-w-4xl aspect-video mx-4 md:mx-0'
             >
-              <motion.button className="absolute -top-16 right-0 text-white text-xl bg-neutral-900/50 ring-1 backdrop-blur-md rounded-full p-2 dark:bg-neutral-100/50 dark:text-black">
-                <XIcon className="size-5" />
+              <motion.button className='absolute -top-16 right-0 text-white text-xl bg-neutral-900/50 ring-1 backdrop-blur-md rounded-full p-2 dark:bg-neutral-100/50 dark:text-black'>
+                <XIcon className='size-5' />
               </motion.button>
-              <div className="size-full border-2 border-white rounded-2xl overflow-hidden isolate z-[1] relative">
+              <div className='size-full border-2 border-white rounded-2xl overflow-hidden isolate z-[1] relative'>
                 <iframe
                   src={videoSrc}
-                  className="size-full rounded-2xl"
+                  className='size-full rounded-2xl'
                   allowFullScreen
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 ></iframe>
               </div>
             </motion.div>

@@ -34,6 +34,10 @@
   display: block;
   text-align: center;
 }
+.contact-text h2 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
 
 .contact-people {
   font-size: 1.5rem;
@@ -48,4 +52,8 @@
 .people-name {
   font-size: 1.2rem;
   padding-bottom: 0.5rem;
+}
+
+.people-name::hover {
+  scale: 2;
 }

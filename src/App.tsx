@@ -52,9 +52,10 @@ const App = () => {
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" element={<RedirectToDefaultLanguage />} />
-          <Route path="/:lang/home" element={<Home />} />
-          <Route path="/:lang/animations" element={<Animations />} />
+          <Route path='/' element={<RedirectToDefaultLanguage />} />
+          <Route path='/:lang/home' element={<Home />} />
+          {/* <Route path='/:lang/aboutme' element={<AboutMe />} /> */}
+          <Route path='/:lang/animations' element={<Animations />} />
         </Routes>
         <Footer />
       </Router>

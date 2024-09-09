@@ -130,7 +130,16 @@ const Home: React.FC = () => {
           <Subtitles />
         </div> */}
       </div>
-
+      <div className='magic-text'>
+        <div className='z-10 flex min-h-[16rem] items-center justify-center rounded-lg'>
+          <TextReveal text='Specjalizujemy się w kompleksowej produkcji materiałów wideo, reklam i relacji z wydarzeń. Łączymy kreatywność i doświadczenie, by dostarczać wyjątkowe materiały wizualne, które naprawdę angażują i inspirują.' />
+        </div>
+        <h1>
+          {" "}
+          Przekształcamy wizje w rzeczywistość, przekraczając oczekiwania
+          naszych klientów.
+        </h1>
+      </div>
       <div id='portfolio' className={`content ${!loading ? "visible" : ""}`}>
         <div className='container-home home'>
           <div className='text-container'>

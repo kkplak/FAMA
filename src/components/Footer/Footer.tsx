@@ -8,17 +8,17 @@ const Layout: React.FC = () => {
   const currentLanguage = i18n.language;
 
   return (
-    <div className="layout">
+    <div className='layout'>
       <Outlet />
-      <footer id="contact">
-        <div className="contact">
-          <div className="contact-text">
+      <footer id='contact'>
+        <div className='contact'>
+          <div className='contact-text'>
             <h1>{t("contactH2")}</h1>
             <h2>{t("contactH3")}</h2>
           </div>
-          <div className="contact-people">
+          <div className='contact-people'>
             <a href={`tel:${t("famaPhone")}`}>{t("famaPhone")}</a>
-            <a href="mailto:fama@famafilm.com">{t("famaMail")}</a>
+            <a href='mailto:fama@famafilm.com'>{t("famaMail")}</a>
           </div>
         </div>
       </footer>

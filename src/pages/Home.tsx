@@ -102,79 +102,79 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="homepage">
+    <div className='homepage'>
       <div className={`loader ${loading ? "" : "hidden"}`}>
-        <h1 className="hero-title">{t("fama")}</h1>
-        <h1 className="hero-title film">{t("film")}</h1>
+        <h1 className='hero-title'>{t("fama")}</h1>
+        {/* <h1 className="hero-title film">{t("film")}</h1> */}
       </div>
 
       <div
-        id="home"
+        id='home'
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
         <iframe
-          src="https://www.youtube.com/embed/5_feKjmTpSE?autoplay=1&mute=1&loop=1&playlist=5_feKjmTpSE"
-          frameBorder="0"
-          allow="autoplay; loop; muted"
+          src='https://www.youtube.com/embed/5_feKjmTpSE?autoplay=1&mute=1&loop=1&playlist=5_feKjmTpSE'
+          frameBorder='0'
+          allow='autoplay; loop; muted'
           allowFullScreen
-          title="FAMA Video"
-          className="background-video"
+          title='FAMA Video'
+          className='background-video'
         ></iframe>
-        <div className="overlay">
+        <div className='overlay'>
           <Sticky offset={60}>
-            <h1 className="hero-title">{t("fama")}</h1>
+            <h1 className='hero-title'>{t("fama")}</h1>
           </Sticky>
-          <h1 className="hero-title film">{t("film")}</h1>
+          {/* <h1 className='hero-title film'>{t("film")}</h1> */}
         </div>
         {/* <div className="subtitles-container">
           <Subtitles />
         </div> */}
       </div>
 
-      <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
-        <div className="container-home home">
-          <div className="text-container">
+      <div id='portfolio' className={`content ${!loading ? "visible" : ""}`}>
+        <div className='container-home home'>
+          <div className='text-container'>
             <h1>{t("homeH1")}</h1>
           </div>
 
-          <div className="video-portfolio">
-            <div className="relative ">
+          <div className='video-portfolio'>
+            <div className='relative '>
               <HeroVideoDialog
-                className="hidden dark:block "
-                animationStyle="from-center"
-                videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
-                thumbnailSrc="/media/DerwiszBMW.png"
-                thumbnailAlt="Hero Video"
+                className='hidden dark:block '
+                animationStyle='from-center'
+                videoSrc='https://www.youtube.com/embed/3xwy-0rYLZQ'
+                thumbnailSrc='/media/DerwiszBMW.png'
+                thumbnailAlt='Hero Video'
                 title={t("port1")}
               />
             </div>
-            <div className="relative ">
+            <div className='relative '>
               <HeroVideoDialog
-                className="hidden dark:block "
-                animationStyle="from-center"
-                videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
-                thumbnailSrc="/media/ratownik.png"
-                thumbnailAlt="Hero Video"
+                className='hidden dark:block '
+                animationStyle='from-center'
+                videoSrc='https://www.youtube.com/embed/3xwy-0rYLZQ'
+                thumbnailSrc='/media/ratownik.png'
+                thumbnailAlt='Hero Video'
                 title={t("port2")}
               />
             </div>
-            <div className="relative ">
+            <div className='relative '>
               <HeroVideoDialog
-                className="hidden dark:block "
-                animationStyle="from-center"
-                videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
-                thumbnailSrc="/media/one-gog.png"
-                thumbnailAlt="Hero Video"
+                className='hidden dark:block '
+                animationStyle='from-center'
+                videoSrc='https://www.youtube.com/embed/3xwy-0rYLZQ'
+                thumbnailSrc='/media/one-gog.png'
+                thumbnailAlt='Hero Video'
                 title={t("port3")}
               />
             </div>
-            <div className="relative ">
+            <div className='relative '>
               <HeroVideoDialog
-                className="hidden dark:block "
-                animationStyle="from-center"
-                videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
-                thumbnailSrc="/media/creme.png"
-                thumbnailAlt="Hero Video"
+                className='hidden dark:block '
+                animationStyle='from-center'
+                videoSrc='https://www.youtube.com/embed/3xwy-0rYLZQ'
+                thumbnailSrc='/media/creme.png'
+                thumbnailAlt='Hero Video'
                 title={t("port4")}
               />
             </div>
@@ -227,29 +227,29 @@ const Home: React.FC = () => {
               </div>
             ))} */}
           </div>
-          <div className="portfolio-cta">
-            <a href="https://www.youtube.com/@fama_film">
+          <div className='portfolio-cta'>
+            <a href='https://www.youtube.com/@fama_film'>
               link do yt - and more?
             </a>
           </div>
         </div>
 
         <div
-          id="content"
+          id='content'
           className={`button-box-container ${!loading ? "visible" : ""}`}
         >
-          <h1 className="insurances-header">{t("offerH1")}</h1>
-          <div className="offers-container">
+          <h1 className='insurances-header'>{t("offerH1")}</h1>
+          <div className='offers-container'>
             {offersData.map((offer, index) => (
               <div
                 key={index}
-                className="offer-card"
+                className='offer-card'
                 ref={(el) => (offersRefs.current[index] = el)} // Add ref to offers
               >
-                <h2 className="offer-title">{offer.title}</h2>
-                <ul className="offer-list">
+                <h2 className='offer-title'>{offer.title}</h2>
+                <ul className='offer-list'>
                   {offer.items.map((item, idx) => (
-                    <li key={idx} className="offer-item">
+                    <li key={idx} className='offer-item'>
                       {item}
                     </li>
                   ))}
@@ -278,16 +278,16 @@ const Home: React.FC = () => {
       {isOpen && (
         <div className={`modal-overlay show`} onClick={closeModal}>
           <div className={`modal-content`} onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={closeModal}>
+            <button className='close-button' onClick={closeModal}>
               &times;
             </button>
             <iframe
-              width="1200"
-              height="655"
+              width='1200'
+              height='655'
               src={currentVideo}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title='YouTube video player'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
               allowFullScreen
             ></iframe>
           </div>

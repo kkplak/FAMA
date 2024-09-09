@@ -214,56 +214,6 @@ h1 {
   letter-spacing: 1px;
 }
 
-.svg-icon {
-  stroke: #056dfa;
-  fill: transparent;
-}
-
-.welcome-button:hover .svg-icon {
-  stroke: #fff;
-  fill: transparent;
-}
-.welcome-button:hover .lable {
-  color: #fff;
-}
-
-.welcome-button:hover .svg-icon {
-  animation: msg 2s linear infinite;
-}
-
-@keyframes msg {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  15% {
-    transform: translateX(1px);
-  }
-
-  30% {
-    transform: scale(1.1);
-  }
-
-  45% {
-    transform: translateY(1px);
-  }
-
-  60% {
-    transform: translateY(0px);
-  }
-
-  75% {
-    transform: scale(1);
-  }
-
-  90% {
-    transform: translateX(-px);
-  }
-
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-}
 .text {
   margin: 0 1.5em;
 }
@@ -284,20 +234,6 @@ h1 {
   margin-top: 5rem;
 }
 
-.ioannis-container img {
-  width: 60%;
-  border-radius: 5px;
-}
-.lukasz-container img {
-  width: 60%;
-  border-radius: 5px;
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-
 .wrapper p {
   margin: 2rem 5rem;
   white-space: pre-wrap;
@@ -307,10 +243,6 @@ a {
   left: 45%;
 }
 
-.ioannis-container,
-.lukasz-container {
-  width: 50%;
-}
 .smaller-p {
   font-size: 0.8rem;
 }
@@ -365,7 +297,7 @@ a {
   .nav-left {
     width: 90%;
   }
-  .nav-left ul {
+  .nav-left .links {
     width: 100%;
     justify-content: space-around;
     padding: 0 5%;
@@ -377,11 +309,9 @@ a {
     left: unset;
     right: 5%;
   }
-  .links {
-    margin-top: 0;
-    margin-left: 0;
+  .nav-icon > a {
+    color: white;
   }
-
   .container,
   .container2 {
     margin: 10% 2%;
@@ -475,6 +405,16 @@ a {
 .hero-title {
   position: absolute;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Artega";
+  transition: top 0.3s ease-in-out; /* Only transition the top property */
+  width: max-content;
+}
+.hero-title.film {
+  position: absolute;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -676,19 +616,6 @@ a {
   transition: opacity 0.3s ease, transform 0.3s ease;
 } */
 
-.nav-left .links li a {
-  text-decoration: none;
-  color: #fff; /* Change to your preferred color */
-}
-
-.nav-left .links li a:hover {
-  color: #555; /* Change to your preferred hover color */
-}
-
-.nav-left .links li span.dot {
-  opacity: 1;
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -770,6 +697,7 @@ html {
   position: relative;
   margin: 10rem 10rem 5rem;
   color: #fff;
+  display: flex;
 }
 
 .portfolio-cta {
@@ -779,11 +707,10 @@ html {
 }
 
 .hero-container {
-  width: 25rem;
-  height: 15rem;
+  width: 30rem;
+  height: 18rem;
   background-size: cover;
   transition: opacity 0.8s ease, transform 0.8s ease;
-  margin: 2rem 10rem;
 }
 .hero-container:hover {
   transform: scale(1.05) !important;
@@ -815,7 +742,9 @@ html {
   margin: 0;
   transition: background-color 0.3s ease;
 }
-
+.nav-icon {
+  color: white;
+}
 .dock-p {
   font-size: 1rem;
   color: white;

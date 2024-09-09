@@ -17,9 +17,7 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
 const DEFAULT_MAGNIFICATION = 90;
 const DEFAULT_DISTANCE = 300;
 
-const dockVariants = cva(
-  "mx-auto w-max mt-8 h-[58px] p-6 flex gap-12 rounded-2xl border supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md"
-);
+const dockVariants = cva(" w-max mt-2 h-[58px] p-6 flex gap-12 rounded-2xl");
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (
@@ -100,7 +98,7 @@ const DockIcon = ({
 
   let width = useSpring(widthSync, {
     mass: 0.1,
-    stiffness: 150,
+    stiffness: 100,
     damping: 12,
   });
 
@@ -109,7 +107,7 @@ const DockIcon = ({
       ref={ref}
       style={{ width }}
       className={cn(
-        "flex aspect-square cursor-pointer items-center justify-center rounded-full",
+        "flex aspect-square cursor-pointer items-center justify-center rounded-full nav-icon",
         className
       )}
       {...props}

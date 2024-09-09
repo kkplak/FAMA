@@ -105,6 +105,7 @@ const Home: React.FC = () => {
     <div className="homepage">
       <div className={`loader ${loading ? "" : "hidden"}`}>
         <h1 className="hero-title">{t("fama")}</h1>
+        <h1 className="hero-title film">{t("film")}</h1>
       </div>
 
       <div
@@ -120,16 +121,14 @@ const Home: React.FC = () => {
           className="background-video"
         ></iframe>
         <div className="overlay">
-          <Sticky offset={20}>
+          <Sticky offset={60}>
             <h1 className="hero-title">{t("fama")}</h1>
           </Sticky>
+          <h1 className="hero-title film">{t("film")}</h1>
         </div>
         {/* <div className="subtitles-container">
           <Subtitles />
         </div> */}
-      </div>
-      <div className="homep-container">
-        <h3>{t("homeP")}</h3>
       </div>
 
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
@@ -139,7 +138,47 @@ const Home: React.FC = () => {
           </div>
 
           <div className="video-portfolio">
-            {[
+            <div className="relative ">
+              <HeroVideoDialog
+                className="hidden dark:block "
+                animationStyle="from-center"
+                videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
+                thumbnailSrc="/media/DerwiszBMW.png"
+                thumbnailAlt="Hero Video"
+                title={t("port1")}
+              />
+            </div>
+            <div className="relative ">
+              <HeroVideoDialog
+                className="hidden dark:block "
+                animationStyle="from-center"
+                videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
+                thumbnailSrc="/media/ratownik.png"
+                thumbnailAlt="Hero Video"
+                title={t("port2")}
+              />
+            </div>
+            <div className="relative ">
+              <HeroVideoDialog
+                className="hidden dark:block "
+                animationStyle="from-center"
+                videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
+                thumbnailSrc="/media/one-gog.png"
+                thumbnailAlt="Hero Video"
+                title={t("port3")}
+              />
+            </div>
+            <div className="relative ">
+              <HeroVideoDialog
+                className="hidden dark:block "
+                animationStyle="from-center"
+                videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
+                thumbnailSrc="/media/creme.png"
+                thumbnailAlt="Hero Video"
+                title={t("port4")}
+              />
+            </div>
+            {/* {[
               {
                 href: "https://youtu.be/5_feKjmTpSE",
                 title: "port1",
@@ -147,27 +186,27 @@ const Home: React.FC = () => {
               },
               {
                 href: "https://www.youtube.com/watch?v=-1VtDOV7BcQ",
-                title: "port2", // Use JSON key
+                title: "port2",
                 thumbnail: "/media/ratownik.png",
               },
               {
                 href: "https://www.youtube.com/watch?v=lU7ccvRv-BU",
-                title: "port3", // Use JSON key
+                title: "port3",
                 thumbnail: "/media/drutex.png",
               },
               {
                 href: "https://www.youtube.com/watch?v=SHPrruFKpug",
-                title: "port4", // Use JSON key
+                title: "port4",
                 thumbnail: "/media/creme.png",
               },
               {
                 href: "https://www.youtube.com/watch?v=3xwy-0rYLZQ",
-                title: "port5", // Use JSON key
+                title: "port5",
                 thumbnail: "/media/one-gog.png",
               },
               {
                 href: "https://www.youtube.com/watch?v=qmKGNlvvNxM",
-                title: "port6", // Use JSON key
+                title: "port6",
                 thumbnail: "/media/timberfast.png",
               },
             ].map((video, index) => (
@@ -186,7 +225,7 @@ const Home: React.FC = () => {
                 ></div>
                 <h3>{t(video.title)}</h3>
               </div>
-            ))}
+            ))} */}
           </div>
           <div className="portfolio-cta">
             <a href="https://www.youtube.com/@fama_film">

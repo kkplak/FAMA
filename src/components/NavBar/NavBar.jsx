@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./../LanguageSwitcher/LanguageSwitcher";
+import { Dock, DockIcon } from "../Dock/Dock";
 
 const NavLeft = ({ language, activeSection }) => {
   const { t } = useTranslation();
@@ -9,7 +10,72 @@ const NavLeft = ({ language, activeSection }) => {
   return (
     <div className="nav-left">
       <div className="links">
-        <ul>
+        <div className="relative nav-bar-dock">
+          <Dock direction="middle">
+            <DockIcon>
+              <Link
+                to="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("home")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {t("home")}
+              </Link>
+            </DockIcon>
+            <DockIcon>
+              <Link
+                to="#portfolio"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("portfolio")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {t("portfolio")}
+              </Link>
+            </DockIcon>
+            <DockIcon>
+              <Link
+                to="#content"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("content")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {t("offer")}
+              </Link>
+            </DockIcon>
+            <DockIcon>
+              <Link
+                to="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {t("contact")}
+              </Link>
+            </DockIcon>
+            <DockIcon>
+              <a
+                href="https://www.instagram.com/fama_film/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("IG")}
+              </a>
+            </DockIcon>
+          </Dock>
+        </div>
+        {/* <ul>
           <li>
             <Link
               to="#home"
@@ -75,7 +141,7 @@ const NavLeft = ({ language, activeSection }) => {
               {t("IG")}
             </a>
           </li>
-        </ul>
+        </ul> */}
       </div>
       <div className="language-container">
         <LanguageSwitcher />

@@ -22,6 +22,7 @@ interface HeroVideoProps {
   thumbnailSrc: string;
   thumbnailAlt?: string;
   className?: string;
+  title?: string;
 }
 
 const animationVariants = {
@@ -71,6 +72,7 @@ export default function HeroVideoDialog({
   animationStyle = "from-center",
   videoSrc,
   thumbnailSrc,
+  title,
   thumbnailAlt = "Video thumbnail",
   className,
 }: HeroVideoProps) {
@@ -91,12 +93,13 @@ export default function HeroVideoDialog({
           className="w-full transition-all duration-200 group-hover:brightness-[0.8] ease-out rounded-md shadow-lg"
         />
         <div className="absolute inset-0 flex items-center justify-center group-hover:scale-100 scale-[0.9] transition-all duration-200 ease-out rounded-2xl">
-          <div className="bg-primary/10 flex items-center justify-center rounded-full backdrop-blur-md size-28">
+          {/* Render Play Button only on screens smaller than 840px */}
+          <div className="md:hidden bg-primary/10 flex items-center justify-center rounded-full backdrop-blur-md size-28">
             <div
               className={`flex items-center justify-center bg-gradient-to-b from-primary/30 to-primary shadow-md rounded-full size-20 transition-all ease-out duration-200 relative group-hover:scale-[1.2] scale-100`}
             >
               <Play
-                className="size-8 text-white fill-white group-hover:scale-105 scale-100 transition-transform duration-200 ease-out"
+                className=" md:visible size-8 text-white fill-white group-hover:scale-105 scale-100 transition-transform duration-200 ease-out"
                 style={{
                   filter:
                     "drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))",
@@ -106,7 +109,7 @@ export default function HeroVideoDialog({
           </div>
         </div>
         <div className="video-title">
-          <h3>Ratownik</h3>
+          <h3>{title}</h3>
         </div>
       </div>
       <AnimatePresence>

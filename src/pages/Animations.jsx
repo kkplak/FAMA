@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import HeroVideoDialog from "../components/HeroDialog/HeroVideoDialog";
 import TextReveal from "../components/TextReveal/TextReveal";
@@ -41,8 +40,12 @@ const Animations = () => {
       </div>
       <div className="magic-text">
         <div className="z-10 flex min-h-[16rem] items-center justify-center rounded-lg">
-          <TextReveal text="FAMA FILMS: Capturing stories, one frame at a time." />
+          <TextReveal text="FAMA FILM: Capturing stories, one frame at a time." />
         </div>
+      </div>
+
+      <div className="about-img-container">
+        <img src="/media/krzys.jpeg"></img>
       </div>
     </div>
   );

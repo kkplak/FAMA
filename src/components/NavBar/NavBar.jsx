@@ -7,10 +7,20 @@ import { Dock, DockIcon } from "../Dock/Dock";
 const NavLeft = ({ language, activeSection }) => {
   const { t } = useTranslation();
 
+  const navLeftStyle = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+
+    top: 0,
+    left: 0,
+    zIndex: 1000,
+    width: "100%",
+  };
   return (
-    <div className="nav-left">
+    <div style={navLeftStyle} className="nav-left">
       <div className="links">
-        <div className="relative nav-bar-dock">
+        <div className=" nav-bar-dock">
           <Dock direction="middle">
             <DockIcon>
               <Link
@@ -70,7 +80,16 @@ const NavLeft = ({ language, activeSection }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {t("IG")}
+                {t("ig")}
+              </a>
+            </DockIcon>
+            <DockIcon>
+              <a
+                href="https://www.instagram.com/fama_film/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("vimeo")}
               </a>
             </DockIcon>
           </Dock>
@@ -180,7 +199,7 @@ const NavBar = () => {
   }, []);
 
   const navbarStyle = {
-    padding: "2% 3%",
+    padding: "0.8% 2%",
     display: "block",
     alignItems: "center",
     justifyContent: "space-between",

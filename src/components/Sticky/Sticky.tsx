@@ -37,7 +37,7 @@ const Sticky: React.FC<StickyProps> = ({ children, offset }) => {
 
     // Add event listeners for scroll and resize
     window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", setInitialPosition); // Adjust position on resize
+    window.addEventListener("resize", setInitialPosition);
 
     // Cleanup event listeners on unmount
     return () => {

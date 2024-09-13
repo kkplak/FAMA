@@ -2,6 +2,10 @@
 .language-switcher {
   display: flex;
 }
+.language-text {
+  height: 40px;
+  align-content: center;
+}
 
 .language-switcher span {
   cursor: pointer;

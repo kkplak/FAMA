@@ -55,7 +55,7 @@ const Sticky: React.FC<StickyProps> = ({ children, offset }) => {
         top: isSticky ? `${offset}px` : "50%",
         left: "50%",
         transform: isSticky ? "translateX(-50%)" : "translate(-50%, -50%)",
-        zIndex: 1000,
+        zIndex: 2,
       }}
     >
       {children}

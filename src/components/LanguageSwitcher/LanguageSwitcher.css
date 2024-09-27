@@ -42,16 +42,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
   }
 
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(0, 0, 0, 0.2);
     width: 113%;
     z-index: 1;
     border-radius: 5px;
+    width: 99%;
+    color: white;
     /* left: 0.4rem; */
   }
 
@@ -67,10 +70,9 @@
     padding-top: 0.9rem;
   }
 
-  .dropdown-content div:hover {
+  /* .dropdown-content div:hover {
     background-color: rgba(0, 0, 0, 0.2);
-    width: 95%;
-  }
+  } */
 
   .language-switcher-dropdown.open .dropdown-content {
     display: block;

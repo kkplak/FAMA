@@ -2,34 +2,42 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./../LanguageSwitcher/LanguageSwitcher";
-import { Dock, DockIcon } from "../Dock/Dock";
+import { Dock, DockIcon } from "../Dock/Dock"; // Named imports
 
-const NavLeft = ({ language, activeSection }) => {
+const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
   const { t } = useTranslation();
 
-  const navLeftStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-
-    top: 0,
-    left: 0,
-    zIndex: 1000,
-    width: "100%",
-  };
   return (
-    <div style={navLeftStyle} className="nav-left">
-      <div className="links">
-        <div className=" nav-bar-dock">
-          <Dock direction="middle">
+    <div className="flex items-center justify-between w-full fixed top-0 left-0 z-5 bg-transparent p-6">
+      {/* Hamburger menu button for mobile */}
+      <button
+        className={`text-2xl ml-4 text-white md:hidden focus:outline-none transition-transform duration-300 ${
+          isOpen ? "rotate-90" : "rotate-0"
+        }`}
+        onClick={toggleMenu}
+      >
+        &#9776;
+      </button>
+
+      {/* Links container for mobile with slide-down animation */}
+      <div
+        className={`${
+          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        } transition-all duration-500 ease-in-out overflow-hidden md:hidden bg-black bg-opacity-40 backdrop-blur-sm border border-black border-opacity-20 absolute top-full left-0 text-white w-4/12`}
+      >
+        <div className="flex flex-col items-start space-y-4 md:p-4 rounded">
+          <Dock direction="middle" animation={false}>
+            {/* Disable animation on mobile */}
             <DockIcon>
               <Link
                 to="#home"
+                className="py-4 block"
                 onClick={(e) => {
                   e.preventDefault();
                   document
                     .getElementById("home")
                     .scrollIntoView({ behavior: "smooth" });
+                  toggleMenu(); // Close menu after click
                 }}
               >
                 {t("home")}
@@ -38,11 +46,13 @@ const NavLeft = ({ language, activeSection }) => {
             <DockIcon>
               <Link
                 to="#portfolio"
+                className="py-4 block"
                 onClick={(e) => {
                   e.preventDefault();
                   document
                     .getElementById("portfolio")
                     .scrollIntoView({ behavior: "smooth" });
+                  toggleMenu();
                 }}
               >
                 {t("portfolio")}
@@ -51,11 +61,13 @@ const NavLeft = ({ language, activeSection }) => {
             <DockIcon>
               <Link
                 to="#content"
+                className="py-4 block"
                 onClick={(e) => {
                   e.preventDefault();
                   document
                     .getElementById("content")
                     .scrollIntoView({ behavior: "smooth" });
+                  toggleMenu();
                 }}
               >
                 {t("offer")}
@@ -64,11 +76,13 @@ const NavLeft = ({ language, activeSection }) => {
             <DockIcon>
               <Link
                 to="#contact"
+                className="py-4 block"
                 onClick={(e) => {
                   e.preventDefault();
                   document
                     .getElementById("contact")
                     .scrollIntoView({ behavior: "smooth" });
+                  toggleMenu();
                 }}
               >
                 {t("contact")}
@@ -79,6 +93,7 @@ const NavLeft = ({ language, activeSection }) => {
                 href="https://www.instagram.com/fama_film/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="py-4 block"
               >
                 {t("ig")}
               </a>
@@ -88,16 +103,23 @@ const NavLeft = ({ language, activeSection }) => {
                 href="https://www.instagram.com/fama_film/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="py-4 block"
               >
                 {t("vimeo")}
               </a>
             </DockIcon>
           </Dock>
         </div>
-        {/* <ul>
-          <li>
+      </div>
+
+      {/* Desktop links */}
+      <div className="hidden md:flex items-center md:space-x-4 md:ml-4 text-white">
+        <Dock direction="middle" animation={true}>
+          {/* Re-enable animation on desktop */}
+          <DockIcon>
             <Link
               to="#home"
+              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -107,11 +129,11 @@ const NavLeft = ({ language, activeSection }) => {
             >
               {t("home")}
             </Link>
-            {activeSection === "home" && <span className="dot" />}
-          </li>
-          <li>
+          </DockIcon>
+          <DockIcon>
             <Link
               to="#portfolio"
+              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -121,11 +143,11 @@ const NavLeft = ({ language, activeSection }) => {
             >
               {t("portfolio")}
             </Link>
-            {activeSection === "portfolio" && <span className="dot" />}
-          </li>
-          <li>
+          </DockIcon>
+          <DockIcon>
             <Link
               to="#content"
+              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -135,11 +157,11 @@ const NavLeft = ({ language, activeSection }) => {
             >
               {t("offer")}
             </Link>
-            {activeSection === "content" && <span className="dot" />}
-          </li>
-          <li>
+          </DockIcon>
+          <DockIcon>
             <Link
               to="#contact"
+              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -149,20 +171,31 @@ const NavLeft = ({ language, activeSection }) => {
             >
               {t("contact")}
             </Link>
-            {activeSection === "contact" && <span className="dot" />}
-          </li>
-          <li>
+          </DockIcon>
+          <DockIcon>
             <a
               href="https://www.instagram.com/fama_film/"
               target="_blank"
               rel="noopener noreferrer"
+              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
             >
-              {t("IG")}
+              {t("ig")}
             </a>
-          </li>
-        </ul> */}
+          </DockIcon>
+          <DockIcon>
+            <a
+              href="https://www.instagram.com/fama_film/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
+            >
+              {t("vimeo")}
+            </a>
+          </DockIcon>
+        </Dock>
       </div>
-      <div className="language-container">
+
+      <div className="md:block flex-shrink-0 mr-4">
         <LanguageSwitcher />
       </div>
     </div>
@@ -173,6 +206,11 @@ const NavBar = () => {
   const location = useLocation();
   const language = location.pathname.split("/")[1];
   const [activeSection, setActiveSection] = useState("home");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -198,23 +236,14 @@ const NavBar = () => {
     };
   }, []);
 
-  const navbarStyle = {
-    padding: "0.8% 2%",
-    display: "block",
-    alignItems: "center",
-    justifyContent: "space-between",
-    position: "fixed",
-    top: 0,
-    left: 0,
-    zIndex: 1000,
-    transition: "0.3s ease-out",
-    backdropFilter: "blur(5px)",
-    width: "100%",
-  };
-
   return (
-    <nav style={navbarStyle} className="nav-bar">
-      <NavLeft language={language} activeSection={activeSection} />
+    <nav className="w-full fixed top-0 left-0 z-50 backdrop-blur-lg bg-opacity-70 bg-gray-900 transition-all duration-300 ease-out">
+      <NavLeft
+        language={language}
+        activeSection={activeSection}
+        isOpen={isOpen}
+        toggleMenu={toggleMenu}
+      />
     </nav>
   );
 };

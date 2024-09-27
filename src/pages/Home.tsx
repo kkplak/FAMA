@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
-import TextReveal from "../components/TextReveal/TextReveal";
 import HeroVideoDialog from "../components/HeroDialog/HeroVideoDialog";
-
 import Sticky from "../components/Sticky/Sticky";
-import WordFadeIn from "../components/WordFadeIn/WordFadeIn";
 import GradualSpacing from "../components/GradualSpacing/GradualSpacing";
+import { useTheme } from "next-themes";
+import Offert from "../components/Offert/Offert";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -21,9 +20,11 @@ const Home: React.FC = () => {
   const videoRefs = useRef<Array<HTMLDivElement | null>>([]);
   const offersRefs = useRef<Array<HTMLDivElement | null>>([]); // Ref for offers
   const [showMore, setShowMore] = useState(false);
+  const theme = useTheme();
 
   // Toggle between showing all videos or just the first four
   const toggleShowMore = () => setShowMore(!showMore);
+
   const offersData = [
     {
       title: t("offer1H2"),
@@ -135,6 +136,7 @@ const Home: React.FC = () => {
           <Subtitles />
         </div> */}
       </div>
+
       <div className="magic-text container ">
         <div className="text-wrapper ">
           <GradualSpacing
@@ -200,8 +202,9 @@ const Home: React.FC = () => {
                     thumbnailSrc="/media/drutex.png"
                     thumbnailAlt="Hero Video"
                     title={t("port5")}
-                  />
+                  />{" "}
                 </div>
+
                 <div className="relative ">
                   <HeroVideoDialog
                     className="hidden dark:block "
@@ -232,11 +235,6 @@ const Home: React.FC = () => {
                     title={t("port4")}
                   />
                 </div>
-                <div className="portfolio-cta">
-                  <a href="https://www.youtube.com/@fama_film">
-                    link do yt - and more?
-                  </a>
-                </div>
               </>
             )}
             <div className="text-center mt-4">
@@ -252,40 +250,8 @@ const Home: React.FC = () => {
           className={`button-box-container ${!loading ? "visible" : ""}`}
         >
           <h1 className="insurances-header">{t("offerH1")}</h1>
-          <div className="offers-container">
-            {offersData.map((offer, index) => (
-              <div
-                key={index}
-                className="offer-card"
-                ref={(el) => (offersRefs.current[index] = el)} // Add ref to offers
-              >
-                <h2 className="offer-title">{offer.title}</h2>
-                <ul className="offer-list">
-                  {offer.items.map((item, idx) => (
-                    <li key={idx} className="offer-item">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <Offert offersData={offersData} />
         </div>
-        {/* <div className="wrapper">
-          <motion.div
-            className="container"
-            style={{
-              scale,
-            }}
-          >
-            <motion.div
-              className="item"
-              style={{
-                scaleY: scrollYProgress,
-              }}
-            />
-          </motion.div>
-        </div> */}
       </div>
 
       {isOpen && (

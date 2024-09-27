@@ -6,9 +6,10 @@
 
 .contact {
   position: relative;
+  display: flex;
   justify-content: center;
+  text-align: center;
   padding: 3%;
-  display: block;
   color: white;
   z-index: 10000;
   margin-top: 10rem;
@@ -30,19 +31,20 @@
   margin: 5rem 0;
   color: #fff;
   z-index: 15;
-  width: 100%;
+  width: max-content;
   display: block;
   text-align: center;
 }
 .contact-text h2 {
-  font-size: 1.5rem;
-  padding-top: 1rem;
+  font-size: 1.8rem;
+  padding-top: 2rem;
 }
 
 .contact-people {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  margin-top: 5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
 .contact-people a {

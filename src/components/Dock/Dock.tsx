@@ -13,8 +13,8 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   children: React.ReactNode;
 }
 
-const DEFAULT_MAGNIFICATION = 90;
-const DEFAULT_DISTANCE = 50;
+const DEFAULT_MAGNIFICATION = 1.2; // Scaling factor for hover
+const DEFAULT_DISTANCE = 80; // The range of effect
 const MOBILE_THRESHOLD = 768;
 
 const dockVariants = cva("w-max mt-2 p-6 flex gap-12 rounded-2xl");
@@ -94,7 +94,7 @@ export interface DockIconProps {
 }
 
 export const DockIcon = ({
-  size,
+  size = 40,
   magnification = DEFAULT_MAGNIFICATION,
   distance = DEFAULT_DISTANCE,
   mouseX,
@@ -110,22 +110,22 @@ export const DockIcon = ({
     return val - bounds.x - bounds.width / 2;
   });
 
-  const widthSync = useTransform(
+  const scale = useTransform(
     distanceCalc,
     [-distance, 0, distance],
-    isMobile ? [40, 40, 40] : [40, magnification, 40]
+    isMobile ? [1, 1, 1] : [1, magnification, 1]
   );
 
-  const width = useSpring(widthSync, {
-    mass: 0.1,
+  const animatedScale = useSpring(scale, {
+    mass: 0.2,
     stiffness: 100,
-    damping: 12,
+    damping: 18,
   });
 
   return (
     <motion.div
       ref={ref}
-      style={{ width }}
+      style={{ scale: animatedScale }} // Apply scale only, no Y-axis movement
       className={cn(
         "flex aspect-square cursor-pointer items-center justify-center rounded-full nav-icon",
         isMobile ? "block mx-auto mb-4" : "flex",

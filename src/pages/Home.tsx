@@ -136,7 +136,14 @@ const Home: React.FC = () => {
           <Subtitles />
         </div> */}
       </div>
-
+      <div className="magic-text container ">
+        <div className="text-wrapper ">
+          <GradualSpacing
+            className="font-display text-center text-m font-bold tracking-[-0.1em]  text-black dark:text-white md:text-m md:leading-[5rem]"
+            text={"ten text musi byc tylko 1 jednej lini bo:"}
+          />
+        </div>
+      </div>
       <div className="magic-text container ">
         <div className="text-wrapper ">
           <GradualSpacing

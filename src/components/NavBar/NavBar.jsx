@@ -119,7 +119,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
           <DockIcon>
             <Link
               to="#home"
-              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
+              className="py-4 md:py-0 block"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -133,7 +133,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
           <DockIcon>
             <Link
               to="#portfolio"
-              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
+              className="py-4 md:py-0 block"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -147,7 +147,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
           <DockIcon>
             <Link
               to="#content"
-              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
+              className="py-4 md:py-0 block"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -161,7 +161,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
           <DockIcon>
             <Link
               to="#contact"
-              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
+              className="py-4 md:py-0 block"
               onClick={(e) => {
                 e.preventDefault();
                 document
@@ -177,7 +177,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
               href="https://www.instagram.com/fama_film/"
               target="_blank"
               rel="noopener noreferrer"
-              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
+              className="py-4 md:py-0 block "
             >
               {t("ig")}
             </a>
@@ -187,7 +187,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
               href="https://www.instagram.com/fama_film/"
               target="_blank"
               rel="noopener noreferrer"
-              className="py-4 md:py-0 block hover:text-yellow-500 transition-colors"
+              className="py-4 md:py-0 block"
             >
               {t("vimeo")}
             </a>

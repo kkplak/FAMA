@@ -15,9 +15,9 @@
   color: #ffffff; /* Color for the active language */
 }
 
-.language-text:hover {
-  color: #ffcc00; /* Hover effect for other languages */
-}
+/* .language-text:hover {
+  color: #ffcc00; 
+} */
 
 .language-switcher span {
   cursor: pointer;

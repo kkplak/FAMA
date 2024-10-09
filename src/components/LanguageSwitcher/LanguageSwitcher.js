@@ -14,17 +14,9 @@ const LanguageSwitcher = () => {
   const location = useLocation();
   const currentPath = location.pathname.split("/").slice(2).join("/");
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 980);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 980);
-    };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
@@ -34,7 +26,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div>
-      {!isMobile ? (
+     
         <div className='language-switcher'>
              <span
             onClick={() => handleLanguageChange("pl")}
@@ -50,20 +42,7 @@ const LanguageSwitcher = () => {
           </span>
        
         </div>
-      ) : (
-        <div className={`language-switcher-dropdown ${dropdownOpen ? 'open' : ''}`}>
-          <div className="dropdown-btn" onClick={() => setDropdownOpen(!dropdownOpen)}>
-            {languages[i18n.language]}
-          </div>
-          <div className="dropdown-content">
-            {Object.entries(languages).map(([lang, label]) => (
-              <div key={lang} onClick={() => handleLanguageChange(lang)}>
-                {label}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+ 
     </div>
   );
 };

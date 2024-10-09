@@ -1,10 +1,22 @@
 /* styles.css */
 .language-switcher {
   display: flex;
+  align-items: center;
 }
+
 .language-text {
-  height: 40px;
-  align-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ffffffa0; /* Default color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.language-text.active {
+  color: #ffffff; /* Color for the active language */
+}
+
+.language-text:hover {
+  color: #ffcc00; /* Hover effect for other languages */
 }
 
 .language-switcher span {

@@ -140,16 +140,13 @@ const Home: React.FC = () => {
         <div className="text-wrapper ">
           <GradualSpacing
             className="font-display text-center text-m font-bold tracking-[-0.1em]  text-black dark:text-white md:text-m md:leading-[5rem]"
-            text={"ten text musi byc tylko 1 jednej lini bo:"}
+            text={t("magicText")}
           />
         </div>
       </div>
       <div className="magic-text container ">
         <div className="text-wrapper ">
-          <GradualSpacing
-            className="font-display text-center text-m font-bold tracking-[-0.1em]  text-black dark:text-white md:text-m md:leading-[5rem]"
-            text={t("homeP")}
-          />
+          <p>{t("homeP")}</p>
         </div>
       </div>
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
@@ -244,11 +241,11 @@ const Home: React.FC = () => {
                 </div>
               </>
             )}
-            <div className="text-center mt-4">
-              <button onClick={toggleShowMore} className="show-more-button">
-                {showMore ? "Show Less" : "Show More"}
-              </button>
-            </div>
+          </div>
+          <div className="text-center mt-4">
+            <button onClick={toggleShowMore} className="show-more-button">
+              {showMore ? "Show Less" : "Show More"}
+            </button>
           </div>
         </div>
 

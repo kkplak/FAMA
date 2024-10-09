@@ -13,11 +13,11 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   children: React.ReactNode;
 }
 
-const DEFAULT_MAGNIFICATION = 1.2; // Scaling factor for hover
+const DEFAULT_MAGNIFICATION = 1.1; // Scaling factor for hover
 const DEFAULT_DISTANCE = 80; // The range of effect
 const MOBILE_THRESHOLD = 768;
 
-const dockVariants = cva("w-max mt-2 p-6 flex gap-12 rounded-2xl");
+const dockVariants = cva("w-max  flex gap-12 rounded-2xl");
 
 export const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (
@@ -128,7 +128,7 @@ export const DockIcon = ({
       style={{ scale: animatedScale }} // Apply scale only, no Y-axis movement
       className={cn(
         "flex aspect-square cursor-pointer items-center justify-center rounded-full nav-icon",
-        isMobile ? "block mx-auto mb-4" : "flex",
+        isMobile ? "block" : "flex",
         className
       )}
       {...props}

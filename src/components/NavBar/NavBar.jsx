@@ -22,7 +22,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
       {/* Links container for mobile with slide-down animation */}
       <div
         className={`${
-          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
         } transition-all duration-500 ease-in-out overflow-hidden md:hidden bg-black bg-opacity-40 backdrop-blur-sm border border-black border-opacity-20 absolute top-full left-0 text-white w-4/12`}
       >
         <div className="flex flex-col items-start space-y-4 md:p-4 rounded">
@@ -31,7 +31,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
             <DockIcon>
               <Link
                 to="#home"
-                className="py-4 block"
+                className="py-4 ml-4 block"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -46,7 +46,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
             <DockIcon>
               <Link
                 to="#portfolio"
-                className="py-4 block"
+                className="py-4 ml-4 block"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -61,7 +61,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
             <DockIcon>
               <Link
                 to="#content"
-                className="py-4 block"
+                className="py-4 ml-4 block"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -76,7 +76,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
             <DockIcon>
               <Link
                 to="#contact"
-                className="py-4 block"
+                className="py-4 ml-4 block"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -93,7 +93,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
                 href="https://www.instagram.com/fama_film/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-4 block"
+                className="py-4 ml-4 block"
               >
                 {t("ig")}
               </a>
@@ -103,100 +103,104 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
                 href="https://www.instagram.com/fama_film/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-4 block"
+                className="py-4 ml-4 block"
+              >
+                {t("vimeo")}
+              </a>
+            </DockIcon>
+          </Dock>
+          <div className=" md:block flex-shrink-0 mr-4 ml-4 pb-8">
+            <LanguageSwitcher />
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop links */}
+      <div className="hidden md:flex items-center justify-between w-full text-white">
+        <div className="flex items-center space-x-4">
+          <Dock direction="middle" animation={true}>
+            <DockIcon>
+              <Link
+                to="#home"
+                className="py-4 md:py-0 block"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("home")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {t("home")}
+              </Link>
+            </DockIcon>
+            <DockIcon>
+              <Link
+                to="#portfolio"
+                className="py-4 md:py-0 block"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("portfolio")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {t("portfolio")}
+              </Link>
+            </DockIcon>
+            <DockIcon>
+              <Link
+                to="#content"
+                className="py-4 md:py-0 block"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("content")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {t("offer")}
+              </Link>
+            </DockIcon>
+            <DockIcon>
+              <Link
+                to="#contact"
+                className="py-4 md:py-0 block"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {t("contact")}
+              </Link>
+            </DockIcon>
+            <DockIcon>
+              <a
+                href="https://www.instagram.com/fama_film/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-4 md:py-0 block"
+              >
+                {t("ig")}
+              </a>
+            </DockIcon>
+            <DockIcon>
+              <a
+                href="https://www.instagram.com/fama_film/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-4 md:py-0 block"
               >
                 {t("vimeo")}
               </a>
             </DockIcon>
           </Dock>
         </div>
-      </div>
 
-      {/* Desktop links */}
-      <div className="hidden md:flex items-center md:space-x-4 md:ml-4 text-white">
-        <Dock direction="middle" animation={true}>
-          {/* Re-enable animation on desktop */}
-          <DockIcon>
-            <Link
-              to="#home"
-              className="py-4 md:py-0 block"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("home")
-                  .scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              {t("home")}
-            </Link>
-          </DockIcon>
-          <DockIcon>
-            <Link
-              to="#portfolio"
-              className="py-4 md:py-0 block"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("portfolio")
-                  .scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              {t("portfolio")}
-            </Link>
-          </DockIcon>
-          <DockIcon>
-            <Link
-              to="#content"
-              className="py-4 md:py-0 block"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("content")
-                  .scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              {t("offer")}
-            </Link>
-          </DockIcon>
-          <DockIcon>
-            <Link
-              to="#contact"
-              className="py-4 md:py-0 block"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("contact")
-                  .scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              {t("contact")}
-            </Link>
-          </DockIcon>
-          <DockIcon>
-            <a
-              href="https://www.instagram.com/fama_film/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="py-4 md:py-0 block "
-            >
-              {t("ig")}
-            </a>
-          </DockIcon>
-          <DockIcon>
-            <a
-              href="https://www.instagram.com/fama_film/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="py-4 md:py-0 block"
-            >
-              {t("vimeo")}
-            </a>
-          </DockIcon>
-        </Dock>
-      </div>
-
-      <div className="md:block flex-shrink-0 mr-4">
-        <LanguageSwitcher />
+        <div className="flex-shrink-0">
+          <LanguageSwitcher />
+        </div>
       </div>
     </div>
   );

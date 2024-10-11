@@ -8,10 +8,10 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex items-center justify-between w-full fixed top-0 left-0 z-5 bg-transparent p-6">
+    <div className="flex items-center  justify-between w-full fixed top-0 left-0 z-5 bg-transparent p-6">
       {/* Hamburger menu button for mobile */}
       <button
-        className={`text-2xl ml-4 text-white md:hidden focus:outline-none transition-transform duration-300 ${
+        className={`text-2xl ml-4  text-white md:hidden focus:outline-none transition-transform duration-300 ${
           isOpen ? "rotate-90" : "rotate-0"
         }`}
         onClick={toggleMenu}
@@ -23,7 +23,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
       <div
         className={`${
           isOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
-        } transition-all duration-500 ease-in-out overflow-hidden md:hidden bg-black bg-opacity-40 backdrop-blur-sm border border-black border-opacity-20 absolute top-full left-0 text-white w-4/12`}
+        } transition-all  duration-500 ease-in-out overflow-hidden md:hidden bg-black bg-opacity-40 backdrop-blur-sm border border-black border-opacity-20 absolute top-full left-0 text-white w-4/12`}
       >
         <div className="flex flex-col items-start space-y-4 md:p-4 rounded">
           <Dock direction="middle" animation={false}>

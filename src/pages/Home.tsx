@@ -119,7 +119,7 @@ const Home: React.FC = () => {
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
         <iframe
-          src="https://www.youtube.com/embed/5_feKjmTpSE?autoplay=1&mute=1&loop=1&playlist=5_feKjmTpSE"
+          src="https://www.youtube.com/embed/17aYq81IENc?autoplay=1&mute=1&loop=1&playlist=17aYq81IENc"
           frameBorder="0"
           allow="autoplay; loop; muted"
           allowFullScreen
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
           className="background-video"
         ></iframe>
         <div className="overlay">
-          <Sticky offset={50}>
+          <Sticky offset={35}>
             <h1 className="hero-title">{t("fama")}</h1>
           </Sticky>
           {/* <h1 className='hero-title film'>{t("film")}</h1> */}

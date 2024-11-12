@@ -27,7 +27,7 @@ const LanguageSwitcher = () => {
   return (
     <div>
      
-        <div className='language-switcher'>
+        <div className='language-switcher md:mr-6'>
              <span
             onClick={() => handleLanguageChange("pl")}
             className={`language-text ${i18n.language === "pl" ? "active" : ""}`}

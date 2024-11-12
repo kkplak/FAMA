@@ -17,7 +17,7 @@ const DEFAULT_MAGNIFICATION = 1.1; // Scaling factor for hover
 const DEFAULT_DISTANCE = 80; // The range of effect
 const MOBILE_THRESHOLD = 768;
 
-const dockVariants = cva("w-max  flex gap-12 rounded-2xl");
+const dockVariants = cva("w-max  flex gap-4 rounded-2xl");
 
 export const Dock = React.forwardRef<HTMLDivElement, DockProps>(
   (
@@ -127,7 +127,7 @@ export const DockIcon = ({
       ref={ref}
       style={{ scale: animatedScale }} // Apply scale only, no Y-axis movement
       className={cn(
-        "flex aspect-square cursor-pointer items-center justify-center rounded-full nav-icon",
+        "flex mt-6 mb-6 scursor-pointer items-center justify-center rounded-full nav-icon",
         isMobile ? "block" : "flex",
         className
       )}

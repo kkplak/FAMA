@@ -119,7 +119,7 @@ const Home: React.FC = () => {
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
         <iframe
-          src="https://www.youtube.com/embed/17aYq81IENc?autoplay=1&mute=1&loop=1&playlist=17aYq81IENc"
+          src="https://www.youtube.com/embed/cZxYLJlxeJg?autoplay=1&mute=1&loop=1&playlist=cZxYLJlxeJg"
           frameBorder="0"
           allow="autoplay; loop; muted"
           allowFullScreen

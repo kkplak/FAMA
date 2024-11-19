@@ -38,41 +38,57 @@ export function AnimatedBeamDemo() {
       ref={containerRef}
     >
       {/* Container for the four Circles */}
-      <div className="flex z-10 flex-row justify-between items-center w-full h-full">
+      <div className="flex z-10 flex-row justify-between items-center w-full h-full offer-card-wrapper">
         <div className="offer-card card-1" ref={div1Ref}>
           <h2 className="offer-title">Planowanie i logistyka</h2>
-          <ul className="offer-list"></ul>
+          <ul className="offer-list">
+            <li>Pomoc w organizacji lokalizacji zdjęć.</li>
+            <li>Casting i dobór odpowiednich aktorów.</li>
+            <li>Zarządzanie harmonogramem produkcji.</li>
+          </ul>
         </div>
 
         <div className="offer-card card-2" ref={div2Ref}>
           <h2 className="offer-title">Produkcja wideo</h2>
-          <ul className="offer-list"></ul>
+          <ul className="offer-list">
+            <li>Kreacja i realizacja filmów promocyjnych.</li>
+            <li>Produkcja filmów korporacyjnych i szkoleniowych.</li>
+            <li>Tworzenie teledysków muzycznych.</li>
+          </ul>
         </div>
         <div className="offer-card card-3" ref={div3Ref}>
           <h2 className="offer-title">Relacje z wydarzen</h2>
-          <ul className="offer-list"></ul>
+          <ul className="offer-list">
+            <li>Zapis wideo konferencji, szkoleń i innych wydarzeń na żywo.</li>
+            <li>Transmisje na żywo oraz streaming wydarzeń online.</li>
+            <li>Tworzenie relacji wideo i podsumowań wydarzeń.</li>
+          </ul>
         </div>
         <div className="offer-card card-4" ref={div4Ref}>
           <h2 className="offer-title">Postprodukcja</h2>
-          <ul className="offer-list"></ul>
+          <ul className="offer-list">
+            <li>Montaż wideo i dźwięku.</li>
+            <li>Efekty specjalne i animacje.</li>
+            <li>Korekcja kolorów i mastering</li>
+          </ul>
         </div>
       </div>
 
       {/* Beams connecting the Circles */}
       <AnimatedBeam
-        duration={8}
+        duration={12}
         containerRef={containerRef}
         fromRef={div1Ref}
         toRef={div2Ref}
       />
       <AnimatedBeam
-        duration={8}
+        duration={12}
         containerRef={containerRef}
         fromRef={div2Ref}
         toRef={div3Ref}
       />
       <AnimatedBeam
-        duration={8}
+        duration={12}
         containerRef={containerRef}
         fromRef={div3Ref}
         toRef={div4Ref}

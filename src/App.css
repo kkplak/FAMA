@@ -41,6 +41,7 @@ body {
   margin: 3rem auto;
   border-radius: 5px;
   max-width: 90%;
+  margin-bottom: 10rem;
 }
 
 .home {
@@ -410,4 +411,26 @@ h1 {
 
 .card-4 {
   margin-top: 10rem;
+}
+
+.card-2 {
+  margin-top: 20rem;
+  margin-left: 10rem;
+}
+.card-3 {
+  margin-top: 60rem;
+  margin-left: 10rem;
+}
+
+.offer-card-wrapper {
+  margin-top: -20rem;
+}
+
+/*---------------------------------------------------------*/
+
+.about-us-container {
+  height: max-content;
+}
+.border {
+  border-width: 0;
 }

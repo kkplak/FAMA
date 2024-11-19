@@ -16,9 +16,10 @@ import translationPL from "./locales/pl.json";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import { useLocation } from "react-router-dom";
-
+import AboutUs from "./pages/AboutUs";
 import "./App.css";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 const resources = {
   en: { translation: translationEN },
@@ -50,12 +51,13 @@ const App = () => {
   return (
     <I18nextProvider i18n={i18next}>
       <Router>
+        <ScrollToTop />
         <NavBar />
         <Routes>
-          <Route path='/' element={<RedirectToDefaultLanguage />} />
-          <Route path='/:lang/home' element={<Home />} />
-          {/* <Route path='/:lang/aboutme' element={<AboutMe />} /> */}
-          <Route path='/:lang/animations' element={<Animations />} />
+          <Route path="/" element={<RedirectToDefaultLanguage />} />
+          <Route path="/:lang/home" element={<Home />} />
+          <Route path="/:lang/aboutus" element={<AboutUs />} />
+          <Route path="/:lang/animations" element={<Animations />} />
         </Routes>
         <Footer />
       </Router>

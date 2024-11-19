@@ -8,6 +8,8 @@ import { useTheme } from "next-themes";
 import Offert from "../components/Offert/Offert";
 import { AnimatedBeamDemo } from "../components/AnimatedBeam/BeamTest";
 import { AnimatedBeam } from "../components/AnimatedBeam/AnimatedBeam";
+import { Link } from "react-router-dom";
+import { ShineBorder } from "../components/ShineBorder/ShineBorder";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -26,25 +28,6 @@ const Home: React.FC = () => {
 
   // Toggle between showing all videos or just the first four
   const toggleShowMore = () => setShowMore(!showMore);
-
-  const offersData = [
-    {
-      title: t("offer1H2"),
-      items: [t("offer1Item1"), t("offer1Item2"), t("offer1Item3")],
-    },
-    {
-      title: t("offer2H2"),
-      items: [t("offer2Item1"), t("offer2Item2"), t("offer2Item3")],
-    },
-    {
-      title: t("offer3H2"),
-      items: [t("offer3Item1"), t("offer3Item2"), t("offer3Item3")],
-    },
-    {
-      title: t("offer4H2"),
-      items: [t("offer4Item1"), t("offer4Item2"), t("offer4Item3")],
-    },
-  ];
 
   useEffect(() => {
     if (lang && i18n.language !== lang) {
@@ -106,7 +89,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="homepage">
+    <div id="top-of-page" className="homepage ">
       <div className={`loader ${loading ? "" : "hidden"}`}>
         <h1 className="hero-title">{t("fama")}</h1>
         {/* <h1 className="hero-title film">{t("film")}</h1> */}
@@ -240,10 +223,15 @@ const Home: React.FC = () => {
               </>
             )}
           </div>
-          <div className="text-center mt-4">
-            <button onClick={toggleShowMore} className="show-more-button">
-              {showMore ? "Show Less" : "Show More"}
-            </button>
+          <div className="mt-8">
+            <ShineBorder
+              className="mx-auto relative flex w-max flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
+              color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+            >
+              <button onClick={toggleShowMore} className="w-full h-full">
+                {showMore ? "Show Less" : "Show More"}
+              </button>
+            </ShineBorder>
           </div>
         </div>
 
@@ -275,6 +263,13 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}
+      <div className="my-4">
+        <Link to={`/${currentLanguage}/aboutus`}>
+          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            {t("aboutUs")}
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

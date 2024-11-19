@@ -10,14 +10,16 @@ import { AnimatedBeamDemo } from "../components/AnimatedBeam/BeamTest";
 import { AnimatedBeam } from "../components/AnimatedBeam/AnimatedBeam";
 import { Link } from "react-router-dom";
 import { ShineBorder } from "../components/ShineBorder/ShineBorder";
+import { useLocation } from "react-router-dom";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
   const { lang } = useParams<{ lang: string }>();
   const currentLanguage = i18n.language;
+  const location = useLocation();
 
   const [loading, setLoading] = useState(true);
-  const [scrollable, setScrollable] = useState(true);
+
   const [contentVisible, setContentVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState("");
@@ -46,6 +48,16 @@ const Home: React.FC = () => {
       document.body.classList.remove("no-scroll");
     };
   }, [lang, i18n, loading]);
+
+  useEffect(() => {
+    if (location.hash) {
+      const elementId = location.hash.replace("#", "");
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location.hash]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -6,15 +6,14 @@ import { Dock, DockIcon } from "../Dock/Dock";
 
 const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   const renderLink = (id, label) => (
     <DockIcon>
       <Link
-        to={`#${id}`}
+        to={`/${language}/home#${id}`}
         className="ml-8 block"
-        onClick={(e) => {
-          e.preventDefault();
-          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        onClick={() => {
           toggleMenu();
         }}
       >

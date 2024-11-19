@@ -6,6 +6,8 @@ import Sticky from "../components/Sticky/Sticky";
 import GradualSpacing from "../components/GradualSpacing/GradualSpacing";
 import { useTheme } from "next-themes";
 import Offert from "../components/Offert/Offert";
+import { AnimatedBeamDemo } from "../components/AnimatedBeam/BeamTest";
+import { AnimatedBeam } from "../components/AnimatedBeam/AnimatedBeam";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -41,10 +43,6 @@ const Home: React.FC = () => {
     {
       title: t("offer4H2"),
       items: [t("offer4Item1"), t("offer4Item2"), t("offer4Item3")],
-    },
-    {
-      title: t("offer5H2"),
-      items: [t("offer5Item1")],
     },
   ];
 
@@ -254,7 +252,8 @@ const Home: React.FC = () => {
           className={`button-box-container ${!loading ? "visible" : ""}`}
         >
           <h1 className="insurances-header">{t("offerH1")}</h1>
-          <Offert offersData={offersData} />
+          <AnimatedBeamDemo />
+          {/* <Offert offersData={offersData} /> */}
         </div>
       </div>
 

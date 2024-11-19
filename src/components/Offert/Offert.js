@@ -49,16 +49,7 @@ const Offert = ({ offersData }) => {
         </ul>
       </div>
 
-      <div className="offer-card" ref={(el) => (offersRefs.current[4] = el)}>
-        <h2 className="offer-title">{offersData[4].title}</h2>
-        <ul className="offer-list">
-          {offersData[4].items.map((item, idx) => (
-            <li key={idx} className="offer-item">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+
     </div>
   );
 };

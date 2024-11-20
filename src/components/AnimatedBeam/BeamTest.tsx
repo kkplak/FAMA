@@ -38,7 +38,7 @@ export function AnimatedBeamDemo() {
       ref={containerRef}
     >
       {/* Container for the four Circles */}
-      <div className="flex z-10 flex-row justify-between items-center w-full h-full offer-card-wrapper">
+      <div className=" offer-cards flex z-10 flex-row justify-between items-center w-full h-full offer-card-wrapper">
         <div className="offer-card card-1" ref={div1Ref}>
           <h2 className="offer-title">Planowanie i logistyka</h2>
           <ul className="offer-list">

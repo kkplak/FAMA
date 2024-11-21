@@ -69,9 +69,9 @@ export function AnimatedBeamMiddle() {
               <li>Tworzenie relacji wideo i podsumowań wydarzeń.</li>
             </ul>
           </div>
-          <Circle ref={div4Ref} className="size-16 middle-fama font-bold">
+          <h3 ref={div4Ref} className=" middle-fama font-bold">
             FAMA
-          </Circle>
+          </h3>
           <div className="offer-card card-4" ref={div6Ref}>
             <h2 className="offer-title">Postprodukcja</h2>
             <ul className="offer-list">

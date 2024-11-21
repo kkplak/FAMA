@@ -421,6 +421,9 @@ h1 {
 
 .middle-fama {
   margin: 5rem;
+  color: white;
+  font-size: 2rem;
+  z-index: 20;
 }
 
 .offer-card-wrapper {

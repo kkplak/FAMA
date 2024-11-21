@@ -11,6 +11,7 @@ import { AnimatedBeam } from "../components/AnimatedBeam/AnimatedBeam";
 import { Link } from "react-router-dom";
 import { ShineBorder } from "../components/ShineBorder/ShineBorder";
 import { useLocation } from "react-router-dom";
+import { AnimatedBeamMiddle } from "../components/AnimatedBeam/BeamMiddle";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -140,6 +141,13 @@ const Home: React.FC = () => {
       <div className="magic-text container ">
         <div className="text-wrapper ">
           <p>{t("homeP")}</p>
+          <div className="my-4">
+            <Link to={`/${currentLanguage}/aboutus`}>
+              <button className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600">
+                O nas
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
@@ -252,7 +260,8 @@ const Home: React.FC = () => {
           className={`button-box-container ${!loading ? "visible" : ""}`}
         >
           <h1 className="insurances-header">{t("offerH1")}</h1>
-          <AnimatedBeamDemo />
+          {/* <AnimatedBeamDemo /> */}
+          <AnimatedBeamMiddle />
           {/* <Offert offersData={offersData} /> */}
         </div>
       </div>
@@ -275,13 +284,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}
-      <div className="my-4">
-        <Link to={`/${currentLanguage}/aboutus`}>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            {t("aboutUs")}
-          </button>
-        </Link>
-      </div>
     </div>
   );
 };

@@ -40,7 +40,7 @@ body {
   text-align: center;
   margin: 3rem auto;
   border-radius: 5px;
-  max-width: 90%;
+  max-width: 80%;
   margin-bottom: 10rem;
 }
 
@@ -409,17 +409,21 @@ h1 {
   background-color: red;
 }
 
-.card-4 {
-  margin-top: 10rem;
+.card-5,
+.card-1 {
+  margin-left: 5rem;
 }
 
-.card-2 {
-  margin-top: 20rem;
-  margin-left: 10rem;
+.card-2,
+.card-6 {
+  margin-right: 5rem;
 }
 .card-3 {
-  margin-top: 60rem;
-  margin-left: 10rem;
+  /* margin-top: 60rem; */
+  /* margin-left: 10rem; */
+}
+.middle-fama {
+  margin: 5rem;
 }
 
 .offer-card-wrapper {
@@ -476,6 +480,14 @@ h1 {
 
 .about-us-container {
   height: max-content;
+}
+.container-offers {
+  padding: 4rem 2rem;
+  text-align: center;
+  margin: 3rem auto;
+  border-radius: 5px;
+  max-width: 90%;
+  margin-bottom: 10rem;
 }
 .border {
   border-width: 0;

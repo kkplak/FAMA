@@ -418,10 +418,44 @@ h1 {
 .card-6 {
   margin-right: 5rem;
 }
+.card-7,
+.card-8 {
+  width: 15rem;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.container-offers {
+  position: relative;
+  overflow: visible;
+  padding: 20rem 2rem !important;
+}
+
+.card-7 {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+}
+.card-8 {
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+}
+.offer-video-4 {
+  width: 110%;
+  height: 100%;
+  justify-content: center;
+}
 
 .middle-fama {
-  margin: 5rem;
+  position: absolute;
+  top: 45rem;
+  left: 45%;
+  width: auto;
+  margin: 2rem;
+
   color: white;
+  background-color: black;
   font-size: 2rem;
   z-index: 20;
 }
@@ -480,3 +514,5 @@ h1 {
 .border {
   border-width: 0;
 }
+
+/* In your CSS file */

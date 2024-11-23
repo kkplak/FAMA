@@ -138,6 +138,7 @@ export function AnimatedBeamMiddle() {
         toRef={div6Ref}
         curvature={0}
         endYOffset={0}
+        reverse
       />
       <AnimatedBeam
         containerRef={containerRef}

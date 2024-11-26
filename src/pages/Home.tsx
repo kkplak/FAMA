@@ -113,13 +113,18 @@ const Home: React.FC = () => {
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
         <iframe
-          src="https://www.youtube.com/embed/cZxYLJlxeJg?autoplay=1&mute=1&loop=1&playlist=cZxYLJlxeJg"
+          src="https://www.youtube.com/embed/EfmEQTNOEuk?autoplay=1&mute=1&loop=1&playlist=EfmEQTNOEuk"
           frameBorder="0"
           allow="autoplay; loop; muted"
           allowFullScreen
           title="FAMA Video"
           className="background-video"
         ></iframe>
+        {/* <video autoPlay muted loop className="background-video" playsInline>
+          <source src="/media/fama_demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> */}
+
         <div className="overlay">
           <Sticky offset={35}>
             <h1 className="hero-title">{t("fama")}</h1>
@@ -151,6 +156,15 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
+        <div
+          id="content"
+          className={`button-box-container ${!loading ? "visible" : ""}`}
+        >
+          <h1 className="insurances-header">{t("offerH1")}</h1>
+          {/* <AnimatedBeamDemo /> */}
+          <AnimatedBeamMiddle />
+          {/* <Offert offersData={offersData} /> */}
+        </div>
         <div className="container-home home">
           <div className="text-container">
             <h1>{t("homeH1")}</h1>
@@ -253,16 +267,6 @@ const Home: React.FC = () => {
               </button>
             </ShineBorder>
           </div>
-        </div>
-
-        <div
-          id="content"
-          className={`button-box-container ${!loading ? "visible" : ""}`}
-        >
-          <h1 className="insurances-header">{t("offerH1")}</h1>
-          {/* <AnimatedBeamDemo /> */}
-          <AnimatedBeamMiddle />
-          {/* <Offert offersData={offersData} /> */}
         </div>
       </div>
 

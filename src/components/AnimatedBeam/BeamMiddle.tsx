@@ -26,37 +26,41 @@ export function AnimatedBeamMiddle() {
       <div className="flex size-full flex-col  z-10 items-stretch justify-between gap-16">
         <div className="flex flex-row items-center justify-between">
           <div className="offer-card card-1" ref={div1Ref}>
-            <h2 className="offer-title">Planowanie i logistyka</h2>
+            <h2 className="offer-title">Preprodukcja</h2>
             <ul className="offer-list">
-              <li>Pomoc w organizacji lokalizacji zdjęć.</li>
-              <li>Casting i dobór odpowiednich aktorów.</li>
-              <li>Zarządzanie harmonogramem produkcji.</li>
+              <li>
+                Opracujemy cały projekt, od stworzenia scenariusza, przez
+                organizację planu zdjęciowego, wynajęcie lokacji i aktorów, po
+                pozostałe kwestie niezbędne do rozpoczęcia nagrań.
+              </li>
             </ul>
           </div>
-          <div className="offer-card card-2" ref={div5Ref}>
-            <h2 className="offer-title">Produkcja wideo</h2>
+          <div className="offer-card card-2" ref={div2Ref}>
+            <h2 className="offer-title">Produkcja</h2>
             <ul className="offer-list">
-              <li>Kreacja i realizacja filmów promocyjnych.</li>
-              <li>Produkcja filmów korporacyjnych i szkoleniowych.</li>
-              <li>Tworzenie teledysków muzycznych.</li>
+              <li>
+                Zrealizujemy nagrania na planie zdjęciowym z wykorzystaniem
+                nowoczesnego sprzętu, w tym profesjonalnego oświetlenia oraz
+                dopracowanej scenografii, które ożywią Twoją wizję.
+              </li>
+            </ul>
+          </div>
+          <div className="offer-card card-3" ref={div3Ref}>
+            <h2 className="offer-title">Postprodukcja</h2>
+            <ul className="offer-list">
+              <li>
+                Zmontujemy nagrany materiał, dodamy korekcję kolorów, efekty,
+                grafiki i dźwięk – wszystko, by stworzyć angażujący, film, który
+                wzbudzi emocje u odbiorców.
+              </li>
             </ul>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-between">
-          <div className="offer-card card-3" ref={div2Ref}>
-            <h2 className="offer-title">Relacje z wydarzen</h2>
-            <ul className="offer-list">
-              <li>
-                Zapis wideo konferencji, szkoleń i innych wydarzeń na żywo.
-              </li>
-              <li>Transmisje na żywo oraz streaming wydarzeń online.</li>
-              <li>Tworzenie relacji wideo i podsumowań wydarzeń.</li>
-            </ul>
-          </div>
+        <div className="">
           <h3 ref={div4Ref} className="offer-card middle-fama font-bold">
             FAMA
           </h3>
-          <div className="offer-card card-4" ref={div6Ref}>
+          {/* <div className="offer-card card-4" ref={div6Ref}>
             <h2 className="offer-title">Relacje z wydarzen</h2>
             <ul className="offer-list">
               <li>
@@ -65,8 +69,8 @@ export function AnimatedBeamMiddle() {
               <li>Transmisje na żywo oraz streaming wydarzeń online.</li>
               <li>Tworzenie relacji wideo i podsumowań wydarzeń.</li>
             </ul>
-          </div>
-          <div className="offer-card card-7" ref={div8Ref}>
+          </div> */}
+          {/* <div className="offer-card card-7" ref={div8Ref}>
             <iframe
               className="offer-video-4"
               // width="560"
@@ -77,8 +81,8 @@ export function AnimatedBeamMiddle() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
-          <div className="offer-card card-8" ref={div9Ref}>
+          </div> */}
+          {/* <div className="offer-card card-8" ref={div9Ref}>
             <iframe
               className="offer-video-4"
               // width="560"
@@ -89,9 +93,9 @@ export function AnimatedBeamMiddle() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
         </div>
-        <div className="flex flex-row items-center justify-between">
+        {/* <div className="flex flex-row items-center justify-between">
           <div className="offer-card card-5" ref={div3Ref}>
             <h2 className="offer-title">Postprodukcja</h2>
             <ul className="offer-list">
@@ -110,7 +114,7 @@ export function AnimatedBeamMiddle() {
               <li>Tworzenie relacji wideo i podsumowań wydarzeń.</li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <AnimatedBeam
@@ -124,6 +128,7 @@ export function AnimatedBeamMiddle() {
         containerRef={containerRef}
         fromRef={div2Ref}
         toRef={div4Ref}
+        duration={40}
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -131,16 +136,17 @@ export function AnimatedBeamMiddle() {
         toRef={div4Ref}
         curvature={75}
         endYOffset={10}
+        reverse
       />
-      <AnimatedBeam
+      {/* <AnimatedBeam
         containerRef={containerRef}
         fromRef={div4Ref}
         toRef={div6Ref}
         curvature={0}
         endYOffset={0}
         reverse
-      />
-      <AnimatedBeam
+      /> */}
+      {/* <AnimatedBeam
         containerRef={containerRef}
         fromRef={div4Ref}
         toRef={div8Ref}
@@ -148,29 +154,29 @@ export function AnimatedBeamMiddle() {
         endYOffset={0}
         gradientStartColor="#FF0000"
         reverse
-      />
-      <AnimatedBeam
+      /> */}
+      {/* <AnimatedBeam
         containerRef={containerRef}
         fromRef={div4Ref}
         toRef={div9Ref}
         curvature={0}
         endYOffset={0}
         gradientStartColor="#FF0000"
-      />
-      <AnimatedBeam
+      /> */}
+      {/* <AnimatedBeam
         containerRef={containerRef}
         fromRef={div5Ref}
         toRef={div4Ref}
         reverse
-      />
-      <AnimatedBeam
+      /> */}
+      {/* <AnimatedBeam
         containerRef={containerRef}
         fromRef={div7Ref}
         toRef={div4Ref}
         curvature={75}
         endYOffset={10}
         reverse
-      />
+      /> */}
     </div>
   );
 }

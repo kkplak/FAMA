@@ -75,7 +75,7 @@ export function AnimatedBeamDemo() {
       </div>
 
       {/* Beams connecting the Circles */}
-      <AnimatedBeam
+      {/* <AnimatedBeam
         duration={12}
         containerRef={containerRef}
         fromRef={div1Ref}
@@ -92,7 +92,7 @@ export function AnimatedBeamDemo() {
         containerRef={containerRef}
         fromRef={div3Ref}
         toRef={div4Ref}
-      />
+      /> */}
     </div>
   );
 }

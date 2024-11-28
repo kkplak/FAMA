@@ -6,7 +6,7 @@ import { cn } from "../../../src/lib/utils";
 
 export interface AnimatedBeamProps {
   className?: string;
-  containerRef: RefObject<HTMLElement>; // Container ref
+  containerRef: RefObject<HTMLElement>;
   fromRef: RefObject<HTMLElement>;
   toRef: RefObject<HTMLElement>;
   curvature?: number;
@@ -149,20 +149,16 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
       }
     };
 
-    // Initialize ResizeObserver
     const resizeObserver = new ResizeObserver(() => {
       updatePath();
     });
 
-    // Observe the container element
     if (containerRef.current) {
       resizeObserver.observe(containerRef.current);
     }
 
-    // Call the updatePath initially to set the initial path
     updatePath();
 
-    // Clean up the observer on component unmount
     return () => {
       resizeObserver.disconnect();
     };

@@ -121,22 +121,21 @@ export function AnimatedBeamMiddle() {
         containerRef={containerRef}
         fromRef={div1Ref}
         toRef={div4Ref}
-        curvature={-75}
+        curvature={-50}
         endYOffset={-10}
       />
+
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div2Ref}
         toRef={div4Ref}
-        duration={40}
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div3Ref}
         toRef={div4Ref}
-        curvature={75}
+        curvature={50}
         endYOffset={10}
-        reverse
       />
       {/* <AnimatedBeam
         containerRef={containerRef}

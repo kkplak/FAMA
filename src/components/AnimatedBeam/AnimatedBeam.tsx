@@ -30,7 +30,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   fromRef,
   toRef,
   curvature = 0,
-  reverse = false, // Include the reverse prop
+  reverse = false,
   duration = Math.random() * 3 + 4,
   delay = 0,
   pathColor = "black",
@@ -46,21 +46,10 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   const id = useId();
   const [pathD, setPathD] = useState("");
   const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
-
-  // Calculate the gradient coordinates based on the reverse prop
-  const gradientCoordinates = reverse
-    ? {
-        x1: ["90%", "-10%"],
-        x2: ["100%", "0%"],
-        y1: ["0%", "0%"],
-        y2: ["0%", "0%"],
-      }
-    : {
-        x1: ["10%", "110%"],
-        x2: ["0%", "100%"],
-        y1: ["0%", "0%"],
-        y2: ["0%", "0%"],
-      };
+  const [gradientCoordinates, setGradientCoordinates] = useState({
+    initial: { x1: "0%", x2: "0%", y1: "0%", y2: "0%" },
+    animate: { x1: "0%", x2: "0%", y1: "0%", y2: "0%" },
+  });
 
   useEffect(() => {
     const updatePath = () => {
@@ -87,15 +76,82 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
           (startX + endX) / 2
         },${controlY} ${endX},${endY}`;
         setPathD(d);
+
+        const deltaX = endX - startX;
+        const deltaY = endY - startY;
+        const isHorizontal = Math.abs(deltaX) > Math.abs(deltaY);
+
+        let initialGradientCoordinates;
+        let animateGradientCoordinates;
+
+        if (isHorizontal) {
+          if (reverse) {
+            initialGradientCoordinates = {
+              x1: "100%",
+              x2: "0%",
+              y1: "0%",
+              y2: "0%",
+            };
+            animateGradientCoordinates = {
+              x1: "0%",
+              x2: "-100%",
+              y1: "0%",
+              y2: "0%",
+            };
+          } else {
+            initialGradientCoordinates = {
+              x1: "0%",
+              x2: "100%",
+              y1: "0%",
+              y2: "0%",
+            };
+            animateGradientCoordinates = {
+              x1: "100%",
+              x2: "200%",
+              y1: "0%",
+              y2: "0%",
+            };
+          }
+        } else {
+          if (reverse) {
+            initialGradientCoordinates = {
+              x1: "0%",
+              x2: "0%",
+              y1: "100%",
+              y2: "0%",
+            };
+            animateGradientCoordinates = {
+              x1: "0%",
+              x2: "0%",
+              y1: "0%",
+              y2: "-100%",
+            };
+          } else {
+            initialGradientCoordinates = {
+              x1: "0%",
+              x2: "0%",
+              y1: "0%",
+              y2: "100%",
+            };
+            animateGradientCoordinates = {
+              x1: "0%",
+              x2: "0%",
+              y1: "100%",
+              y2: "200%",
+            };
+          }
+        }
+
+        setGradientCoordinates({
+          initial: initialGradientCoordinates,
+          animate: animateGradientCoordinates,
+        });
       }
     };
 
     // Initialize ResizeObserver
-    const resizeObserver = new ResizeObserver((entries) => {
-      // For all entries, recalculate the path
-      for (let entry of entries) {
-        updatePath();
-      }
+    const resizeObserver = new ResizeObserver(() => {
+      updatePath();
     });
 
     // Observe the container element
@@ -119,6 +175,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
     startYOffset,
     endXOffset,
     endYOffset,
+    reverse,
   ]);
 
   return (
@@ -152,31 +209,33 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
           className="transform-gpu"
           id={id}
           gradientUnits={"userSpaceOnUse"}
-          initial={{
-            x1: "0%",
-            x2: "0%",
-            y1: "0%",
-            y2: "0%",
-          }}
-          animate={{
-            x1: gradientCoordinates.x1,
-            x2: gradientCoordinates.x2,
-            y1: gradientCoordinates.y1,
-            y2: gradientCoordinates.y2,
-          }}
+          initial={gradientCoordinates.initial}
+          animate={gradientCoordinates.animate}
           transition={{
             delay,
             duration,
-            ease: [0.5, 0.9, 0.5, 0.5], // https://easings.net/#easeOutExpo
+            ease: [0.1, 0.1, 0.1, 0.1],
             repeat: Infinity,
             repeatDelay: 0,
           }}
         >
-          <stop stopColor={gradientStartColor} stopOpacity="0"></stop>
-          <stop stopColor={gradientStartColor}></stop>
-          <stop offset="32.5%" stopColor={gradientStopColor}></stop>
           <stop
-            offset="100%"
+            offset="10%"
+            stopColor={gradientStartColor}
+            stopOpacity="0"
+          ></stop>
+          <stop
+            offset="20%"
+            stopColor={gradientStartColor}
+            stopOpacity="1"
+          ></stop>
+          <stop
+            offset="80%"
+            stopColor={gradientStopColor}
+            stopOpacity="1"
+          ></stop>
+          <stop
+            offset="40%"
             stopColor={gradientStopColor}
             stopOpacity="0"
           ></stop>

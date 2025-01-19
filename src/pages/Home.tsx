@@ -199,11 +199,11 @@ const Home: React.FC = () => {
               <Box
        iconPath="/media/produkcja.png"
        title="Produkcja"
-       description="Tutaj Twoje pomysły nabiorą konkretnych kształtów! W tej fazie zajmiemy się opracowaniem koncepcji, oraz angażującego scenariusza. Zaplanujemy harmonogram działań, wybierzemy lokacje i aktorów.  Preprodukcja to kluczowy krok, który wpływa na jakość finalnego materiału, a staranne przygotowanie zwiększa szanse na udaną realizację."/>
+       description="Produkcja to moment, w którym koncepcje i scenariusze stają się rzeczywistością. Kluczowym aspektem tego etapu jest realizacja zdjęć przy użyciu profesjonalnego sprzętu, w tym odpowiedniego oświetlenia oraz starannie zaprojektowanej scenografii. Na sukces Twojego filmu pracuje cały zespół, w skład którego wchodzą operatorzy kamer, dźwiękowcy, oświetleniowcy oraz kierownik planu."/>
               <Box
        iconPath="/media/postprodukcja.png"
        title="Postprodukcja"
-       description="Tutaj Twoje pomysły nabiorą konkretnych kształtów! W tej fazie zajmiemy się opracowaniem koncepcji, oraz angażującego scenariusza. Zaplanujemy harmonogram działań, wybierzemy lokacje i aktorów.  Preprodukcja to kluczowy krok, który wpływa na jakość finalnego materiału, a staranne przygotowanie zwiększa szanse na udaną realizację."/></div>
+       description="Postprodukcja to finalny etap tworzenia filmu reklamowego, w którym materiał zyskuje ostateczny kształt. To tutaj film nabiera charakteru i staje się kompletny dzięki starannemu montażowi najlepszych ujęć, które łączymy w spójną narrację. W tym procesie koncentrujemy się również na korekcji kolorów, dodawaniu efektów wizualnych oraz tworzeniu ścieżki dźwiękowej, która wzmacnia emocje i przekaz, nadając filmowi wyjątkowy klimat."/></div>
         </div>
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
         <div

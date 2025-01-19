@@ -12,6 +12,8 @@ import { Link } from "react-router-dom";
 import { ShineBorder } from "../components/ShineBorder/ShineBorder";
 import { useLocation } from "react-router-dom";
 import { AnimatedBeamMiddle } from "../components/AnimatedBeam/BeamMiddle";
+import Slider from "../components/Slider/Slider";
+import Box from "../components/Box/Box";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -28,6 +30,35 @@ const Home: React.FC = () => {
   const offersRefs = useRef<Array<HTMLDivElement | null>>([]); // Ref for offers
   const [showMore, setShowMore] = useState(false);
   const theme = useTheme();
+  const camera = "/media/camera.png";
+
+  const slides = [
+    {
+      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/running/running_strain__y3znieztqfma_large.jpg",
+      title: "Preprodukcja",
+      description: "Opracujemy cały projekt, od stworzenia scenariusza, przez organizację planu zdjęciowego, wynajęcie lokacji i aktorów, po pozostałe kwestie niezbędne do rozpoczęcia nagrań."
+    },
+    {
+      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/cycling/cycling_pairing__bdtjz1w92ecy_medium.jpg",
+      title: "Nagrania",
+      description: "Zrealizujemy nagrania na planie zdjęciowym z wykorzystaniem  nowoczesnego sprzętu, w tym profesjonalnego oświetlenia oraz dopracowanej scenografii, które ożywią Twoją wizję."
+    },
+    {
+      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/cycling/cycling_zones__5jdurpnxicii_medium.jpg",
+      title: "Montaż",
+      description: "Zmontujemy nagrany materiał  – wszystko, by stworzyć angażujący, film, który wzbudzi emocje u odbiorców."
+    },
+    {
+      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/running/running_strain__y3znieztqfma_large.jpg",
+      title: "Korekcja i efekty",
+      description: "Kolor korekcja Obejmuje poprawę kolorystyki, kontrastu i nasycenia, aby ujęcia były spójne wizualnie. Dodaje się efekty wizualne, animacje i poprawki dźwiękowe, takie jak synchronizacja lektora i miksowanie ścieżki audio."
+    },
+    {
+      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/cycling/cycling_pairing__bdtjz1w92ecy_medium.jpg",
+      title: "Slide 5 Title",
+      description: "This is the description for slide 5."
+    }
+  ];
 
   // Toggle between showing all videos or just the first four
   const toggleShowMore = () => setShowMore(!showMore);
@@ -141,29 +172,49 @@ const Home: React.FC = () => {
             className="font-display text-center text-m font-bold tracking-[-0.1em]  text-black dark:text-white md:text-m md:leading-[5rem]"
             text={t("magicText")}
           />
+            <p className="home-p">{t("homeP")}</p>
         </div>
       </div>
-      <div className="magic-text container ">
-        <div className="text-wrapper ">
-          <p>{t("homeP")}</p>
-          <div className="my-4">
+      {/* <div className="magic-text container "> */}
+        {/* <div className="text-wrapper "> */}
+          {/* <p>{t("homeP")}</p> */}
+          {/* <div className="my-4">
             <Link to={`/${currentLanguage}/aboutus`}>
               <button className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600">
                 O nas
               </button>
             </Link>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
+      {/* </div> */}
+      <div className="container-home home ">
+      <div className="text-container">
+        <h1>Nasza oferta</h1>
       </div>
+      <div className="box-container" >
+       <Box
+       iconPath="/media/reprodukcja.png"
+       title="Preprodukcja"
+       description="Tutaj Twoje pomysły nabiorą konkretnych kształtów! W tej fazie zajmiemy się opracowaniem koncepcji, oraz angażującego scenariusza. Zaplanujemy harmonogram działań, wybierzemy lokacje i aktorów.  Preprodukcja to kluczowy krok, który wpływa na jakość finalnego materiału, a staranne przygotowanie zwiększa szanse na udaną realizację."/>
+              <Box
+       iconPath="/media/produkcja.png"
+       title="Produkcja"
+       description="Tutaj Twoje pomysły nabiorą konkretnych kształtów! W tej fazie zajmiemy się opracowaniem koncepcji, oraz angażującego scenariusza. Zaplanujemy harmonogram działań, wybierzemy lokacje i aktorów.  Preprodukcja to kluczowy krok, który wpływa na jakość finalnego materiału, a staranne przygotowanie zwiększa szanse na udaną realizację."/>
+              <Box
+       iconPath="/media/postprodukcja.png"
+       title="Postprodukcja"
+       description="Tutaj Twoje pomysły nabiorą konkretnych kształtów! W tej fazie zajmiemy się opracowaniem koncepcji, oraz angażującego scenariusza. Zaplanujemy harmonogram działań, wybierzemy lokacje i aktorów.  Preprodukcja to kluczowy krok, który wpływa na jakość finalnego materiału, a staranne przygotowanie zwiększa szanse na udaną realizację."/></div>
+        </div>
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
         <div
           id="content"
           className={`button-box-container ${!loading ? "visible" : ""}`}
         >
-          <h1 className="insurances-header">{t("offerH1")}</h1>
+       
           {/* <AnimatedBeamDemo /> */}
-          <AnimatedBeamMiddle />
+          {/* <AnimatedBeamMiddle /> */}
           {/* <Offert offersData={offersData} /> */}
+        
         </div>
         <div className="container-home home">
           <div className="text-container">
@@ -175,40 +226,48 @@ const Home: React.FC = () => {
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
+                   credits="Director: Adam, Camera: Eve, Scenography: John"
                 videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
                 thumbnailSrc="/media/DerwiszBMW.png"
                 thumbnailAlt="Derwisz BMW"
                 title={t("port1")}
+               
               />
             </div>
             <div className="relative ">
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
+                   credits="Director: Adam, Camera: Eve, Scenography: John"
                 videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
                 thumbnailSrc="/media/ratownik.png"
                 thumbnailAlt="Hero Video"
                 title={t("port2")}
+             
               />
             </div>
             <div className="relative ">
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
+                   credits="Director: Adam, Camera: Eve, Scenography: John"
                 videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
                 thumbnailSrc="/media/one-gog.png"
                 thumbnailAlt="Hero Video"
                 title={t("port3")}
+             
               />
             </div>
             <div className="relative ">
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
+                    credits="Director: Adam, Camera: Eve, Scenography: John"
                 videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
                 thumbnailSrc="/media/creme.png"
                 thumbnailAlt="Hero Video"
                 title={t("port4")}
+               
               />
             </div>
             {showMore && (
@@ -217,10 +276,12 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
+                      credits="Director: Adam, Camera: Eve, Scenography: John"
                     videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
                     thumbnailSrc="/media/drutex.png"
                     thumbnailAlt="Hero Video"
                     title={t("port5")}
+                
                   />{" "}
                 </div>
 
@@ -228,30 +289,36 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
+                       credits="Director: Adam, Camera: Eve, Scenography: John"
                     videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
                     thumbnailSrc="/media/timberfast.png"
                     thumbnailAlt="Hero Video"
                     title={t("port6")}
+                   
                   />
                 </div>
                 <div className="relative ">
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
+                       credits="Director: Adam, Camera: Eve, Scenography: John"
                     videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
                     thumbnailSrc="/media/creme.png"
                     thumbnailAlt="Hero Video"
                     title={t("port4")}
+                   
                   />
                 </div>
                 <div className="relative ">
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
+                         credits="Director: Adam, Camera: Eve, Scenography: John"
                     videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
                     thumbnailSrc="/media/creme.png"
                     thumbnailAlt="Hero Video"
                     title={t("port4")}
+                  
                   />
                 </div>
               </>
@@ -287,7 +354,12 @@ const Home: React.FC = () => {
             ></iframe>
           </div>
         </div>
-      )}
+      )}    <div className="container-home home ">
+      <div className="text-container">
+        <h1>Nasze uslugi</h1>
+      </div>
+        <Slider slides={slides} />
+        </div>
     </div>
   );
 };

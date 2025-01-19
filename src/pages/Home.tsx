@@ -34,29 +34,29 @@ const Home: React.FC = () => {
 
   const slides = [
     {
-      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/running/running_strain__y3znieztqfma_large.jpg",
-      title: "Preprodukcja",
-      description: "Opracujemy cały projekt, od stworzenia scenariusza, przez organizację planu zdjęciowego, wynajęcie lokacji i aktorów, po pozostałe kwestie niezbędne do rozpoczęcia nagrań."
+      image: "https://impactproduction.pl/wp-content/uploads/2024/05/BTS-ING-KOSMOS-WWA-04457-Enhanced-NR-scaled.jpg",
+      title: "Filmy wizerunkowe",
+      // description: "Opracujemy cały projekt, od stworzenia scenariusza, przez organizację planu zdjęciowego, wynajęcie lokacji i aktorów, po pozostałe kwestie niezbędne do rozpoczęcia nagrań."
     },
     {
-      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/cycling/cycling_pairing__bdtjz1w92ecy_medium.jpg",
-      title: "Nagrania",
-      description: "Zrealizujemy nagrania na planie zdjęciowym z wykorzystaniem  nowoczesnego sprzętu, w tym profesjonalnego oświetlenia oraz dopracowanej scenografii, które ożywią Twoją wizję."
+      image: "https://andcut.eu/wp-content/uploads/2020/04/AdobeStock_247275495small.jpg",
+      title: "Filmy produktowe",
+      // description: "Zrealizujemy nagrania na planie zdjęciowym z wykorzystaniem  nowoczesnego sprzętu, w tym profesjonalnego oświetlenia oraz dopracowanej scenografii, które ożywią Twoją wizję."
     },
     {
-      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/cycling/cycling_zones__5jdurpnxicii_medium.jpg",
-      title: "Montaż",
-      description: "Zmontujemy nagrany materiał  – wszystko, by stworzyć angażujący, film, który wzbudzi emocje u odbiorców."
+      image: "https://wspa.pl/wp-content/uploads/2024/03/Check-IT-Lublin-WSPA-2024-12.jpg",
+      title: "Relacje z wydarzeń",
+      // description: "Zmontujemy nagrany materiał  – wszystko, by stworzyć angażujący, film, który wzbudzi emocje u odbiorców."
     },
     {
-      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/running/running_strain__y3znieztqfma_large.jpg",
-      title: "Korekcja i efekty",
-      description: "Kolor korekcja Obejmuje poprawę kolorystyki, kontrastu i nasycenia, aby ujęcia były spójne wizualnie. Dodaje się efekty wizualne, animacje i poprawki dźwiękowe, takie jak synchronizacja lektora i miksowanie ścieżki audio."
+      image: "https://images.pexels.com/photos/1809576/pexels-photo-1809576.jpeg?cs=srgb&dl=pexels-pixelcop-1809576.jpg&fm=jpg",
+      title: "Nagrania z drona",
+      description: " TEST: Kolor korekcja Obejmuje poprawę kolorystyki, kontrastu i nasycenia, aby ujęcia były spójne wizualnie. Dodaje się efekty wizualne, animacje i poprawki dźwiękowe, takie jak synchronizacja lektora i miksowanie ścieżki audio."
     },
     {
-      image: "https://www.apple.com/v/apple-watch-ultra-2/f/images/overview/cycling/cycling_pairing__bdtjz1w92ecy_medium.jpg",
-      title: "Slide 5 Title",
-      description: "This is the description for slide 5."
+      image: "https://thumbs.dreamstime.com/b/iphone-ios-folder-social-media-icons-vector-set-network-screen-colorful-wallpaper-white-background-facebook-instagram-187031401.jpg",
+      title: "Filmy na social media",
+      // description: "This is the description for slide 5."
     }
   ];
 

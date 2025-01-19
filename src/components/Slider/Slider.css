@@ -26,6 +26,12 @@
     padding: 20px;
     box-sizing: border-box;
   }
+  .slide:nth-of-type(5) {
+    filter: grayscale(100%);
+  }
+.slide:nth-of-type(4) {
+    filter: grayscale(100%);
+  }
   
   .slide-image {
     width: 100%;
@@ -33,6 +39,8 @@
     height: auto;
     margin-bottom: 20px;
     border-radius: 20px;
+    object-fit: cover;
+    
     /* filter: grayscale(100%);  */
   }
   

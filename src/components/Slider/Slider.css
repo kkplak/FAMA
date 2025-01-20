@@ -21,21 +21,18 @@
   .slide {
     flex: 0 0 calc(80% / 2);
     max-width: calc(100% / 3);
+ 
     text-align: center;
     overflow: hidden;
     padding: 20px;
     box-sizing: border-box;
   }
-  .slide:nth-of-type(5) {
-    filter: grayscale(100%);
-  }
-.slide:nth-of-type(4) {
-    filter: grayscale(100%);
-  }
+
   
   .slide-image {
     width: 100%;
-    min-height: 35rem;
+    aspect-ratio: 5/7;
+    /* min-height: 35rem; */
     height: auto;
     margin-bottom: 20px;
     border-radius: 20px;

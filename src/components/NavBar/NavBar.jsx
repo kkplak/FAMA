@@ -56,7 +56,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
           <Dock direction="middle" animation={false}>
             {renderLink("home", "home")}
             {renderLink("portfolio", "portfolio")}
-            {renderLink("content", "offer")}
+            {renderLink("offer", "offer")}
             {renderLink("contact", "contact")}
             {renderExternalLink("https://www.instagram.com/fama_film/", "ig")}
             {renderExternalLink(
@@ -75,8 +75,9 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
         <div className="flex items-center space-x-4">
           <Dock direction="middle" animation={true}>
             {renderLink("home", "home")}
+            {renderLink("offer", "offer")}
             {renderLink("portfolio", "portfolio")}
-            {renderLink("content", "offer")}
+          
             {renderLink("contact", "contact")}
           </Dock>
         </div>

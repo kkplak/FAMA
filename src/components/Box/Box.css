@@ -1,47 +1,115 @@
-
 .box-container {
-    display: flex;
-    gap: 5rem;
-    justify-content: center;
- 
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
 }
-.box-offert {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
 
-    border-radius: 20px;
-    padding: 20px 30px;
-    background-color: #000000;
-    width: 600px;
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
- 
-  /* .box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  } */
+.box-offert {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-radius: 20px;
+  padding: 20px 30px;
+  background-color: #000;
   
-  .box-icon {
-    font-size: 10px;
-    height: 40px;
-    width: 40px;
-    margin-bottom: 12px;
- 
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box-icon {
+  font-size: 10px;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 12px;
+}
+
+.box-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.box-description {
+  font-size: 16px;
+  color: #9a9a9a;
+}
+@media (max-width: 1200px) {
+  .box-container {
+    gap: 2rem; 
   }
-  
+
+  .box-offert {
+    width: 100%;
+    margin: 0 auto; 
+  }
   .box-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #ffffff;
-  
+    font-size: 18px;
   }
-  
+
   .box-description {
-    font-size: 16px;
-    color: #9a9a9a;
-   
+    font-size: 14px;
   }
-  
+}
+@media (max-width: 1200px) {
+  .box-container {
+    flex-direction: column;
+    gap: 2rem; 
+  }
+
+  .box-offert {
+    width: 100%;
+    margin: 0 auto; 
+  }
+  .box-title {
+    font-size: 18px;
+  }
+
+  .box-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-container {
+
+    flex-direction: column;
+
+  }
+
+  .box-offert {
+
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto; 
+  }
+
+
+  .box-title {
+    font-size: 18px;
+  }
+
+  .box-description {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .box-container {
+    gap: 1rem;
+  }
+  .box-offert {
+    width: 95%;
+    max-width: 400px;
+  }
+  .box-title {
+    font-size: 16px;
+  }
+  .box-description {
+    font-size: 14px;
+  }
+}

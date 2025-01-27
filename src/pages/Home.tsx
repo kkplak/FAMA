@@ -52,7 +52,7 @@ const Home: React.FC = () => {
     {
       image: "https://images.pexels.com/photos/1809576/pexels-photo-1809576.jpeg?cs=srgb&dl=pexels-pixelcop-1809576.jpg&fm=jpg",
       title: "Nagrania z drona",
-      description: " TEST: Kolor korekcja Obejmuje poprawę kolorystyki, kontrastu i nasycenia, aby ujęcia były spójne wizualnie. Dodaje się efekty wizualne, animacje i poprawki dźwiękowe, takie jak synchronizacja lektora i miksowanie ścieżki audio."
+      // description: " TEST: Kolor korekcja Obejmuje poprawę kolorystyki, kontrastu i nasycenia, aby ujęcia były spójne wizualnie. Dodaje się efekty wizualne, animacje i poprawki dźwiękowe, takie jak synchronizacja lektora i miksowanie ścieżki audio."
     },
     {
       image: "https://thumbs.dreamstime.com/b/iphone-ios-folder-social-media-icons-vector-set-network-screen-colorful-wallpaper-white-background-facebook-instagram-187031401.jpg",
@@ -456,7 +456,7 @@ const Home: React.FC = () => {
             ></iframe>
           </div>
         </div>
-      )}    <div className="container-home home ">
+      )}    <div className="container-home home container-offer">
          <BlurFade delay={0.25} inView>
       <div className="text-container">
         <h1>Nasze uslugi</h1>

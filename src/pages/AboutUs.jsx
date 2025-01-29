@@ -118,7 +118,7 @@ const AboutUs = () => {
               On set during our latest shoot
             </p>
           </div>
-          {/* Add more images as needed */}
+        
         </div>
       </div>
     </div>

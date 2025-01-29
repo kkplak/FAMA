@@ -6,8 +6,6 @@ import {
   useNavigate,
 } from "react-router-dom";
 import Home from "./pages/Home";
-
-import Animations from "./pages/Animations";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
@@ -18,7 +16,6 @@ import Footer from "./components/Footer/Footer";
 import { useLocation } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import "./App.css";
-import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
 const resources = {
@@ -37,7 +34,6 @@ const RedirectToDefaultLanguage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Check if the user is visiting the root path ("/")
     if (location.pathname === "/") {
       const defaultLanguage = "pl";
       navigate(`/${defaultLanguage}/home`);
@@ -57,7 +53,7 @@ const App = () => {
           <Route path="/" element={<RedirectToDefaultLanguage />} />
           <Route path="/:lang/home" element={<Home />} />
           <Route path="/:lang/aboutus" element={<AboutUs />} />
-          <Route path="/:lang/animations" element={<Animations />} />
+
         </Routes>
         <Footer />
       </Router>

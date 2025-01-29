@@ -5,13 +5,7 @@ import HeroVideoDialog from "../components/HeroDialog/HeroVideoDialog";
 import Sticky from "../components/Sticky/Sticky";
 import GradualSpacing from "../components/GradualSpacing/GradualSpacing";
 import { useTheme } from "next-themes";
-import Offert from "../components/Offert/Offert";
-import { AnimatedBeamDemo } from "../components/AnimatedBeam/BeamTest";
-import { AnimatedBeam } from "../components/AnimatedBeam/AnimatedBeam";
-import { Link } from "react-router-dom";
-import { ShineBorder } from "../components/ShineBorder/ShineBorder";
 import { useLocation } from "react-router-dom";
-import { AnimatedBeamMiddle } from "../components/AnimatedBeam/BeamMiddle";
 import Slider from "../components/Slider/Slider";
 import Box from "../components/Box/Box";
 import { BlurFade } from "../components/BlurFade/BlurFade";
@@ -30,40 +24,29 @@ const Home: React.FC = () => {
   const [currentVideo, setCurrentVideo] = useState("");
   const videoRefs = useRef<Array<HTMLDivElement | null>>([]);
   const offersRefs = useRef<Array<HTMLDivElement | null>>([]); // Ref for offers
-  const [showMore, setShowMore] = useState(false);
-  const theme = useTheme();
-  const camera = "/media/camera.png";
 
   const slides = [
     {
-      image: "/media/offert1.png",
-      title: "Filmy wizerunkowe",
-      // description: "Opracujemy cały projekt, od stworzenia scenariusza, przez organizację planu zdjęciowego, wynajęcie lokacji i aktorów, po pozostałe kwestie niezbędne do rozpoczęcia nagrań."
+      image: t("slide1Src"),
+      title: t("slide1H1"),
     },
     {
-      image: "/media/offert2.png",
-      title: "Filmy produktowe",
-      // description: "Zrealizujemy nagrania na planie zdjęciowym z wykorzystaniem  nowoczesnego sprzętu, w tym profesjonalnego oświetlenia oraz dopracowanej scenografii, które ożywią Twoją wizję."
+      image: t("slide2Src"),
+      title: t("slide2H1"),
     },
     {
-      image: "/media/offert3.png",
-      title: "Relacje z wydarzeń",
-      // description: "Zmontujemy nagrany materiał  – wszystko, by stworzyć angażujący, film, który wzbudzi emocje u odbiorców."
+      image: t("slide3Src"),
+      title: t("slide3H1"),
     },
     {
-      image: "/media/offert4.png",
-      title: "Nagrania z drona",
-      // description: " TEST: Kolor korekcja Obejmuje poprawę kolorystyki, kontrastu i nasycenia, aby ujęcia były spójne wizualnie. Dodaje się efekty wizualne, animacje i poprawki dźwiękowe, takie jak synchronizacja lektora i miksowanie ścieżki audio."
+      image: t("slide4Src"),
+      title: t("slide4H1"),
     },
     {
-      image: "/media/offert5.png",
-      title: "Filmy na social media",
-      // description: "This is the description for slide 5."
+      image: t("slide5Src"),
+      title: t("slide5H1"),
     },
   ];
-
-  // Toggle between showing all videos or just the first four
-  const toggleShowMore = () => setShowMore(!showMore);
 
   useEffect(() => {
     if (lang && i18n.language !== lang) {
@@ -119,7 +102,7 @@ const Home: React.FC = () => {
         videoRefs.current.forEach((ref) => ref && observer.unobserve(ref));
       }
       if (offersRefs.current) {
-        offersRefs.current.forEach((ref) => ref && observer.unobserve(ref)); // Unobserve the offers section
+        offersRefs.current.forEach((ref) => ref && observer.unobserve(ref));
       }
     };
   }, [contentVisible]);
@@ -138,7 +121,6 @@ const Home: React.FC = () => {
     <div id="top-of-page" className="homepage ">
       <div className={`loader ${loading ? "" : "hidden"}`}>
         <h1 className="hero-title">{t("fama")}</h1>
-        {/* <h1 className="hero-title film">{t("film")}</h1> */}
       </div>
       <div
         id="home"
@@ -152,20 +134,12 @@ const Home: React.FC = () => {
           title="FAMA Video"
           className="background-video"
         ></iframe>
-        {/* <video autoPlay muted loop className="background-video" playsInline>
-          <source src="/media/fama_demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
 
         <div className="overlay">
           <Sticky offset={35}>
             <h1 className="hero-title">{t("fama")}</h1>
           </Sticky>
-          {/* <h1 className='hero-title film'>{t("film")}</h1> */}
         </div>
-        {/* <div className="subtitles-container">
-          <Subtitles />
-        </div> */}
       </div>
       <div className="magic-text container ">
         <div className="text-wrapper ">
@@ -181,25 +155,25 @@ const Home: React.FC = () => {
       <div id="offer" className="container-home home ">
         <BlurFade delay={0.25} inView>
           <div className="text-container">
-            <h1>Nasza oferta</h1>
+            <h1>{t("homeOffer")}</h1>
           </div>
         </BlurFade>
         <BlurFade delay={0.25} inView>
           <div className="box-container">
             <Box
-              iconPath="/media/reprodukcja.png"
-              title="Preprodukcja"
-              description="Tutaj Twoje pomysły nabiorą konkretnych kształtów! W tej fazie zajmiemy się opracowaniem koncepcji, oraz angażującego scenariusza. Zaplanujemy harmonogram działań, wybierzemy lokacje i aktorów.  Preprodukcja to kluczowy krok, który wpływa na jakość finalnego materiału, a staranne przygotowanie zwiększa szanse na udaną realizację."
+              iconPath={t("homeOffer1Src")}
+              title={t("homeOffer1Title")}
+              description={t("homeOffer1Copy")}
             />
             <Box
-              iconPath="/media/produkcja.png"
-              title="Produkcja"
-              description="Produkcja to moment, w którym koncepcje i scenariusze stają się rzeczywistością. Kluczowym aspektem tego etapu jest realizacja zdjęć przy użyciu profesjonalnego sprzętu, w tym odpowiedniego oświetlenia oraz starannie zaprojektowanej scenografii. Na sukces Twojego filmu pracuje cały zespół, w skład którego wchodzą operatorzy kamer, dźwiękowcy, oświetleniowcy oraz kierownik planu."
+              iconPath={t("homeOffer2Src")}
+              title={t("homeOffer2Title")}
+              description={t("homeOffer2Copy")}
             />
             <Box
-              iconPath="/media/postprodukcja.png"
-              title="Postprodukcja"
-              description="Postprodukcja to finalny etap tworzenia filmu reklamowego, w którym materiał zyskuje ostateczny kształt. To tutaj film nabiera charakteru i staje się kompletny dzięki starannemu montażowi najlepszych ujęć, które łączymy w spójną narrację. W tym procesie koncentrujemy się również na korekcji kolorów, dodawaniu efektów wizualnych oraz tworzeniu ścieżki dźwiękowej, która wzmacnia emocje i przekaz, nadając filmowi wyjątkowy klimat."
+              iconPath={t("homeOffer3Src")}
+              title={t("homeOffer3Title")}
+              description={t("homeOffer3Copy")}
             />
           </div>
         </BlurFade>
@@ -208,15 +182,11 @@ const Home: React.FC = () => {
         <div
           id="content"
           className={`button-box-container ${!loading ? "visible" : ""}`}
-        >
-          {/* <AnimatedBeamDemo /> */}
-          {/* <AnimatedBeamMiddle /> */}
-          {/* <Offert offersData={offersData} /> */}
-        </div>
+        ></div>
         <div className="container-home home">
           <BlurFade delay={0.25} inView>
             <div className="text-container">
-              <h1>{t("homeH1")}</h1>
+              <h1>{t("homePorfolio")}</h1>
             </div>
           </BlurFade>
           {/* <BlurFade delay={0.25} inView> */}
@@ -225,10 +195,10 @@ const Home: React.FC = () => {
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
-                credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                videoSrc="https://www.youtube.com/embed/s3SegEFov6o"
-                thumbnailSrc="/media/port1.png"
-                thumbnailAlt="East Side Drift"
+                credits={t("port1Credits")}
+                videoSrc={t("port1Src")}
+                thumbnailSrc={t("port1Img")}
+                thumbnailAlt={t("port1")}
                 title={t("port1")}
               />
             </div>
@@ -236,10 +206,10 @@ const Home: React.FC = () => {
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
-                credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                videoSrc="https://www.youtube.com/embed/-hn6AhsE9Rw"
-                thumbnailSrc="/media/port2.png"
-                thumbnailAlt="Octane1 - Film produktowy"
+                credits={t("port2Credits")}
+                videoSrc={t("port2Src")}
+                thumbnailSrc={t("port2Img")}
+                thumbnailAlt={t("port2")}
                 title={t("port2")}
               />
             </div>
@@ -247,10 +217,10 @@ const Home: React.FC = () => {
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
-                credits="Produkcja: FAMA Film, &nbsp;Zdjęcia: Krzysztof Sosnowski, &nbsp;Operator drona: Przemek Zdybel,&nbsp; Montaż: Krzysztof Sosnowski"
-                videoSrc="https://www.youtube.com/embed/P6YyrBsYmng"
-                thumbnailSrc="/media/port3.png"
-                thumbnailAlt="Relacja z zawodów podczas Truck Show Grajewo"
+                credits={t("port3Credits")}
+                videoSrc={t("port3Src")}
+                thumbnailSrc={t("port3Img")}
+                thumbnailAlt={t("port3")}
                 title={t("port3")}
               />
             </div>
@@ -258,158 +228,156 @@ const Home: React.FC = () => {
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
-                credits="Produkcja: Mental Fly &nbsp;Zdjęcia: Krzysztof Sosnowski, Michał Środek &nbsp;Montaż: Krzysztof Sosnowski"
-                videoSrc="https://www.youtube.com/embed/Hx5VfUc8O4Q"
-                thumbnailSrc="/media/port4.png"
-                thumbnailAlt="Ismena Warszawska - relacja z pokazu mody"
+                credits={t("port4Credits")}
+                videoSrc={t("port4Src")}
+                thumbnailSrc={t("port4Img")}
+                thumbnailAlt={t("port4")}
                 title={t("port4")}
               />
             </div>
-            </div>
-            <ToggleDescription
-              title="See more"
-              description={
-                <div className="video-portfolio">
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: FAMA Film&nbsp; Zdjęcia: Krzysztof Sosnowski&nbsp; Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/5_feKjmTpSE"
-                      thumbnailSrc="/media/port5.png"
-                      thumbnailAlt="BMW 1600 - projekt własny"
-                      title={t("port5")}
-                    />{" "}
-                  </div>
-
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: Dzida Film Studio&nbsp; Zdjęcia: Łukasz Baliński, Bartłomiej Wieloszewski&nbsp; Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/jclPM5ZWPe8"
-                      thumbnailSrc="/media/port6.png"
-                      thumbnailAlt="Dr Irena Eris - relacja z wydarzenia"
-                      title={t("port6")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: Splash Media &nbsp;Zdjęcia: Krzysztof Sosnowski, Michał Środek &nbsp;Montaż: Michał Środek"
-                      videoSrc="https://www.youtube.com/embed/sMt4uqkbVRY"
-                      thumbnailSrc="/media/port7.png"
-                      thumbnailAlt="MONDRY - film wizerunkowy"
-                      title={t("port7")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: Splash Media&nbsp; Zdjęcia: Michał Środek, Michał Grzyb &nbsp;Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/NVCT-CbqyfM"
-                      thumbnailSrc="/media/port8.png"
-                      thumbnailAlt="Meble Wójcik - film wizerunkowy"
-                      title={t("port8")}
-                    />
-                  </div>
-
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/qmKGNlvvNxM"
-                      thumbnailSrc="/media/port9.png"
-                      thumbnailAlt="Timberfast - film wizerunkowy"
-                      title={t("port9")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
-                      thumbnailSrc="/media/port10.png"
-                      thumbnailAlt="Backstage z sesji zdjęciowej"
-                      title={t("port10")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski&nbsp;Operator drona: Przemek Zdybel &nbsp;Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/_dBHXOMdkas"
-                      thumbnailSrc="/media/port11.png"
-                      thumbnailAlt="Agroperfekt - film produktowy"
-                      title={t("port11")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: Polarise &nbsp;Zdjęcia: Kamil Dziubczyński, Krzysztof Sosnowski  &nbsp;Operator drona: Przemek Zdybel &nbsp; Montaż: Kamil Dziubczyński"
-                      videoSrc="https://www.youtube.com/embed/-1VtDOV7BcQ"
-                      thumbnailSrc="/media/port12.png"
-                      thumbnailAlt="We Roam Poland - film dokumentalny"
-                      title={t("port12")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/c4Aeq7EHmBw"
-                      thumbnailSrc="/media/port13.png"
-                      thumbnailAlt="Timberfast - film wizerunkowy"
-                      title={t("port13")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: Splash Media &nbsp;Zdjęcia: Michał Środek, Michał Grzyb &nbsp;Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/pzJerK9wR5k"
-                      thumbnailSrc="/media/port14.png"
-                      thumbnailAlt="Kubala - film produktowy"
-                      title={t("port14")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Operator drona: Przemek Zdybel &nbsp;Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/Pt9FXClwn_k"
-                      thumbnailSrc="/media/port15.png"
-                      thumbnailAlt="Trzy Podkowy - zapowiedź filmu"
-                      title={t("port15")}
-                    />
-                  </div>
-                  <div className="relative ">
-                    <HeroVideoDialog
-                      className="hidden dark:block "
-                      animationStyle="from-center"
-                      credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                      videoSrc="https://www.youtube.com/embed/SHPrruFKpug"
-                      thumbnailSrc="/media/port16.png"
-                      thumbnailAlt="Creme - film produktowy"
-                      title={t("port16")}
-                    />
-                  </div>
+          </div>
+          <ToggleDescription
+            title="See more"
+            description={
+              <div className="video-portfolio">
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits={t("port5Credits")}
+                    videoSrc={t("port5Src")}
+                    thumbnailSrc={t("port5Img")}
+                    thumbnailAlt={t("port5")}
+                    title={t("port5")}
+                  />{" "}
                 </div>
-              }
-            />
-       
 
-     
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: Dzida Film Studio&nbsp; Zdjęcia: Łukasz Baliński, Bartłomiej Wieloszewski&nbsp; Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/jclPM5ZWPe8"
+                    thumbnailSrc="/media/port6.png"
+                    thumbnailAlt={t("port6")}
+                    title={t("port6")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: Splash Media &nbsp;Zdjęcia: Krzysztof Sosnowski, Michał Środek &nbsp;Montaż: Michał Środek"
+                    videoSrc="https://www.youtube.com/embed/sMt4uqkbVRY"
+                    thumbnailSrc="/media/port7.png"
+                    thumbnailAlt={t("port7")}
+                    title={t("port7")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: Splash Media&nbsp; Zdjęcia: Michał Środek, Michał Grzyb &nbsp;Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/NVCT-CbqyfM"
+                    thumbnailSrc="/media/port8.png"
+                    thumbnailAlt={t("port8")}
+                    title={t("port8")}
+                  />
+                </div>
+
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/qmKGNlvvNxM"
+                    thumbnailSrc="/media/port9.png"
+                    thumbnailAlt={t("port9")}
+                    title={t("port9")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
+                    thumbnailSrc="/media/port10.png"
+                    thumbnailAlt={t("port10")}
+                    title={t("port10")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski&nbsp;Operator drona: Przemek Zdybel &nbsp;Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/_dBHXOMdkas"
+                    thumbnailSrc="/media/port11.png"
+                    thumbnailAlt={t("port11")}
+                    title={t("port11")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: Polarise &nbsp;Zdjęcia: Kamil Dziubczyński, Krzysztof Sosnowski  &nbsp;Operator drona: Przemek Zdybel &nbsp; Montaż: Kamil Dziubczyński"
+                    videoSrc="https://www.youtube.com/embed/-1VtDOV7BcQ"
+                    thumbnailSrc="/media/port12.png"
+                    thumbnailAlt={t("port12")}
+                    title={t("port12")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/c4Aeq7EHmBw"
+                    thumbnailSrc="/media/port13.png"
+                    thumbnailAlt={t("port13")}
+                    title={t("port13")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: Splash Media &nbsp;Zdjęcia: Michał Środek, Michał Grzyb &nbsp;Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/pzJerK9wR5k"
+                    thumbnailSrc="/media/port14.png"
+                    thumbnailAlt={t("port14")}
+                    title={t("port14")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Operator drona: Przemek Zdybel &nbsp;Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/Pt9FXClwn_k"
+                    thumbnailSrc="/media/port15.png"
+                    thumbnailAlt={t("port15")}
+                    title={t("port15")}
+                  />
+                </div>
+                <div className="relative ">
+                  <HeroVideoDialog
+                    className="hidden dark:block "
+                    animationStyle="from-center"
+                    credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
+                    videoSrc="https://www.youtube.com/embed/SHPrruFKpug"
+                    thumbnailSrc="/media/port16.png"
+                    thumbnailAlt={t("port16")}
+                    title={t("port16")}
+                  />
+                </div>
+              </div>
+            }
+          />
+
           {/* </BlurFade> */}
         </div>
       </div>
@@ -434,7 +402,7 @@ const Home: React.FC = () => {
       <div className="container-home home container-offer">
         <BlurFade delay={0.25} inView>
           <div className="text-container">
-            <h1>Nasze uslugi</h1>
+            <h1>{t("homeSliderH1")}</h1>
           </div>
         </BlurFade>
         <BlurFade delay={0.25} inView>

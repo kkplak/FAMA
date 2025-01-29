@@ -71,7 +71,7 @@ body {
   text-align: center;
   margin-bottom: 5rem;
 }
-.magic-text {
+.magic-text .text-wrapper h1 {
   color: white !important;
 }
 .image-container {

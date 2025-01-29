@@ -71,7 +71,9 @@ body {
   text-align: center;
   margin-bottom: 5rem;
 }
-
+.magic-text {
+  color: white !important;
+}
 .image-container {
   z-index: 11;
   display: flex;

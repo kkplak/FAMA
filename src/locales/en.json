@@ -4,57 +4,124 @@
   "famaFilm": "FAMA FILM",
 
   "home": "Home",
-  "portfolio": "Realizacje",
-  "offer": "Oferta",
-  "contact": "Kontakt",
+  "portfolio": "Portfolio",
+  "offer": "Offer",
+  "contact": "Contact",
   "ig": "Instagram",
   "vimeo": "Vimeo",
-  "magicText": "Chwytamy historie, kadr po kadrze.",
-  "homeH1": "Sprawdź nasze realizacje",
-  "homeP": "Specjalizujemy się w kompleksowej produkcji materiałów wideo, reklam oraz relacji z wydarzeń. Łączymy kreatywność z doświadczeniem, aby dostarczać wyjątkowe materiały wizualne, które angażują i inspirują. Przekształcamy wizje w rzeczywistość, dążąc do pełnej satysfakcji naszych klientów. Nasze projekty wyróżniają się nie tylko wysoką jakością, ale także unikalnym podejściem, które sprawia, że każdy film opowiada swoją własną historię.",
 
-  "portH1": "Sprawdź nasze realizacje",
+  "magicText": "We capture stories, frame by frame",
+  "homeP": "We specialize in comprehensive production of video materials, advertisements, and event coverage. We combine creativity with experience to deliver exceptional visual content that engages and inspires. We transform visions into reality, striving for complete customer satisfaction. Our projects stand out for their high quality and personalized approach. As a result, each film is a unique story that effectively captures attention and strengthens brand image, helping to achieve desired goals.",
+
+  "homeOffer": "We will guide you through the entire film production process.",
+  "homeOffer1Src": "/media/reprodukcja.png",
+  "homeOffer1Title": "Preproduction",
+  "homeOffer1Copy": "In this phase, your ideas will take on tangible shapes! We will focus on developing the concept and an engaging script. We will plan the action schedule, select locations, and choose actors. Pre-production is a crucial step that significantly impacts the quality of the final material. Careful preparation increases the chances of a successful project execution.",
+
+  "homeOffer2Src": "/media/produkcja.png",
+  "homeOffer2Title": "Production",
+  "homeOffer2Copy": "Production is the moment when concepts and scripts become reality. A key aspect of this stage is the filming process. We are using professional equipment, including appropriate lighting and carefully designed sets. The success of your film is supported by a team of specialists selected according to the production's requirements, including camera operators, sound engineers, lighting technicians, the assistant director, and makeup artists.",
+
+  "homeOffer3Src": "/media/postprodukcja.png",
+  "homeOffer3Title": "Postproduction",
+  "homeOffer3Copy": "Postproduction is the final stage of film creation, where the material takes its final shape. This is also the phase where the film gains character and becomes complete. We achieve this through careful editing of the best shots. These shots are woven into a cohesive narrative. In this process, we also focus on color correction, adding visual effects, and creating a soundtrack that enhances emotions and the message, giving the film a unique atmosphere.",
+
+  "homePorfolio": "Check our work",
+
   "port1": "East Side Drift",
+  "port1Src": "https://www.youtube.com/embed/s3SegEFov6o",
+  "port1Img": "/media/port1.png",
+  "port1Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
+
   "port2": "Octane1 - Film produktowy",
+  "port2Src": "https://www.youtube.com/embed/-hn6AhsE9Rw",
+  "port2Img": "/media/port2.png",
+  "port2Credits": "Produkcja: Polarise Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
+
   "port3": "Relacja z zawodów podczas Truck Show Grajewo",
+  "port3Src": "https://www.youtube.com/embed/P6YyrBsYmng",
+  "port3Img": "/media/port3.png",
+  "port3Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Operator drona: Przemek Zdybel Montaż: Krzysztof Sosnowski",
+
   "port4": "Ismena Warszawska - relacja z pokazu mody",
+  "port4Src": "https://www.youtube.com/embed/Hx5VfUc8O4Q",
+  "port4Img": "/media/port4.png",
+  "port4Credits": "Produkcja: Mental Fly Zdjęcia: Krzysztof Sosnowski, Michał Środek Montaż: Krzysztof Sosnowski",
+
   "port5": "BMW 1600 - projekt własny",
+  "port5Src": "https://www.youtube.com/embed/5_feKjmTpSE",
+  "port5Img": "/media/port5.png",
+  "port5Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
+
   "port6": "Dr Irena Eris - relacja z wydarzenia",
+  "port6Src": "https://www.youtube.com/embed/jclPM5ZWPe8",
+  "port6Img": "/media/port6.png",
+  "port6Credits": "Produkcja: Dzida Film Studio Zdjęcia: Łukasz Baliński, Bartłomiej Wieloszewski Montaż: Krzysztof Sosnowski",
+
   "port7": "MONDRY - film wizerunkowy",
+  "port7Src": "https://www.youtube.com/embed/sMt4uqkbVRY",
+  "port7Img": "/media/port7.png",
+  "port7Credits": "Produkcja: Splash Media Zdjęcia: Krzysztof Sosnowski, Michał Środek Montaż: Michał Środek",
+
   "port8": "Meble Wójcik - film wizerunkowy",
+  "port8Src": "https://www.youtube.com/embed/NVCT-CbqyfM",
+  "port8Img": "/media/port8.png",
+  "port8Credits": "Produkcja: Splash Media Zdjęcia: Michał Środek, Michał Grzyb Montaż: Krzysztof Sosnowski",
+
   "port9": "Timberfast - film wizerunkowy",
+  "port9Src": "https://www.youtube.com/embed/qmKGNlvvNxM",
+  "port9Img": "/media/port9.png",
+  "port9Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
+
   "port10": "Backstage z sesji zdjęciowej",
+  "port10Src": "https://www.youtube.com/embed/3xwy-0rYLZQ",
+  "port10Img": "/media/port10.png",
+  "port10Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
+
   "port11": "Agroperfekt - film produktowy",
+  "port11Src": "https://www.youtube.com/embed/_dBHXOMdkas",
+  "port11Img": "/media/port11.png",
+  "port11Credits": "Produkcja: Polarise Zdjęcia: Krzysztof Sosnowski Operator drona: Przemek Zdybel Montaż: Krzysztof Sosnowski",
+
   "port12": "We Roam Poland - film dokumentalny",
+  "port12Src": "https://www.youtube.com/embed/-1VtDOV7BcQ",
+  "port12Img": "/media/port12.png",
+  "port12Credits": "Produkcja: Polarise Zdjęcia: Kamil Dziubczyński, Krzysztof Sosnowski Operator drona: Przemek Zdybel Montaż: Kamil Dziubczyński",
+
   "port13": "Timberfast - film wizerunkowy",
+  "port13Src": "https://www.youtube.com/embed/c4Aeq7EHmBw",
+  "port13Img": "/media/port13.png",
+  "port13Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
+
   "port14": "Kubala - film produktowy",
+  "port14Src": "https://www.youtube.com/embed/pzJerK9wR5k",
+  "port14Img": "/media/port14.png",
+  "port14Credits": "Produkcja: Splash Media Zdjęcia: Michał Środek, Michał Grzyb Montaż: Krzysztof Sosnowski",
+
   "port15": "Trzy Podkowy - zapowiedź filmu",
+  "port15Src": "https://www.youtube.com/embed/Pt9FXClwn_k",
+  "port15Img": "/media/port15.png",
+  "port15Credits": "Produkcja: Polarise Zdjęcia: Krzysztof Sosnowski Operator drona: Przemek Zdybel Montaż: Krzysztof Sosnowski",
+
   "port16": "Creme - film produktowy",
+  "port16Src": "https://www.youtube.com/embed/SHPrruFKpug",
+  "port16Img": "/media/port16.png",
+  "port16Credits": "Produkcja: Polarise Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
 
+  "homeSliderH1": "We create recordings to suit your needs",
+  "slide1Src": "/media/offert1.png",
+  "slide1H1": "Product videos",
+  "slide2Src": "/media/offert2.png",
+  "slide2H1": "Branding videos",
+  "slide3Src": "/media/offert3.png",
+  "slide3H1": "Event coverage",
+  "slide4Src": "/media/offert4.png",
+  "slide4H1": "Drone shoots",
+  "slide5Src": "/media/offert5.png",
+  "slide5H1": "Social Media videos",
 
-  "offerH1": "Wszystko, czego potrzebujesz w jednym miejscu",
-  "offer1H2": "Planowanie i logistyka",
-  "offer1Item1": "Pomoc w organizacji lokalizacji zdjęć.",
-  "offer1Item2": "Casting i dobór odpowiednich aktorów.",
-  "offer1Item3": "Zarządzanie harmonogramem produkcji.",
-
-  "offer2H2": "Produkcja wideo",
-  "offer2Item1": "Kreacja i realizacja filmów promocyjnych.",
-  "offer2Item2": "Produkcja filmów korporacyjnych i szkoleniowych.",
-  "offer2Item3": "Tworzenie teledysków muzycznych.",
-
-  "offer3H2": "Relacje z wydarzeń",
-  "offer3Item1": "Zapis wideo konferencji, szkoleń i innych wydarzeń na żywo.",
-  "offer3Item2": "Transmisje na żywo oraz streaming wydarzeń online.",
-  "offer3Item3": "Tworzenie relacji wideo i podsumowań wydarzeń.",
-
-  "offer4H2": "Postprodukcja",
-  "offer4Item1": "Montaż wideo i dźwięku.",
-  "offer4Item2": "Efekty specjalne i animacje.",
-  "offer4Item3": "Korekcja kolorów i mastering.",
-
-  "contactH2": "Do każdej oferty podchodzimy w sposób indywidualny.",
-  "contactH3": "Porozmawiajmy.",
+  "contactH2": "We approach each offer in an individual manner.",
+  "contactH3": "Let's talk.",
 
   "famaPhone": "+48 667 540 700",
   "famaMail": "FAMA@FAMAFILM.COM"

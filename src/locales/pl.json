@@ -54,26 +54,59 @@
   "port5Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
 
   "port6": "Dr Irena Eris - relacja z wydarzenia",
+  "port6Src": "https://www.youtube.com/embed/jclPM5ZWPe8",
+  "port6Img": "/media/port6.png",
+  "port6Credits": "Produkcja: Dzida Film Studio Zdjęcia: Łukasz Baliński, Bartłomiej Wieloszewski Montaż: Krzysztof Sosnowski",
 
   "port7": "MONDRY - film wizerunkowy",
+  "port7Src": "https://www.youtube.com/embed/sMt4uqkbVRY",
+  "port7Img": "/media/port7.png",
+  "port7Credits": "Produkcja: Splash Media Zdjęcia: Krzysztof Sosnowski, Michał Środek Montaż: Michał Środek",
 
   "port8": "Meble Wójcik - film wizerunkowy",
+  "port8Src": "https://www.youtube.com/embed/NVCT-CbqyfM",
+  "port8Img": "/media/port8.png",
+  "port8Credits": "Produkcja: Splash Media Zdjęcia: Michał Środek, Michał Grzyb Montaż: Krzysztof Sosnowski",
 
   "port9": "Timberfast - film wizerunkowy",
+  "port9Src": "https://www.youtube.com/embed/qmKGNlvvNxM",
+  "port9Img": "/media/port9.png",
+  "port9Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
 
   "port10": "Backstage z sesji zdjęciowej",
+  "port10Src": "https://www.youtube.com/embed/3xwy-0rYLZQ",
+  "port10Img": "/media/port10.png",
+  "port10Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
 
   "port11": "Agroperfekt - film produktowy",
+  "port11Src": "https://www.youtube.com/embed/_dBHXOMdkas",
+  "port11Img": "/media/port11.png",
+  "port11Credits": "Produkcja: Polarise Zdjęcia: Krzysztof Sosnowski Operator drona: Przemek Zdybel Montaż: Krzysztof Sosnowski",
 
   "port12": "We Roam Poland - film dokumentalny",
+  "port12Src": "https://www.youtube.com/embed/-1VtDOV7BcQ",
+  "port12Img": "/media/port12.png",
+  "port12Credits": "Produkcja: Polarise Zdjęcia: Kamil Dziubczyński, Krzysztof Sosnowski Operator drona: Przemek Zdybel Montaż: Kamil Dziubczyński",
 
   "port13": "Timberfast - film wizerunkowy",
+  "port13Src": "https://www.youtube.com/embed/c4Aeq7EHmBw",
+  "port13Img": "/media/port13.png",
+  "port13Credits": "Produkcja: FAMA Film Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
 
   "port14": "Kubala - film produktowy",
+  "port14Src": "https://www.youtube.com/embed/pzJerK9wR5k",
+  "port14Img": "/media/port14.png",
+  "port14Credits": "Produkcja: Splash Media Zdjęcia: Michał Środek, Michał Grzyb Montaż: Krzysztof Sosnowski",
 
   "port15": "Trzy Podkowy - zapowiedź filmu",
+  "port15Src": "https://www.youtube.com/embed/Pt9FXClwn_k",
+  "port15Img": "/media/port15.png",
+  "port15Credits": "Produkcja: Polarise Zdjęcia: Krzysztof Sosnowski Operator drona: Przemek Zdybel Montaż: Krzysztof Sosnowski",
 
   "port16": "Creme - film produktowy",
+  "port16Src": "https://www.youtube.com/embed/SHPrruFKpug",
+  "port16Img": "/media/port16.png",
+  "port16Credits": "Produkcja: Polarise Zdjęcia: Krzysztof Sosnowski Montaż: Krzysztof Sosnowski",
 
   "homeSliderH1": "Tworzymy nagrania dostosowane do Twoich potrzeb",
   "slide1Src": "/media/offert1.png",

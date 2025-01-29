@@ -47,7 +47,7 @@ const App = () => {
   return (
     <I18nextProvider i18n={i18next}>
       <Router>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <NavBar />
         <Routes>
           <Route path="/" element={<RedirectToDefaultLanguage />} />

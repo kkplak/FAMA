@@ -256,9 +256,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: Dzida Film Studio&nbsp; Zdjęcia: Łukasz Baliński, Bartłomiej Wieloszewski&nbsp; Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/jclPM5ZWPe8"
-                    thumbnailSrc="/media/port6.png"
+                    credits={t("port6Credits")}
+                    videoSrc={t("port6Src")}
+                    thumbnailSrc={t("port6Img")}
                     thumbnailAlt={t("port6")}
                     title={t("port6")}
                   />
@@ -267,9 +267,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: Splash Media &nbsp;Zdjęcia: Krzysztof Sosnowski, Michał Środek &nbsp;Montaż: Michał Środek"
-                    videoSrc="https://www.youtube.com/embed/sMt4uqkbVRY"
-                    thumbnailSrc="/media/port7.png"
+                    credits={t("port7Credits")}
+                    videoSrc={t("port7Src")}
+                    thumbnailSrc={t("port7Img")}
                     thumbnailAlt={t("port7")}
                     title={t("port7")}
                   />
@@ -278,9 +278,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: Splash Media&nbsp; Zdjęcia: Michał Środek, Michał Grzyb &nbsp;Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/NVCT-CbqyfM"
-                    thumbnailSrc="/media/port8.png"
+                    credits={t("port8Credits")}
+                    videoSrc={t("port8Src")}
+                    thumbnailSrc={t("port8Img")}
                     thumbnailAlt={t("port8")}
                     title={t("port8")}
                   />
@@ -290,9 +290,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/qmKGNlvvNxM"
-                    thumbnailSrc="/media/port9.png"
+                    credits={t("port9Credits")}
+                    videoSrc={t("port9Src")}
+                    thumbnailSrc={t("port9Img")}
                     thumbnailAlt={t("port9")}
                     title={t("port9")}
                   />
@@ -301,9 +301,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
-                    thumbnailSrc="/media/port10.png"
+                    credits={t("port10Credits")}
+                    videoSrc={t("port10Src")}
+                    thumbnailSrc={t("port10Img")}
                     thumbnailAlt={t("port10")}
                     title={t("port10")}
                   />
@@ -312,9 +312,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski&nbsp;Operator drona: Przemek Zdybel &nbsp;Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/_dBHXOMdkas"
-                    thumbnailSrc="/media/port11.png"
+                    credits={t("port11Credits")}
+                    videoSrc={t("port11Src")}
+                    thumbnailSrc={t("port11Img")}
                     thumbnailAlt={t("port11")}
                     title={t("port11")}
                   />
@@ -323,9 +323,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: Polarise &nbsp;Zdjęcia: Kamil Dziubczyński, Krzysztof Sosnowski  &nbsp;Operator drona: Przemek Zdybel &nbsp; Montaż: Kamil Dziubczyński"
-                    videoSrc="https://www.youtube.com/embed/-1VtDOV7BcQ"
-                    thumbnailSrc="/media/port12.png"
+                    credits={t("port12Credits")}
+                    videoSrc={t("port12Src")}
+                    thumbnailSrc={t("port12Img")}
                     thumbnailAlt={t("port12")}
                     title={t("port12")}
                   />
@@ -334,9 +334,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/c4Aeq7EHmBw"
-                    thumbnailSrc="/media/port13.png"
+                    credits={t("port13Credits")}
+                    videoSrc={t("port13Src")}
+                    thumbnailSrc={t("port13Img")}
                     thumbnailAlt={t("port13")}
                     title={t("port13")}
                   />
@@ -345,9 +345,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: Splash Media &nbsp;Zdjęcia: Michał Środek, Michał Grzyb &nbsp;Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/pzJerK9wR5k"
-                    thumbnailSrc="/media/port14.png"
+                    credits={t("port14Credits")}
+                    videoSrc={t("port14Src")}
+                    thumbnailSrc={t("port14Img")}
                     thumbnailAlt={t("port14")}
                     title={t("port14")}
                   />
@@ -356,9 +356,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Operator drona: Przemek Zdybel &nbsp;Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/Pt9FXClwn_k"
-                    thumbnailSrc="/media/port15.png"
+                    credits={t("port15Credits")}
+                    videoSrc={t("port15Src")}
+                    thumbnailSrc={t("port15Img")}
                     thumbnailAlt={t("port15")}
                     title={t("port15")}
                   />
@@ -367,9 +367,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                    credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
-                    videoSrc="https://www.youtube.com/embed/SHPrruFKpug"
-                    thumbnailSrc="/media/port16.png"
+                    credits={t("port16Credits")}
+                    videoSrc={t("port16Src")}
+                    thumbnailSrc={t("port16Img")}
                     thumbnailAlt={t("port16")}
                     title={t("port16")}
                   />

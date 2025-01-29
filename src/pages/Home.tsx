@@ -181,7 +181,7 @@ const Home: React.FC = () => {
       <div id="offer" className="container-home home ">
         <BlurFade delay={0.25} inView>
           <div className="text-container">
-            <h1>Nasza oferta TEST</h1>
+            <h1>Nasza oferta</h1>
           </div>
         </BlurFade>
         <BlurFade delay={0.25} inView>

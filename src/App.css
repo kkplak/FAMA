@@ -202,7 +202,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  width: 100%;
+  width: 85%;
   margin: 4rem auto;
 }
 .hero-container img {
@@ -291,6 +291,16 @@ h1 {
 .close-button:hover {
   color: red;
 }
+
+.toggle-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+
 
 @media only screen and (max-width: 980px) {
   .magic-text h1 {

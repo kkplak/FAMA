@@ -35,27 +35,27 @@ const Home: React.FC = () => {
 
   const slides = [
     {
-      image: "https://impactproduction.pl/wp-content/uploads/2024/05/BTS-ING-KOSMOS-WWA-04457-Enhanced-NR-scaled.jpg",
+      image: "/media/offert1.png",
       title: "Filmy wizerunkowe",
       // description: "Opracujemy cały projekt, od stworzenia scenariusza, przez organizację planu zdjęciowego, wynajęcie lokacji i aktorów, po pozostałe kwestie niezbędne do rozpoczęcia nagrań."
     },
     {
-      image: "https://andcut.eu/wp-content/uploads/2020/04/AdobeStock_247275495small.jpg",
+      image: "/media/offert2.png",
       title: "Filmy produktowe",
       // description: "Zrealizujemy nagrania na planie zdjęciowym z wykorzystaniem  nowoczesnego sprzętu, w tym profesjonalnego oświetlenia oraz dopracowanej scenografii, które ożywią Twoją wizję."
     },
     {
-      image: "https://wspa.pl/wp-content/uploads/2024/03/Check-IT-Lublin-WSPA-2024-12.jpg",
+      image: "/media/offert3.png",
       title: "Relacje z wydarzeń",
       // description: "Zmontujemy nagrany materiał  – wszystko, by stworzyć angażujący, film, który wzbudzi emocje u odbiorców."
     },
     {
-      image: "https://images.pexels.com/photos/1809576/pexels-photo-1809576.jpeg?cs=srgb&dl=pexels-pixelcop-1809576.jpg&fm=jpg",
+      image: "/media/offert4.png",
       title: "Nagrania z drona",
       // description: " TEST: Kolor korekcja Obejmuje poprawę kolorystyki, kontrastu i nasycenia, aby ujęcia były spójne wizualnie. Dodaje się efekty wizualne, animacje i poprawki dźwiękowe, takie jak synchronizacja lektora i miksowanie ścieżki audio."
     },
     {
-      image: "https://thumbs.dreamstime.com/b/iphone-ios-folder-social-media-icons-vector-set-network-screen-colorful-wallpaper-white-background-facebook-instagram-187031401.jpg",
+      image: "/media/offert5.png",
       title: "Filmy na social media",
       // description: "This is the description for slide 5."
     }
@@ -225,7 +225,7 @@ const Home: React.FC = () => {
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
-                credits="Produkcja: FAMA Film, &nbsp;Zdjęcia: Krzysztof Sosnowski,  &nbsp;Montaż: Krzysztof Sosnowski"
+                credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
                 videoSrc="https://www.youtube.com/embed/s3SegEFov6o"
                 thumbnailSrc="/media/port1.png"
                 thumbnailAlt="East Side Drift"
@@ -237,7 +237,7 @@ const Home: React.FC = () => {
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
-                   credits="Produkcja: Polarise, &nbsp;Zdjęcia: Krzysztof Sosnowski, &nbsp;Montaż: Krzysztof Sosnowski"
+                   credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
                 videoSrc="https://www.youtube.com/embed/-hn6AhsE9Rw"
                 thumbnailSrc="/media/port2.png"
                 thumbnailAlt="Octane1 - Film produktowy"
@@ -261,9 +261,9 @@ const Home: React.FC = () => {
               <HeroVideoDialog
                 className="hidden dark:block "
                 animationStyle="from-center"
-                credits="Produkcja: Mental Fly, &nbsp;Zdjęcia: Krzysztof Sosnowski, Michał Środek, &nbsp;Montaż: Krzysztof Sosnowski"
+                credits="Produkcja: Mental Fly &nbsp;Zdjęcia: Krzysztof Sosnowski, Michał Środek &nbsp;Montaż: Krzysztof Sosnowski"
                 videoSrc="https://www.youtube.com/embed/Hx5VfUc8O4Q"
-                thumbnailSrc="/media/bts5.jpeg"
+                thumbnailSrc="/media/port4.png"
                 thumbnailAlt="Ismena Warszawska - relacja z pokazu mody"
                 title={t("port4")}
                
@@ -275,7 +275,7 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                      credits="Produkcja: FAMA Film,&nbsp; Zdjęcia: Krzysztof Sosnowski,&nbsp; Montaż: Krzysztof Sosnowski"
+                      credits="Produkcja: FAMA Film&nbsp; Zdjęcia: Krzysztof Sosnowski&nbsp; Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/5_feKjmTpSE"
                     thumbnailSrc="/media/port5.png"
                     thumbnailAlt="BMW 1600 - projekt własny"
@@ -288,9 +288,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                       credits="Produkcja: Dzida Film Studio,&nbsp; Zdjęcia: Łukasz Baliński, Bartłomiej Wieloszewski,&nbsp; Montaż: Krzysztof Sosnowski"
+                       credits="Produkcja: Dzida Film Studio&nbsp; Zdjęcia: Łukasz Baliński, Bartłomiej Wieloszewski&nbsp; Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/jclPM5ZWPe8"
-                    thumbnailSrc="/media/bts5.jpeg"
+                    thumbnailSrc="/media/port6.png"
                     thumbnailAlt="Dr Irena Eris - relacja z wydarzenia"
                     title={t("port6")}
                    
@@ -300,7 +300,7 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                       credits="Produkcja: Splash Media, &nbsp;Zdjęcia: Krzysztof Sosnowski, Michał Środek, &nbsp;Montaż: Michał Środek"
+                       credits="Produkcja: Splash Media &nbsp;Zdjęcia: Krzysztof Sosnowski, Michał Środek &nbsp;Montaż: Michał Środek"
                     videoSrc="https://www.youtube.com/embed/sMt4uqkbVRY"
                     thumbnailSrc="/media/port7.png"
                     thumbnailAlt="MONDRY - film wizerunkowy"
@@ -312,7 +312,7 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: Splash Media,&nbsp; Zdjęcia: Michał Środek, Michał Grzyb, &nbsp;Montaż: Krzysztof Sosnowski"
+                         credits="Produkcja: Splash Media&nbsp; Zdjęcia: Michał Środek, Michał Grzyb &nbsp;Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/NVCT-CbqyfM"
                     thumbnailSrc="/media/port8.png"
                     thumbnailAlt="Meble Wójcik - film wizerunkowy"
@@ -328,9 +328,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: FAMA Film, &nbsp;Zdjęcia: Krzysztof Sosnowski, &nbsp;Montaż: Krzysztof Sosnowski"
+                         credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/qmKGNlvvNxM"
-                    thumbnailSrc="/media/bts5.jpeg"
+                    thumbnailSrc="/media/port9.png"
                     thumbnailAlt="Timberfast - film wizerunkowy"
                     title={t("port9")}
                   
@@ -340,9 +340,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: FAMA Film, &nbsp;Zdjęcia: Krzysztof Sosnowski, &nbsp;Montaż: Krzysztof Sosnowski"
+                         credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/3xwy-0rYLZQ"
-                    thumbnailSrc="/media/bts5.jpeg"
+                    thumbnailSrc="/media/port10.png"
                     thumbnailAlt="Backstage z sesji zdjęciowej"
                     title={t("port10")}
                   
@@ -352,7 +352,7 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: Polarise, Zdjęcia: Krzysztof Sosnowski, Operator drona: Przemek Zdybel, Montaż: Krzysztof Sosnowski"
+                         credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski&nbsp;Operator drona: Przemek Zdybel &nbsp;Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/_dBHXOMdkas"
                     thumbnailSrc="/media/port11.png"
                     thumbnailAlt="Agroperfekt - film produktowy"
@@ -364,9 +364,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: Polarise, &nbsp;Zdjęcia: Kamil Dziubczyński, Krzysztof Sosnowski, &nbsp;Operator drona: Przemek Zdybel,&nbsp; Montaż: Kamil Dziubczyński"
+                         credits="Produkcja: Polarise &nbsp;Zdjęcia: Kamil Dziubczyński, Krzysztof Sosnowski  &nbsp;Operator drona: Przemek Zdybel &nbsp; Montaż: Kamil Dziubczyński"
                     videoSrc="https://www.youtube.com/embed/-1VtDOV7BcQ"
-                    thumbnailSrc="/media/bts5.jpeg"
+                    thumbnailSrc="/media/port12.png"
                     thumbnailAlt="We Roam Poland - film dokumentalny"
                     title={t("port12")}
                   
@@ -376,9 +376,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: FAMA Film, &nbsp;Zdjęcia: Krzysztof Sosnowski, &nbsp;Montaż: Krzysztof Sosnowski"
+                         credits="Produkcja: FAMA Film &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/c4Aeq7EHmBw"
-                       thumbnailSrc="/media/bts5.jpeg"
+                       thumbnailSrc="/media/port13.png"
                     thumbnailAlt="Timberfast - film wizerunkowy"
                     title={t("port13")}
                   
@@ -388,9 +388,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: Splash Media, &nbsp;Zdjęcia: Michał Środek, Michał Grzyb, &nbsp;Montaż: Krzysztof Sosnowski"
+                         credits="Produkcja: Splash Media &nbsp;Zdjęcia: Michał Środek, Michał Grzyb &nbsp;Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/pzJerK9wR5k"
-                     thumbnailSrc="/media/bts5.jpeg"
+                     thumbnailSrc="/media/port14.png"
                     thumbnailAlt="Kubala - film produktowy"
                     title={t("port14")}
                   
@@ -400,9 +400,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: Polarise, &nbsp;Zdjęcia: Krzysztof Sosnowski, &nbsp;Operator drona: Przemek Zdybel, &nbsp;Montaż: Krzysztof Sosnowski"
+                         credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Operator drona: Przemek Zdybel &nbsp;Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/Pt9FXClwn_k"
-                     thumbnailSrc="/media/bts5.jpeg"
+                     thumbnailSrc="/media/port15.png"
                     thumbnailAlt="Trzy Podkowy - zapowiedź filmu"
                     title={t("port15")}
                   
@@ -412,9 +412,9 @@ const Home: React.FC = () => {
                   <HeroVideoDialog
                     className="hidden dark:block "
                     animationStyle="from-center"
-                         credits="Produkcja: Polarise, &nbsp;Zdjęcia: Krzysztof Sosnowski, &nbsp;Montaż: Krzysztof Sosnowski"
+                         credits="Produkcja: Polarise &nbsp;Zdjęcia: Krzysztof Sosnowski &nbsp;Montaż: Krzysztof Sosnowski"
                     videoSrc="https://www.youtube.com/embed/SHPrruFKpug"
-                       thumbnailSrc="/media/bts5.jpeg"
+                       thumbnailSrc="/media/port16.png"
                     thumbnailAlt="Creme - film produktowy"
                     title={t("port16")}
                   

@@ -399,18 +399,23 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}{" "}
-      <div className="container-offer">
-      <div className="container-home home ">
+    
+      <div className="container-custom-offer home ">
         <BlurFade delay={0.25} inView>
           <div className="text-container">
             <h1>{t("homeSliderH1")}</h1>
           </div>
         </BlurFade>
+        </div>
+        <div className="container-offer-overflow">
+        <div className="container-offer">
         <BlurFade delay={0.25} inView>
           <Slider slides={slides} />
         </BlurFade>
       </div>
       </div>
+  
+     
     </div>
   );
 };

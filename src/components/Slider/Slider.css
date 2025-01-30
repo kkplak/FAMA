@@ -60,7 +60,7 @@
   
   .slider-btn {
     position: absolute;
-    top: 17%;
+    top: 74.5%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -68,21 +68,30 @@
     padding: 10px;
     cursor: pointer;
     z-index: 10;
-    border: 1px solid white;
+  
   }
   
   .slider-btn.left {
-    right: 60px;
+    right: 80px;
 
   }
   
   .slider-btn.right {
-    right: 10px;
+    right: 40px;
   }
   
   .slider-btn:hover {
     background: rgba(0, 0, 0, 0.8);
   }
-  .container-offer {
+  .container-offer-overflow {
     overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+  .container-offer {
+    overflow: scroll;
+  }
+  .slider-btn {
+    display: none;
+  }
   }

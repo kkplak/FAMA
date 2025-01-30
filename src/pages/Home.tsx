@@ -399,7 +399,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}{" "}
-      <div className="container-home home container-offer">
+      <div className="container-offer">
+      <div className="container-home home ">
         <BlurFade delay={0.25} inView>
           <div className="text-container">
             <h1>{t("homeSliderH1")}</h1>
@@ -408,6 +409,7 @@ const Home: React.FC = () => {
         <BlurFade delay={0.25} inView>
           <Slider slides={slides} />
         </BlurFade>
+      </div>
       </div>
     </div>
   );

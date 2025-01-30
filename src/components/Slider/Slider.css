@@ -20,17 +20,17 @@
   
   .slide {
     flex: 0 0 calc(80% / 2);
-    max-width: calc(100% / 3);
+    max-width: calc(78% / 2.5);
  
     text-align: center;
     overflow: hidden;
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box;
   }
 
   
   .slide-image {
-    width: 100%;
+    width: 80%;
     aspect-ratio: 5/7;
     /* min-height: 35rem; */
     height: auto;
@@ -60,7 +60,7 @@
   
   .slider-btn {
     position: absolute;
-    top: 50%;
+    top: 17%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -68,10 +68,12 @@
     padding: 10px;
     cursor: pointer;
     z-index: 10;
+    border: 1px solid white;
   }
   
   .slider-btn.left {
-    left: 10px;
+    right: 60px;
+
   }
   
   .slider-btn.right {
@@ -81,4 +83,6 @@
   .slider-btn:hover {
     background: rgba(0, 0, 0, 0.8);
   }
-  
+  .container-offer {
+    overflow: hidden;
+  }

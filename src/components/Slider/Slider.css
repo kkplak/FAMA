@@ -99,8 +99,14 @@
     justify-content: left; /* Centers the slides */
     overflow: scroll;
     max-width: min-content;
-
 }
+.slide:first-of-type {
+  margin-left: 4rem;
+}
+.slide:last-of-type {
+  margin-right: 4rem;
+}
+
   /* .container-offer {
     overflow: scroll;
   } */

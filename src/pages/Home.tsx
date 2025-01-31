@@ -24,7 +24,7 @@ const Home: React.FC = () => {
   const [currentVideo, setCurrentVideo] = useState("");
   const videoRefs = useRef<Array<HTMLDivElement | null>>([]);
   const offersRefs = useRef<Array<HTMLDivElement | null>>([]); // Ref for offers
-
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 980);
   const slides = [
     {
       image: t("slide1Src"),
@@ -117,6 +117,12 @@ const Home: React.FC = () => {
     setCurrentVideo("");
   };
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 980);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div id="top-of-page" className="homepage ">
       <div className={`loader ${loading ? "" : "hidden"}`}>
@@ -126,6 +132,7 @@ const Home: React.FC = () => {
         id="home"
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
+{!isMobile ? (
         <iframe
           src="https://www.youtube.com/embed/EfmEQTNOEuk?autoplay=1&mute=1&loop=1&playlist=EfmEQTNOEuk"
           frameBorder="0"
@@ -134,6 +141,18 @@ const Home: React.FC = () => {
           title="FAMA Video"
           className="background-video"
         ></iframe>
+      ) : (
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="background-video-mobile"
+        >
+          <source src="/media/video/hero-mobile.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
 
         <div className="overlay">
           <Sticky offset={35}>
@@ -399,7 +418,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}{" "}
-    
+    <div id="offer-wrapper">
       <div className="container-custom-offer home ">
         <BlurFade delay={0.25} inView>
           <div className="text-container">
@@ -414,7 +433,7 @@ const Home: React.FC = () => {
         </BlurFade>
       </div>
       </div>
-  
+      </div>
      
     </div>
   );

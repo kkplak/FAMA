@@ -31,13 +31,16 @@ const Slider = ({ slides }) => {
           ))}
         </div>
       </div>
-      <button className="slider-btn left" onClick={handlePrev} aria-label="Previous Slide">
+     
+    </div>
+    <div className="slider-btns">
+    <button className="slider-btn left" onClick={handlePrev} aria-label="Previous Slide">
         &#9664;
       </button>
       <button className="slider-btn right" onClick={handleNext} aria-label="Next Slide">
         &#9654;
       </button>
-    </div>
+      </div>
     </div>
   );
 };

@@ -1,11 +1,14 @@
+#offer-wrapper {position: relative;}
 .parent-container {
     display: flex;
     justify-content: flex-end; /* Aligns child elements to the right */
+
 }
 .slider-container {
     width: 100%; /* Optional: Set the desired width */
-    max-width: 1200px; /* Maintains the maximum width */
+    max-width: 1000px; /* Maintains the maximum width */
     overflow: visible;
+ 
 }
   .slider-wrapper {
     display: flex;
@@ -20,7 +23,7 @@
   
   .slide {
     flex: 0 0 calc(80% / 2);
-    max-width: calc(78% / 2.5);
+    max-width: calc(90% / 3);
  
     text-align: center;
     overflow: hidden;
@@ -57,41 +60,66 @@
     font-size: 1rem;
     color: #666;
   }
-  
-  .slider-btn {
+
+  .slider-btns {
     position: absolute;
-    top: 74.5%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    top: 10%;
+    right: 4%;
+  }
+
+  .slider-btn {
+    background: transparent;
     color: white;
-    border: none;
-    padding: 10px;
+    padding: 20px;
     cursor: pointer;
     z-index: 10;
-  
-  }
-  
-  .slider-btn.left {
-    right: 80px;
+}
 
-  }
-  
-  .slider-btn.right {
-    right: 40px;
-  }
-  
-  .slider-btn:hover {
+
+
+
+  /* .slider-btn:hover {
     background: rgba(0, 0, 0, 0.8);
-  }
+  } */
   .container-offer-overflow {
     overflow: hidden;
   }
 
   @media (max-width: 768px) {
-  .container-offer {
-    overflow: scroll;
+    .slide {
+      flex: 0 0 40%; /* Each slide takes up 50% of the container */
+      max-width: 40%; /* Ensures it does not exceed 50% */
+      text-align: center;
+      overflow: hidden;
+      padding: 0;
+      box-sizing: border-box;
   }
+  .slider-container {
+    display: flex;
+    justify-content: left; /* Centers the slides */
+    overflow: scroll;
+    max-width: min-content;
+
+}
+  /* .container-offer {
+    overflow: scroll;
+  } */
   .slider-btn {
     display: none;
   }
+  }
+
+  @media (max-width:1100px) {
+    .slider-container {
+      max-width: 900px; 
+  }
+  
+
+  }
+  @media (max-width:900px) {
+    .slider-container {
+      max-width: 768px; 
+  }
+  
+
   }

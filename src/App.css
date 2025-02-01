@@ -316,7 +316,9 @@ h1 {
 
 }
 
-
+.magic-text h1 {
+  letter-spacing: 2px;
+}
 
 @media only screen and (max-width: 980px) {
   .magic-text h1 {
@@ -336,15 +338,23 @@ h1 {
   } */
 }
 
-@media (max-width: 980px) {
 
-}
+
 
 @media (max-width: 768px) {
   .video-portfolio {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin: 2rem auto;
+  }
+  .home-p {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+  .magic-text h1{
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
   }
 
   /* .container,
@@ -360,8 +370,29 @@ h1 {
 
 @media (max-width: 500px) {
   .magic-text h1 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
+  .container {
+    padding: 1rem;
+    margin-bottom: 4rem;
+  }
+  .container-home
+{margin-bottom: 4rem;}
+.text-container h1 {
+  font-size: 1.5rem ;
+}
+.contact-text h1 {
+  font-size: 1.5rem ;
+}
+.contact-text h2 {
+  font-size: 1.3rem ;
+}
+.contact-people a {
+  font-size: 1.1rem ;
+}
+.text-box h2 {
+  font-size: 1.1rem ;
+}
 }
 
 /* Fading in content when visible */

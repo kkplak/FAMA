@@ -49,7 +49,7 @@ export default function GradualSpacing({
   return (
     <div
       ref={ref}
-      className="flex justify-center flex-wrap overflow-hidden space-x-1 max-w-full"
+      className="flex justify-center flex-wrap overflow-hidden max-w-full"
     >
       <AnimatePresence>
         {isVisible &&

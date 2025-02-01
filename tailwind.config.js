@@ -5,7 +5,12 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}', // Adjust the path according to your project structure
   ],
   theme: {
+    
     extend: {
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(10px)',
+      },
       // Add custom animations
       animation: {
         'shine': 'shine var(--duration) linear infinite',
@@ -23,5 +28,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-filters')],
 };

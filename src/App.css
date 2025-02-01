@@ -45,7 +45,7 @@ body {
 .container,
 .container-home {
   color: #e5e5e5;
-  background: #00000021;
+  background: transparent;
   padding: 4rem 2rem;
   text-align: center;
   margin: 3rem auto;

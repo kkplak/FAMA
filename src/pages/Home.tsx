@@ -155,7 +155,7 @@ const Home: React.FC = () => {
       )}
 
         <div className="overlay">
-          <Sticky offset={35}>
+          <Sticky offset={45}>
             <h1 className="hero-title">{t("fama")}</h1>
           </Sticky>
         </div>

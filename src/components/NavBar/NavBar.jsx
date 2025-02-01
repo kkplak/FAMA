@@ -119,14 +119,15 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 backdrop-blur-lg bg-opacity-20 bg-gray-900 transition-all duration-300 ease-out">
-      <NavLeft
-        language={language}
-        activeSection={activeSection}
-        isOpen={isOpen}
-        toggleMenu={toggleMenu}
-      />
-    </nav>
+<nav className="w-full fixed top-0 left-0 z-50 backdrop-blur-custom bg-[rgba(0,0,0,0.2)] transition-all duration-300 ease-out">
+  <NavLeft
+    language={language}
+    activeSection={activeSection}
+    isOpen={isOpen}
+    toggleMenu={toggleMenu}
+  />
+</nav>
+
   );
 };
 

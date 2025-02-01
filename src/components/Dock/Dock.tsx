@@ -15,7 +15,7 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
 
 const DEFAULT_MAGNIFICATION = 1.1; // Scaling factor for hover
 const DEFAULT_DISTANCE = 80; // The range of effect
-const MOBILE_THRESHOLD = 768;
+const MOBILE_THRESHOLD = 1024;
 
 const dockVariants = cva("w-max  flex gap-4 rounded-2xl");
 
@@ -128,7 +128,7 @@ export const DockIcon = ({
       style={{ scale: animatedScale }} // Apply scale only, no Y-axis movement
       className={cn(
         "flex mt-6 mb-6 scursor-pointer items-center justify-center rounded-full nav-icon",
-        isMobile ? "block" : "flex",
+        isMobile ? "block mt-2 mb-4" : "flex",
         className
       )}
       {...props}

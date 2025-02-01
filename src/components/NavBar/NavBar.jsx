@@ -36,56 +36,64 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
   );
 
   return (
-    <div className="flex items-center justify-between w-full fixed top-0 left-0 z-5 backdrop-blur-md ">
-      <button
-        className={`text-2xl mt-4 ml-4 mb-4 text-white md:hidden focus:outline-none transition-transform duration-300 ${
-          isOpen ? "rotate-90" : "rotate-0"
-        }`}
-        onClick={toggleMenu}
-      >
-        &#9776;
-      </button>
+    <div className="flex items-center justify-between w-full fixed top-0 left-0 z-5 backdrop-blur-md">
+  {/* Mobile Menu Button */}
+  <button
+  className={`relative w-10 h-10 flex items-center justify-center text-white lg:hidden focus:outline-none transition-transform duration-300 ${
+    isOpen ? "rotate-90" : "rotate-0"
+  }`}
+  onClick={toggleMenu}
+>
+  <div className="absolute w-6 h-0.5 bg-white transition-all duration-300 ease-in-out transform origin-center 
+    ${isOpen ? 'rotate-45 translate-y-1.5' : ''}">
+  </div>
+  <div className="absolute w-6 h-0.5 bg-white transition-all duration-300 ease-in-out transform origin-center 
+    ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}">
+  </div>
+</button>
 
-      {/* Mobile Links */}
-      <div
-        className={`${
-          isOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
-        } transition-all duration-500 ease-in-out overflow-hidden md:hidden bg-black bg-opacity-40 backdrop-blur-sm border border-black border-opacity-20 absolute top-full left-0 text-white w-4/12`}
-      >
-        <div className="flex flex-col items-start space-y-4 md:p-4 rounded">
-          <Dock direction="middle" animation={false}>
-            {renderLink("home", "home")}
-            {renderLink("portfolio", "portfolio")}
-            {renderLink("offer", "offer")}
-            {renderLink("contact", "contact")}
-            {renderExternalLink("https://www.instagram.com/fama_film/", "ig")}
-            {renderExternalLink(
-              "https://www.instagram.com/fama_film/",
-              "vimeo"
-            )}
-          </Dock>
-          <div className="md:block flex-shrink-0 mr-4 ml-4 pb-8">
-            <LanguageSwitcher />
-          </div>
-        </div>
-      </div>
 
-      {/* Desktop Links */}
-      <div className="hidden md:flex items-center justify-between w-full text-white">
-        <div className="flex items-center space-x-4">
-          <Dock direction="middle" animation={true}>
-            {renderLink("home", "home")}
-            {renderLink("offer", "offer")}
-            {renderLink("portfolio", "portfolio")}
-          
-            {renderLink("contact", "contact")}
-          </Dock>
-        </div>
-        <div className="flex-shrink-0">
-          <LanguageSwitcher />
-        </div>
-      </div>
+  {/* Mobile Links */}
+  <div
+  className={`absolute top-14 inset-x-4 bg-[rgba(0,0,0,0.5)] text-white transition-all duration-300 ease-in-out transform ${
+    isOpen ? "scale-100 opacity-100" : "scale-90 opacity-0 pointer-events-none"
+  } rounded-xl p-0 backdrop-blur-xl shadow-lg lg:hidden z-50`}
+>
+  {/* Navigation Container */}
+  <div className="flex items-center justify-between p-4">
+    {/* Navigation Links */}
+    <Dock className="mobile-dock" direction="middle" animation={false}>
+      {renderLink("home", "home")}
+      {renderLink("portfolio", "portfolio")}
+      {renderLink("offer", "offer")}
+      {renderLink("contact", "contact")}
+      {renderExternalLink("https://www.instagram.com/fama_film/", "ig")}
+      {renderExternalLink("https://www.instagram.com/fama_film/", "vimeo")}
+    </Dock>
+
+    {/* Language Switcher aligned to the right */}
+    <LanguageSwitcher />
+  </div>
+</div>
+
+
+
+  {/* Desktop Links */}
+  <div className="hidden lg:flex items-center justify-between w-full text-white">
+    <div className="flex items-center space-x-4">
+      <Dock direction="middle" animation={true}>
+        {renderLink("home", "home")}
+        {renderLink("offer", "offer")}
+        {renderLink("portfolio", "portfolio")}
+        {renderLink("contact", "contact")}
+      </Dock>
     </div>
+    <div className="flex-shrink-0">
+      <LanguageSwitcher />
+    </div>
+  </div>
+</div>
+
   );
 };
 

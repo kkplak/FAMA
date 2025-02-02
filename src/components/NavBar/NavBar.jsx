@@ -55,7 +55,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
 
   {/* Mobile Links */}
   <div
-  className={`absolute top-14 inset-x-4 bg-[rgba(0,0,0,0.7)] text-white transition-all duration-300 ease-in-out transform ${
+  className={`absolute top-14 inset-x-4 bg-[rgba(0,0,0,0.85)] text-white transition-all duration-300 ease-in-out transform ${
     isOpen ? "scale-100 opacity-100" : "scale-90 opacity-0 pointer-events-none"
   } rounded-xl p-0 backdrop-blur-xl shadow-lg lg:hidden z-50`}
 >

@@ -132,32 +132,38 @@ const Home: React.FC = () => {
         id="home"
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
-{!isMobile ? (
-        <iframe
-          src="https://www.youtube.com/embed/EfmEQTNOEuk?autoplay=1&mute=1&loop=1&playlist=EfmEQTNOEuk"
-          frameBorder="0"
-          allow="autoplay; loop; muted"
-          allowFullScreen
-          title="FAMA Video"
-          className="background-video"
-        ></iframe>
-      ) : (
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="background-video-mobile"
-        >
-          <source src="/media/video/hero-mobile.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      )}
+        {!isMobile ? (
+          <iframe
+            src="https://www.youtube.com/embed/EfmEQTNOEuk?autoplay=1&mute=1&loop=1&playlist=EfmEQTNOEuk"
+            frameBorder="0"
+            allow="autoplay; loop; muted"
+            allowFullScreen
+            title="FAMA Video"
+            className="background-video"
+          ></iframe>
+        ) : (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="background-video-mobile"
+          >
+            <source src="/media/video/hero-mobile.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
 
         <div className="overlay">
-          <Sticky offset={45}>
-            <h1 className="hero-title">{t("fama")}</h1>
-          </Sticky>
+          {!isMobile ? (
+            <Sticky offset={45}>
+              <h1 className="hero-title">{t("fama")}</h1>
+            </Sticky>
+          ) : (
+            <Sticky offset={28}>
+              <h1 className="hero-title">{t("fama")}</h1>
+            </Sticky>
+          )}
         </div>
       </div>
       <div className="magic-text container ">
@@ -418,23 +424,22 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}{" "}
-    <div id="offer-wrapper">
-      <div className="container-custom-offer home ">
-        <BlurFade delay={0.25} inView>
-          <div className="text-container">
-            <h1>{t("homeSliderH1")}</h1>
-          </div>
-        </BlurFade>
+      <div id="offer-wrapper">
+        <div className="container-custom-offer home ">
+          <BlurFade delay={0.25} inView>
+            <div className="text-container">
+              <h1>{t("homeSliderH1")}</h1>
+            </div>
+          </BlurFade>
         </div>
         <div className="container-offer-overflow">
-        <div className="container-offer">
-        <BlurFade delay={0.25} inView>
-          <Slider slides={slides} />
-        </BlurFade>
+          <div className="container-offer">
+            <BlurFade delay={0.25} inView>
+              <Slider slides={slides} />
+            </BlurFade>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
-     
     </div>
   );
 };

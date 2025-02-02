@@ -7,44 +7,42 @@ interface StickyProps {
 
 const Sticky: React.FC<StickyProps> = ({ children, offset }) => {
   const [isSticky, setIsSticky] = useState(false);
-  const [originalPosition, setOriginalPosition] = useState(0);
-  const elementRef = useRef<HTMLDivElement | null>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
+  const originalPositionRef = useRef<number>(0);
+
+  // Calculates and stores the element's initial position relative to the document
+  const setInitialPosition = () => {
+    if (elementRef.current) {
+      const rect = elementRef.current.getBoundingClientRect();
+      originalPositionRef.current = window.scrollY + rect.top;
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (elementRef.current) {
-        const rect = elementRef.current.getBoundingClientRect();
-        const scrollTop = window.scrollY;
-
-        // Set sticky when the scroll position is past the original position minus the offset
-        if (scrollTop > originalPosition - offset) {
-          setIsSticky(true);
-        } else {
-          setIsSticky(false);
-        }
-      }
-    };
-
-    const setInitialPosition = () => {
-      if (elementRef.current) {
-        const rect = elementRef.current.getBoundingClientRect();
-        setOriginalPosition(window.scrollY + rect.top);
-      }
-    };
-
-    // Set initial position
+    // Set the initial position when the component mounts
     setInitialPosition();
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      // Determine if the element should be sticky
+      const shouldStick = scrollTop > originalPositionRef.current - offset;
+      // Update state only if there's a change
+      if (shouldStick !== isSticky) {
+        setIsSticky(shouldStick);
+      }
+    };
 
     // Add event listeners for scroll and resize
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", setInitialPosition);
 
-    // Cleanup event listeners on unmount
+    // Clean up event listeners on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", setInitialPosition);
     };
-  }, [offset, originalPosition]);
+    // Only depend on the offset prop; originalPosition is maintained via ref
+  }, [offset, isSticky]);
 
   return (
     <div

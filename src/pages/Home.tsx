@@ -10,6 +10,7 @@ import Slider from "../components/Slider/Slider";
 import Box from "../components/Box/Box";
 import { BlurFade } from "../components/BlurFade/BlurFade";
 import ToggleDescription from "../components/Toggle/Toggle";
+import { AppleCardsCarouselDemo } from "../components/AppleCard/CardsDemo";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -430,15 +431,15 @@ const Home: React.FC = () => {
             <div className="text-container">
               <h1>{t("homeSliderH1")}</h1>
             </div>
+            <AppleCardsCarouselDemo />
           </BlurFade>
         </div>
-        <div className="container-offer-overflow">
-          <div className="container-offer">
-            <BlurFade delay={0.25} inView>
+   
+            {/* <BlurFade delay={0.25} inView>
               <Slider slides={slides} />
-            </BlurFade>
-          </div>
-        </div>
+            </BlurFade> */}
+          
+       
       </div>
     </div>
   );

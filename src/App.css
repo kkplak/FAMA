@@ -308,12 +308,21 @@ h1 {
   color: red;
 }
 
+.toggle-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toggle-content {
+  overflow: hidden;
+}
+
 .toggle-header {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
-
 }
 
 .magic-text h1 {

@@ -1,16 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
 
 interface StickyProps {
   children: React.ReactNode;
-  offset: number; // Distance from the top when the element should stick
+  offset: number;
 }
 
 const Sticky: React.FC<StickyProps> = ({ children, offset }) => {
   const [isSticky, setIsSticky] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
   const originalPositionRef = useRef<number>(0);
+  const animationFrameRef = useRef<number | null>(null);
 
-  // Calculates and stores the element's initial position relative to the document
+  // Function to calculate the element's initial position
   const setInitialPosition = () => {
     if (elementRef.current) {
       const rect = elementRef.current.getBoundingClientRect();
@@ -18,30 +19,36 @@ const Sticky: React.FC<StickyProps> = ({ children, offset }) => {
     }
   };
 
-  useEffect(() => {
-    // Set the initial position when the component mounts
+  useLayoutEffect(() => {
     setInitialPosition();
+  }, []);
 
+  useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      // Determine if the element should be sticky
-      const shouldStick = scrollTop > originalPositionRef.current - offset;
-      // Update state only if there's a change
-      if (shouldStick !== isSticky) {
-        setIsSticky(shouldStick);
-      }
+      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+
+      animationFrameRef.current = requestAnimationFrame(() => {
+        const scrollTop = window.scrollY;
+        const shouldStick = scrollTop >= originalPositionRef.current - offset;
+
+        if (shouldStick !== isSticky) {
+          setIsSticky(shouldStick);
+        }
+      });
     };
 
-    // Add event listeners for scroll and resize
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", setInitialPosition);
+    const handleResize = () => {
+      setInitialPosition();
+    };
 
-    // Clean up event listeners on unmount
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", setInitialPosition);
+      window.removeEventListener("resize", handleResize);
+      if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
     };
-    // Only depend on the offset prop; originalPosition is maintained via ref
   }, [offset, isSticky]);
 
   return (
@@ -50,10 +57,11 @@ const Sticky: React.FC<StickyProps> = ({ children, offset }) => {
       className={isSticky ? "sticky-fama" : ""}
       style={{
         position: isSticky ? "fixed" : "absolute",
-        top: isSticky ? `${offset}px` : "50%",
+        top: isSticky ? `${offset}px` : "auto",
         left: "50%",
-        transform: isSticky ? "translateX(-50%)" : "translate(-50%, -50%)",
+        transform: "translateX(-50%)",
         zIndex: 45,
+        transition: isSticky ? "none" : "top 0.3s ease-out", 
       }}
     >
       {children}

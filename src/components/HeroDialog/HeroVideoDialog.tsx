@@ -107,7 +107,7 @@ export default function HeroVideoDialog({
             </div>
           </div>
         </div>
-        <div className="video-title md:flex hidden group-hover:flex">
+        <div className="video-title  hidden group-hover:flex">
           <h3>{title}</h3>
         </div>
       </div>

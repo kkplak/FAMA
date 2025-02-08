@@ -76,7 +76,7 @@ export const Carousel = ({
   return (
     (<CarouselContext.Provider value={{ onCardClose: handleCardClose, currentIndex }}>
       <div className="relative w-full">
-      <div className="flex justify-end gap-2 mr-10">
+      <div className="flex justify-end gap-2 mr-10 hidden md:flex">
           <button
             className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
@@ -243,7 +243,7 @@ export const Card = ({
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-xl md:text-3xl font-semibold text-white-900 mt-2"
+            className="text-xl md:text-3xl  text-white-900 mt-2"
           >
             {card.title}
           </motion.p>

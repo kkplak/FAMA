@@ -41,23 +41,7 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
   return (
     <div className="flex items-center justify-between w-full fixed top-0 left-0  backdrop-blur-md">
       {/* Mobile Menu Button */}
-      <button
-        className={`relative w-10 h-10 flex items-center justify-center text-white lg:hidden focus:outline-none transition-transform duration-300 ${
-          isOpen ? "rotate-90" : "rotate-0"
-        }`}
-        onClick={toggleMenu}
-      >
-        <div
-          className={`absolute w-6 h-0.5 bg-white transition-all duration-300 ease-in-out transform origin-center ${
-            isOpen ? "rotate-45 translate-y-1.5" : ""
-          }`}
-        ></div>
-        <div
-          className={`absolute w-6 h-0.5 bg-white transition-all duration-300 ease-in-out transform origin-center ${
-            isOpen ? "-rotate-45 -translate-y-1.5" : ""
-          }`}
-        ></div>
-      </button>
+
 
       {/* Mobile Links - separated into its own component */}
       <MobileLinks

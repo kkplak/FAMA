@@ -11,6 +11,7 @@ import Box from "../components/Box/Box";
 import { BlurFade } from "../components/BlurFade/BlurFade";
 import ToggleDescription from "../components/Toggle/Toggle";
 import { AppleCardsCarouselDemo } from "../components/AppleCard/CardsDemo";
+import { AppleCardsCarouselDemo2 } from "../components/AppleCard/CardsDemo2";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -26,28 +27,7 @@ const Home: React.FC = () => {
   const videoRefs = useRef<Array<HTMLDivElement | null>>([]);
   const offersRefs = useRef<Array<HTMLDivElement | null>>([]); // Ref for offers
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 980);
-  const slides = [
-    {
-      image: t("slide1Src"),
-      title: t("slide1H1"),
-    },
-    {
-      image: t("slide2Src"),
-      title: t("slide2H1"),
-    },
-    {
-      image: t("slide3Src"),
-      title: t("slide3H1"),
-    },
-    {
-      image: t("slide4Src"),
-      title: t("slide4H1"),
-    },
-    {
-      image: t("slide5Src"),
-      title: t("slide5H1"),
-    },
-  ];
+
 
   useEffect(() => {
     if (lang && i18n.language !== lang) {
@@ -202,8 +182,10 @@ const Home: React.FC = () => {
               description={t("homeOffer3Copy")}
             />
           </div>
+      
         </BlurFade>
       </div>
+      <AppleCardsCarouselDemo2 />
       <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
         <div
           id="content"

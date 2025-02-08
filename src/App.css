@@ -46,12 +46,12 @@ body {
 .container-home {
   color: #e5e5e5;
   background: transparent;
-  padding: 4rem 2rem;
+  padding: 0 2rem;
   text-align: center;
-  margin: 3rem auto;
+  margin: 0 auto;
   border-radius: 5px;
   max-width: 90%;
-  margin-bottom: 10rem;
+  
 }
 
 .home {
@@ -72,12 +72,16 @@ body {
 
 .text-container {
   z-index: 11;
+  max-width: 100%; /* or a specific max-width like 1200px */
   width: 100%;
   text-align: center;
-  margin-bottom: 5rem;
+  padding: 1rem 2rem;
+  margin: 15rem auto 0;
+  color: white;
 }
 .magic-text .text-wrapper h1 {
   color: white !important;
+  margin-top: 5rem !important;
 }
 .image-container {
   z-index: 11;
@@ -330,6 +334,10 @@ h1 {
 }
 
 @media only screen and (max-width: 980px) {
+  #offer  .container-home{
+    margin: 0;
+    padding: 0;
+  }
   .magic-text h1 {
     font-size: 20px;
   }
@@ -345,7 +353,12 @@ h1 {
   .contact-text {
     font-size: 20px;
   }
+  .text-container {
 
+    padding: 1rem 2rem;
+    margin: 10rem auto 0;
+    
+  }
   .box {
     max-width: unset;
     margin: 1rem;
@@ -400,7 +413,13 @@ h1 {
   }
   .container-home
 {margin-bottom: 4rem;}
+.text-container {
 
+
+  padding: 1rem 2rem;
+  margin: 5rem auto 0;
+    
+  }
 
 .video-title {
  

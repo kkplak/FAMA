@@ -156,12 +156,13 @@ const Home: React.FC = () => {
           </BlurFade>
         </div>
       </div>
-      <div id="offer" className="container-home home ">
-        <BlurFade delay={0.25} inView>
+      <BlurFade delay={0.25} inView>
           <div className="text-container">
             <h1>{t("homeOffer")}</h1>
           </div>
         </BlurFade>
+      <div id="offer">
+     
         <BlurFade delay={0.25} inView>
           <div className="box-container">
             <Box
@@ -189,12 +190,13 @@ const Home: React.FC = () => {
           id="content"
           className={`button-box-container ${!loading ? "visible" : ""}`}
         ></div>
-        <div className="container-home home">
-          <BlurFade delay={0.25} inView>
+                  <BlurFade delay={0.25} inView>
             <div className="text-container">
               <h1>{t("homePorfolio")}</h1>
             </div>
           </BlurFade>
+        <div className="container-home home">
+
           {/* <BlurFade delay={0.25} inView> */}
           <div className="video-portfolio">
             <div className="relative ">
@@ -406,11 +408,15 @@ const Home: React.FC = () => {
         </div>
       )}{" "}
       <div id="offer-wrapper">
-        <div className="container-custom-offer home ">
-          <BlurFade delay={0.25} inView>
+      <BlurFade delay={0.25} inView>
             <div className="text-container">
               <h1>{t("homeSliderH1")}</h1>
             </div>
+           
+          </BlurFade>
+        <div className="container-custom-offer home ">
+          <BlurFade delay={0.25} inView>
+         
             <AppleCardsCarouselDemo />
           </BlurFade>
         </div>

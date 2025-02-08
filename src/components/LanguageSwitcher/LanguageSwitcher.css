@@ -6,7 +6,7 @@
 
 .language-text {
   cursor: pointer;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: #ffffffa0; /* Default color */
   transition: color 0.3s ease; /* Smooth transition for color change */
 }

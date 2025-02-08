@@ -27,7 +27,7 @@
 }
 
 .box-title {
-  font-size: 1.7rem;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 8px;
   color: #fff;
@@ -56,11 +56,11 @@ display: none;
 
 
   .box-title {
-    font-size: 18px;
+ 
   }
 
   .box-description {
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 }
 

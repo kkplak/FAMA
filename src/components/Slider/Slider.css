@@ -50,14 +50,14 @@
   }
   
   .text-box h2 {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     margin-bottom: 10px;
     color: white;
   
   }
   
   .text-box p {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     color: #666;
   }
 

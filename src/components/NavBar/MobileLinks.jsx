@@ -21,8 +21,8 @@ const MobileLinks = ({ isOpen, renderLink, renderExternalLink }) => {
         {/* Navigation Links */}
         <Dock className="mobile-dock" direction="middle" animation={false}>
           {renderLink("home", "home")}
-          {renderLink("portfolio", "portfolio")}
           {renderLink("offer", "offer")}
+          {renderLink("portfolio", "portfolio")}
           {renderLink("contact", "contact")}
           {renderExternalLink("https://www.instagram.com/fama_film/", "ig")}
           {renderExternalLink("https://www.instagram.com/fama_film/", "vimeo")}

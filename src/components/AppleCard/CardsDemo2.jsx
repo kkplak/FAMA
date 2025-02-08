@@ -70,7 +70,7 @@ export function AppleCardsCarouselDemo2() {
   const items = 
     mobileData.map((data, index) => (
         // Wrap each Box slide in a div that forces a wider width (e.g., 90% of viewport width)
-        <div key={index} className="w-[70vw]">
+        <div key={index} className="w-[300px]">
           <Box
             iconPath={data.iconPath}
             title={data.title}

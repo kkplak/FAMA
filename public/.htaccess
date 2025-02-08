@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Allow access to static assets (JS, CSS, images)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirect all other routes to index.html
+RewriteRule ^ index.html [QSA,L]

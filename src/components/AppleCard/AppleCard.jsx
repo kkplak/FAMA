@@ -221,7 +221,7 @@ export const Card = ({
         <motion.button
           layoutId={layout ? `card-${card.title}` : undefined}
           onClick={handleOpen}
-          className="block rounded-3xl overflow-hidden bg-gray-100 dark:bg-neutral-900 w-full"
+          className="block rounded-3xl pointer-events-none overflow-hidden bg-gray-100 dark:bg-neutral-900 w-full"
         >
             <div className="w-full aspect-[7/10] relative">
       <BlurImage

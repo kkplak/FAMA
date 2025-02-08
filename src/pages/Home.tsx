@@ -158,11 +158,11 @@ const Home: React.FC = () => {
         <div className="overlay">
           {!isMobile ? (
             <Sticky offset={45}>
-              <h1 className="hero-title">{t("fama")}</h1>
+              <h1 className="hero-title z-40">{t("fama")}</h1>
             </Sticky>
           ) : (
             <Sticky offset={28}>
-              <h1 className="hero-title">{t("fama")}</h1>
+              <h1 className="hero-title z-40">{t("fama")}</h1>
             </Sticky>
           )}
         </div>

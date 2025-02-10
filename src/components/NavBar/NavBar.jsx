@@ -1,5 +1,3 @@
-// src/components/NavBar/NavBar.js
-
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -22,9 +20,19 @@ const NavBar = () => {
       <Link
         to={`/${language}/home#${id}`}
         className="ml-8 block"
-        onClick={() => {
-          toggleMenu();
-        }}
+      >
+        {t(label)}
+      </Link>
+    </DockIcon>
+  );
+
+  // Helper for mobile internal links
+  const renderMobileLink = (id, label) => (
+    <DockIcon>
+      <Link
+        to={`/${language}/home#${id}`}
+        className="ml-8 block"
+        onClick={toggleMenu}
       >
         {t(label)}
       </Link>
@@ -75,24 +83,21 @@ const NavBar = () => {
         <div className="flex items-center justify-between w-full">
           {/* Mobile Menu Button */}
           <button
-  className="relative w-10 h-10 flex flex-col items-center justify-center text-white 
-             lg:hidden focus:outline-none transition-transform duration-300"
-  onClick={toggleMenu}
->
-  {/* Top line */}
-  <div
-    className={`w-6 h-0.5 bg-white transition-all duration-300 ease-in-out transform
-      ${isOpen ? "translate-x-2 opacity-50" : ""}`}
-  />
-  {/* Bottom line (shorter), shifted left by default and moves right when toggled */}
-  <div
-    className={`w-4 h-0.5 bg-white mt-1 transition-all duration-300 ease-in-out transform
-      ${isOpen ? "translate-x-3 opacity-50" : "-translate-x-1"}`}
-  />
-</button>
-
-
-
+            className="relative w-10 h-10 flex flex-col items-center justify-center text-white 
+                       lg:hidden focus:outline-none transition-transform duration-300"
+            onClick={toggleMenu}
+          >
+            {/* Top line */}
+            <div
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ease-in-out transform
+                ${isOpen ? "translate-x-2 opacity-50" : ""}`}
+            />
+            {/* Bottom line (shorter), shifted left by default and moves right when toggled */}
+            <div
+              className={`w-4 h-0.5 bg-white mt-1 transition-all duration-300 ease-in-out transform
+                ${isOpen ? "translate-x-3 opacity-50" : "-translate-x-1"}`}
+            />
+          </button>
 
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center justify-between w-full text-white">
@@ -114,7 +119,7 @@ const NavBar = () => {
       {/* Render the mobile menu OUTSIDE the <nav> */}
       <MobileLinks
         isOpen={isOpen}
-        renderLink={renderLink}
+        renderLink={renderMobileLink}
         renderExternalLink={renderExternalLink}
       />
     </>

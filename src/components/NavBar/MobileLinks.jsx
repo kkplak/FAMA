@@ -1,5 +1,3 @@
-// src/components/NavBar/MobileLinks.js
-
 import React from "react";
 import { Dock } from "../Dock/Dock";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
@@ -25,7 +23,7 @@ const MobileLinks = ({ isOpen, renderLink, renderExternalLink }) => {
           {renderLink("portfolio", "portfolio")}
           {renderLink("contact", "contact")}
           {renderExternalLink("https://www.instagram.com/fama_film/", "ig")}
-          {renderExternalLink("https://www.instagram.com/fama_film/", "vimeo")}
+          {renderExternalLink("https://www.youtube.com/@fama_film", "vimeo")}
         </Dock>
 
         <div className="flex h-max self-start pr-6 pt-2">

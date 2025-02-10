@@ -10,6 +10,7 @@ import { BlurFade } from "../components/BlurFade/BlurFade";
 import ToggleDescription from "../components/Toggle/Toggle";
 import { AppleCardsCarouselDemo } from "../components/AppleCard/CardsDemo";
 import { AppleCardsCarouselDemo2 } from "../components/AppleCard/CardsDemo2";
+// import { Helmet } from "react-helmet-async";
 
 const Home: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -103,6 +104,10 @@ const Home: React.FC = () => {
   }, []);
 
   return (
+    //  <Helmet>
+    //     <title>My Awesome Page</title>
+    //     <meta name="description" content="This is a detailed description of my page for SEO." />
+    //   </Helmet>
     <div id="top-of-page" className="homepage ">
       <div className={`loader ${loading ? "" : "hidden"}`}>
         <h1 className="hero-title">{t("fama")}</h1>

@@ -16,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 import { useLocation } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import "./App.css";
+import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/ScrollToTop";
 
 const resources = {
@@ -45,6 +46,7 @@ const RedirectToDefaultLanguage = () => {
 
 const App = () => {
   return (
+    // <HelmetProvider>
     <I18nextProvider i18n={i18next}>
       <Router>
         {/* <ScrollToTop /> */}
@@ -58,6 +60,7 @@ const App = () => {
         <Footer />
       </Router>
     </I18nextProvider>
+    // </HelmetProvider>
   );
 };
 

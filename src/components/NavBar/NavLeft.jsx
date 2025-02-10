@@ -1,5 +1,3 @@
-// src/components/NavBar/NavLeft.js
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -16,9 +14,18 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
       <Link
         to={`/${language}/home#${id}`}
         className="ml-8 block"
-        onClick={() => {
-          toggleMenu();
-        }}
+      >
+        {t(label)}
+      </Link>
+    </DockIcon>
+  );
+
+  const renderMobileLink = (id, label) => (
+    <DockIcon>
+      <Link
+        to={`/${language}/home#${id}`}
+        className="ml-8 block"
+        onClick={toggleMenu}
       >
         {t(label)}
       </Link>
@@ -42,11 +49,10 @@ const NavLeft = ({ language, activeSection, isOpen, toggleMenu }) => {
     <div className="flex items-center justify-between w-full fixed top-0 left-0  backdrop-blur-md">
       {/* Mobile Menu Button */}
 
-
       {/* Mobile Links - separated into its own component */}
       <MobileLinks
         isOpen={isOpen}
-        renderLink={renderLink}
+        renderLink={renderMobileLink}
         renderExternalLink={renderExternalLink}
       />
 

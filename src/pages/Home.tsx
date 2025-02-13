@@ -27,7 +27,6 @@ const Home: React.FC = () => {
   const offersRefs = useRef<Array<HTMLDivElement | null>>([]); // Ref for offers
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 980);
 
-
   useEffect(() => {
     if (lang && i18n.language !== lang) {
       i18n.changeLanguage(lang);
@@ -108,68 +107,69 @@ const Home: React.FC = () => {
     //     <title>My Awesome Page</title>
     //     <meta name="description" content="This is a detailed description of my page for SEO." />
     //   </Helmet>
-    <div id="top-of-page" className="homepage ">
+    <div id='top-of-page' className='homepage '>
       <div className={`loader ${loading ? "" : "hidden"}`}>
-        <h1 className="hero-title">{t("fama")}</h1>
+        <h1 className='hero-title'>{t("fama")}</h1>
       </div>
       <div
-        id="home"
+        id='home'
         className={`hero-section ${contentVisible ? "visible" : ""}`}
       >
         {!isMobile ? (
-          <iframe
-            src="https://www.youtube.com/embed/EfmEQTNOEuk?autoplay=1&mute=1&loop=1&playlist=EfmEQTNOEuk"
-            frameBorder="0"
-            allow="autoplay; loop; muted"
-            allowFullScreen
-            title="FAMA Video"
-            className="background-video"
-          ></iframe>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className='background-video-desktop'
+          >
+            <source src='/media/video/hero-desktop.mp4' type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
         ) : (
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="background-video-mobile"
+            className='background-video-mobile'
           >
-            <source src="/media/video/hero-mobile.mp4" type="video/mp4" />
+            <source src='/media/video/hero-mobile.mp4' type='video/mp4' />
             Your browser does not support the video tag.
           </video>
         )}
 
-        <div className="overlay">
+        <div className='overlay'>
           {!isMobile ? (
             <Sticky offset={45}>
-              <h1 className="hero-title z-40">{t("fama")}</h1>
+              <h1 className='hero-title z-40'>{t("fama")}</h1>
             </Sticky>
           ) : (
             <Sticky offset={28}>
-              <h1 className="hero-title z-40">{t("fama")}</h1>
+              <h1 className='hero-title z-40'>{t("fama")}</h1>
             </Sticky>
           )}
         </div>
       </div>
-      <div className="magic-text container ">
-        <div className="text-wrapper ">
+      <div className='magic-text container '>
+        <div className='text-wrapper '>
           <GradualSpacing
-            className="font-display text-center text-m font-bold tracking-[-0.1em]  text-black dark:text-white md:text-m md:leading-[5rem]"
+            className='font-display text-center text-m font-bold tracking-[-0.1em]  text-black dark:text-white md:text-m md:leading-[5rem]'
             text={t("magicText")}
           />
           <BlurFade delay={0.25} inView>
-            <p className="home-p">{t("homeP")}</p>
+            <p className='home-p'>{t("homeP")}</p>
           </BlurFade>
         </div>
       </div>
       <BlurFade delay={0.25} inView>
-          <div className="text-container">
-            <h1>{t("homeOffer")}</h1>
-          </div>
-        </BlurFade>
-      <div id="offer">
-     
+        <div className='text-container'>
+          <h1>{t("homeOffer")}</h1>
+        </div>
+      </BlurFade>
+      <div id='offer'>
         <BlurFade delay={0.25} inView>
-          <div className="box-container">
+          <div className='box-container'>
             <Box
               iconPath={t("homeOffer1Src")}
               title={t("homeOffer1Title")}
@@ -186,28 +186,26 @@ const Home: React.FC = () => {
               description={t("homeOffer3Copy")}
             />
           </div>
-      
         </BlurFade>
       </div>
       <AppleCardsCarouselDemo2 />
-      <div id="portfolio" className={`content ${!loading ? "visible" : ""}`}>
+      <div id='portfolio' className={`content ${!loading ? "visible" : ""}`}>
         <div
-          id="content"
+          id='content'
           className={`button-box-container ${!loading ? "visible" : ""}`}
         ></div>
-                  <BlurFade delay={0.25} inView>
-            <div className="text-container">
-              <h1>{t("homePorfolio")}</h1>
-            </div>
-          </BlurFade>
-        <div className="container-home home">
-
+        <BlurFade delay={0.25} inView>
+          <div className='text-container'>
+            <h1>{t("homePorfolio")}</h1>
+          </div>
+        </BlurFade>
+        <div className='container-home home'>
           {/* <BlurFade delay={0.25} inView> */}
-          <div className="video-portfolio">
-            <div className="relative ">
+          <div className='video-portfolio'>
+            <div className='relative '>
               <HeroVideoDialog
-                className="dark:block "
-                animationStyle="from-center"
+                className='dark:block '
+                animationStyle='from-center'
                 credits={t("port1Credits")}
                 videoSrc={t("port1Src")}
                 thumbnailSrc={t("port1Img")}
@@ -215,10 +213,10 @@ const Home: React.FC = () => {
                 title={t("port1")}
               />
             </div>
-            <div className="relative ">
+            <div className='relative '>
               <HeroVideoDialog
-                className=" dark:block "
-                animationStyle="from-center"
+                className=' dark:block '
+                animationStyle='from-center'
                 credits={t("port2Credits")}
                 videoSrc={t("port2Src")}
                 thumbnailSrc={t("port2Img")}
@@ -226,10 +224,10 @@ const Home: React.FC = () => {
                 title={t("port2")}
               />
             </div>
-            <div className="relative ">
+            <div className='relative '>
               <HeroVideoDialog
-                className="dark:block "
-                animationStyle="from-center"
+                className='dark:block '
+                animationStyle='from-center'
                 credits={t("port3Credits")}
                 videoSrc={t("port3Src")}
                 thumbnailSrc={t("port3Img")}
@@ -237,10 +235,10 @@ const Home: React.FC = () => {
                 title={t("port3")}
               />
             </div>
-            <div className="relative ">
+            <div className='relative '>
               <HeroVideoDialog
-                className=" dark:block "
-                animationStyle="from-center"
+                className=' dark:block '
+                animationStyle='from-center'
                 credits={t("port4Credits")}
                 videoSrc={t("port4Src")}
                 thumbnailSrc={t("port4Img")}
@@ -250,13 +248,13 @@ const Home: React.FC = () => {
             </div>
           </div>
           <ToggleDescription
-            title="See more"
+            title='See more'
             description={
-              <div className="video-portfolio">
-                <div className="relative ">
+              <div className='video-portfolio'>
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port5Credits")}
                     videoSrc={t("port5Src")}
                     thumbnailSrc={t("port5Img")}
@@ -265,10 +263,10 @@ const Home: React.FC = () => {
                   />{" "}
                 </div>
 
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port6Credits")}
                     videoSrc={t("port6Src")}
                     thumbnailSrc={t("port6Img")}
@@ -276,10 +274,10 @@ const Home: React.FC = () => {
                     title={t("port6")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port7Credits")}
                     videoSrc={t("port7Src")}
                     thumbnailSrc={t("port7Img")}
@@ -287,10 +285,10 @@ const Home: React.FC = () => {
                     title={t("port7")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port8Credits")}
                     videoSrc={t("port8Src")}
                     thumbnailSrc={t("port8Img")}
@@ -299,10 +297,10 @@ const Home: React.FC = () => {
                   />
                 </div>
 
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port9Credits")}
                     videoSrc={t("port9Src")}
                     thumbnailSrc={t("port9Img")}
@@ -310,10 +308,10 @@ const Home: React.FC = () => {
                     title={t("port9")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port10Credits")}
                     videoSrc={t("port10Src")}
                     thumbnailSrc={t("port10Img")}
@@ -321,10 +319,10 @@ const Home: React.FC = () => {
                     title={t("port10")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port11Credits")}
                     videoSrc={t("port11Src")}
                     thumbnailSrc={t("port11Img")}
@@ -332,10 +330,10 @@ const Home: React.FC = () => {
                     title={t("port11")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port12Credits")}
                     videoSrc={t("port12Src")}
                     thumbnailSrc={t("port12Img")}
@@ -343,10 +341,10 @@ const Home: React.FC = () => {
                     title={t("port12")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port13Credits")}
                     videoSrc={t("port13Src")}
                     thumbnailSrc={t("port13Img")}
@@ -354,10 +352,10 @@ const Home: React.FC = () => {
                     title={t("port13")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port14Credits")}
                     videoSrc={t("port14Src")}
                     thumbnailSrc={t("port14Img")}
@@ -365,10 +363,10 @@ const Home: React.FC = () => {
                     title={t("port14")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port15Credits")}
                     videoSrc={t("port15Src")}
                     thumbnailSrc={t("port15Img")}
@@ -376,10 +374,10 @@ const Home: React.FC = () => {
                     title={t("port15")}
                   />
                 </div>
-                <div className="relative ">
+                <div className='relative '>
                   <HeroVideoDialog
-                    className="hidden dark:block "
-                    animationStyle="from-center"
+                    className='hidden dark:block '
+                    animationStyle='from-center'
                     credits={t("port16Credits")}
                     videoSrc={t("port16Src")}
                     thumbnailSrc={t("port16Img")}
@@ -397,40 +395,36 @@ const Home: React.FC = () => {
       {isOpen && (
         <div className={`modal-overlay show`} onClick={closeModal}>
           <div className={`modal-content`} onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={closeModal}>
+            <button className='close-button' onClick={closeModal}>
               &times;
             </button>
             <iframe
-              width="1200"
-              height="655"
+              width='1200'
+              height='655'
               src={currentVideo}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title='YouTube video player'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
               allowFullScreen
             ></iframe>
           </div>
         </div>
       )}{" "}
-      <div id="offer-wrapper">
-      <BlurFade delay={0.25} inView>
-            <div className="text-container">
-              <h1>{t("homeSliderH1")}</h1>
-            </div>
-           
-          </BlurFade>
-        <div className="container-custom-offer home ">
+      <div id='offer-wrapper'>
+        <BlurFade delay={0.25} inView>
+          <div className='text-container'>
+            <h1>{t("homeSliderH1")}</h1>
+          </div>
+        </BlurFade>
+        <div className='container-custom-offer home '>
           <BlurFade delay={0.25} inView>
-         
             <AppleCardsCarouselDemo />
           </BlurFade>
         </div>
-   
-            {/* <BlurFade delay={0.25} inView>
+
+        {/* <BlurFade delay={0.25} inView>
               <Slider slides={slides} />
             </BlurFade> */}
-          
-       
       </div>
     </div>
   );

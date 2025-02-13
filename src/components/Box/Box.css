@@ -2,7 +2,7 @@
   display: flex;
   gap: 3rem;
   justify-content: center;
-  margin-top: 4rem;
+  margin: 4rem 2rem 0;
 }
 
 .box-offert {
@@ -13,7 +13,7 @@
   border-radius: 20px;
   padding: 20px 30px;
   background-color: #000;
-  
+
   width: 100%;
   max-width: 600px;
   text-align: left;
@@ -39,29 +39,23 @@
   color: #9a9a9a;
 }
 
-
-
 @media (max-width: 1023px) {
   .box-container {
-display: none;
+    display: none;
     flex-direction: column;
-
+    margin: 4rem 0 0 0;
   }
 
   .box-offert {
-
     width: 90%;
     max-width: 450px;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 
-
   .box-title {
- 
   }
 
   .box-description {
     /* font-size: 14px; */
   }
 }
-

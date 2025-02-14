@@ -498,6 +498,9 @@ h1 {
   .contact-text {
     font-size: 24px;
   }
+  .contact {
+    margin-top: 7rem;
+  }
   .contact-people {
     font-size: 20px;
     justify-content: space-around;

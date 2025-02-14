@@ -490,17 +490,21 @@ h1 {
     font-size: 30px;
   }
   .box-title {
-    font-size: 20px;
+    font-size: 24px;
   }
   .contact-box-container {
     display: block;
   }
   .contact-text {
+    font-size: 24px;
+  }
+  .contact-people {
     font-size: 20px;
+    justify-content: space-around;
   }
   .text-container {
     padding: 1rem 2rem;
-    margin: 10rem auto 0;
+    margin: 7rem auto 0;
   }
   .box {
     max-width: unset;
@@ -509,6 +513,13 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .box-title {
+    font-size: 20px;
+  }
+
+  .contact-text {
+    font-size: 20px;
+  }
   .home-p {
     margin-top: 3rem;
     font-size: 16px;
@@ -539,6 +550,10 @@ h1 {
   .container-offers {
     padding-top: 15rem !important;
   }
+  .video-title {
+    text-align: left;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -556,10 +571,6 @@ h1 {
   .text-container {
     padding: 1rem 2rem;
     margin: 5rem auto 0;
-  }
-
-  .video-title {
-    text-align: left;
   }
 }
 

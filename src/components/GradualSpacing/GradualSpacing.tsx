@@ -49,16 +49,16 @@ export default function GradualSpacing({
   return (
     <div
       ref={ref}
-      className="flex justify-center flex-wrap overflow-hidden max-w-full"
+      className='flex justify-center flex-wrap overflow-hidden max-w-full'
     >
       <AnimatePresence>
         {isVisible &&
           text.split("").map((char, i) => (
             <motion.h1
               key={i}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
+              initial='hidden'
+              animate='visible'
+              exit='hidden'
               variants={framerProps}
               transition={{ duration, delay: i * delayMultiple }}
               className={cn("drop-shadow-sm ", className)}

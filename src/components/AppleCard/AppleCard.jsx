@@ -91,7 +91,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
           </button>
         </div>
         <div
-          className='flex w-full overflow-x-scroll overscroll-x-auto pn-10 pt-20 md:pt-20 md:pb-10 scroll-smooth [scrollbar-width:none]'
+          className='flex w-full overflow-x-scroll overscroll-x-auto pn-10 pt-20 md:pt-10 md:pb-10 scroll-smooth [scrollbar-width:none]'
           ref={carouselRef}
           onScroll={checkScrollability}
         >

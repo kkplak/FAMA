@@ -141,7 +141,7 @@ const Home: React.FC = () => {
 
         <div className='overlay'>
           {!isMobile ? (
-            <Sticky offset={45}>
+            <Sticky offset={38}>
               <h1 className='hero-title z-40'>{t("fama")}</h1>
             </Sticky>
           ) : (

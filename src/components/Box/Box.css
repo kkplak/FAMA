@@ -2,7 +2,7 @@
   display: flex;
   gap: 3rem;
   justify-content: center;
-  margin: 4rem 8rem 0;
+  margin: 4rem 12rem 0;
 }
 
 .box-offert {
@@ -39,7 +39,7 @@
   color: #9a9a9a;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1530px) {
   .box-container {
     display: none;
     flex-direction: column;

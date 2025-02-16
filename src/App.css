@@ -37,18 +37,19 @@ body {
 }
 .home-p {
   margin-top: 4rem;
-  font-size: 16px;
+  font-size: 20px;
+  padding: 0 8rem;
 }
 
 .container,
 .container-home {
   color: #e5e5e5;
   background: transparent;
-  padding: 0 2rem;
+  padding: 0;
   text-align: center;
   margin: 0 auto;
   border-radius: 5px;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .home {
@@ -71,7 +72,7 @@ body {
   max-width: 100%; /* or a specific max-width like 1200px */
   width: 100%;
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 1rem 8rem;
   margin: 15rem auto 0;
   color: white;
 }
@@ -218,7 +219,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  width: 85%;
+  width: 100%;
+  padding: 0 8rem;
   margin: 4rem auto;
 }
 .hero-container img {
@@ -456,6 +458,20 @@ h1 {
 .border {
   border-width: 0;
 }
+@media (max-width: 1200px) {
+  .text-container {
+    padding: 1rem 4rem;
+  }
+  .box-container {
+    margin: 4rem 4rem 0;
+  }
+  .home-p {
+    padding: 0 4rem;
+  }
+  .video-portfolio {
+    padding: 0 4rem;
+  }
+}
 
 @media only screen and (max-width: 980px) {
   .video-portfolio {
@@ -501,17 +517,34 @@ h1 {
   .contact {
     margin-top: 7rem;
   }
+  .home-p {
+    margin-top: 3rem;
+    font-size: 16px;
+  }
+  .box-description {
+    font-size: 16px;
+  }
   .contact-people {
     font-size: 20px;
     justify-content: space-around;
   }
   .text-container {
-    padding: 1rem 2rem;
+    padding: 1rem 5rem;
     margin: 7rem auto 0;
   }
   .box {
     max-width: unset;
     margin: 1rem;
+  }
+
+  .box-container {
+    margin: 4rem 5rem 0;
+  }
+  .home-p {
+    padding: 0 5rem;
+  }
+  .video-portfolio {
+    padding: 0 5rem;
   }
 }
 
@@ -525,8 +558,8 @@ h1 {
   }
   .home-p {
     margin-top: 3rem;
-    font-size: 16px;
   }
+
   .magic-text h1 {
     letter-spacing: 1px;
     padding: 0;
@@ -557,6 +590,24 @@ h1 {
     text-align: left;
     font-size: 12px;
   }
+  .text-container {
+    padding: 1rem 2rem;
+    margin: 7rem auto 0;
+  }
+  .box {
+    max-width: unset;
+    margin: 1rem;
+  }
+
+  .box-container {
+    margin: 4rem 2rem 0;
+  }
+  .home-p {
+    padding: 0 2rem;
+  }
+  .video-portfolio {
+    padding: 0 2rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -565,7 +616,6 @@ h1 {
   }
   .container,
   .container-home {
-    padding: 1rem;
     margin-bottom: 4rem;
   }
   .container-home {

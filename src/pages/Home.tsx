@@ -145,7 +145,7 @@ const Home: React.FC = () => {
               <h1 className='hero-title z-40'>{t("fama")}</h1>
             </Sticky>
           ) : (
-            <Sticky offset={28}>
+            <Sticky offset={22}>
               <h1 className='hero-title z-40'>{t("fama")}</h1>
             </Sticky>
           )}
@@ -162,33 +162,6 @@ const Home: React.FC = () => {
           </BlurFade>
         </div>
       </div>
-      <BlurFade delay={0.25} inView>
-        <div className='text-container'>
-          <h1>{t("homeOffer")}</h1>
-        </div>
-      </BlurFade>
-      <div id='offer'>
-        <BlurFade delay={0.25} inView>
-          <div className='box-container'>
-            <Box
-              iconPath={t("homeOffer1Src")}
-              title={t("homeOffer1Title")}
-              description={t("homeOffer1Copy")}
-            />
-            <Box
-              iconPath={t("homeOffer2Src")}
-              title={t("homeOffer2Title")}
-              description={t("homeOffer2Copy")}
-            />
-            <Box
-              iconPath={t("homeOffer3Src")}
-              title={t("homeOffer3Title")}
-              description={t("homeOffer3Copy")}
-            />
-          </div>
-        </BlurFade>
-      </div>
-      <AppleCardsCarouselDemo2 />
       <div id='portfolio' className={`content ${!loading ? "visible" : ""}`}>
         <div
           id='content'
@@ -410,6 +383,33 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}{" "}
+      <BlurFade delay={0.25} inView>
+        <div className='text-container'>
+          <h1>{t("homeOffer")}</h1>
+        </div>
+      </BlurFade>
+      <AppleCardsCarouselDemo2 />
+      <div id='offer'>
+        <BlurFade delay={0.25} inView>
+          <div className='box-container'>
+            <Box
+              iconPath={t("homeOffer1Src")}
+              title={t("homeOffer1Title")}
+              description={t("homeOffer1Copy")}
+            />
+            <Box
+              iconPath={t("homeOffer2Src")}
+              title={t("homeOffer2Title")}
+              description={t("homeOffer2Copy")}
+            />
+            <Box
+              iconPath={t("homeOffer3Src")}
+              title={t("homeOffer3Title")}
+              description={t("homeOffer3Copy")}
+            />
+          </div>
+        </BlurFade>
+      </div>
       <div id='offer-wrapper'>
         <BlurFade delay={0.25} inView>
           <div className='text-container'>

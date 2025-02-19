@@ -249,11 +249,10 @@ const Home: React.FC = () => {
                   </div>
                 </div>
 
-                <BlurFade delay={0.25} inView>
-                  <div className='text-container smaller-margin '>
-                    <h1>{t("homePorfolioCollab")}</h1>
-                  </div>
-                </BlurFade>
+                <div className='text-container smaller-margin '>
+                  <h1>{t("homePorfolioCollab")}</h1>
+                </div>
+
                 <div className='video-portfolio'>
                   <div className='relative '>
                     <HeroVideoDialog

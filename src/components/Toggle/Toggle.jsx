@@ -1,45 +1,72 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const ToggleDescription = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef(null);
   const previousScrollPosition = useRef(0);
 
-  const toggleDescription = () => {
+  const toggleDescription = useCallback(() => {
     if (!isOpen) {
-      // Save current scroll position before opening
+      // Save the current scroll position before opening
       previousScrollPosition.current = window.scrollY;
-    } else {
-      // Restore previous scroll position when closing
-      setTimeout(() => {
-        window.scrollTo({ top: previousScrollPosition.current, behavior: "smooth" });
-      }, 10); // Delay to avoid UI flickering
     }
     setIsOpen((prev) => !prev);
+  }, [isOpen]);
+
+  // Define variants for open and closed states with easing
+  const variants = {
+    open: {
+      height: "auto",
+      opacity: 1,
+      transition: {
+        height: { type: "tween", duration: 0.4, ease: "easeInOut" },
+        opacity: { duration: 0.3, ease: "easeInOut" },
+      },
+    },
+    closed: {
+      height: 0,
+      opacity: 0,
+      transition: {
+        height: { type: "tween", duration: 0.4, ease: "easeInOut" },
+        opacity: { duration: 0.3, ease: "easeInOut" },
+      },
+    },
   };
 
   return (
-    <div className="toggle-description-container" ref={contentRef}>
+    <div className='toggle-description-container'>
       <motion.div
-        initial={{ height: 0, opacity: 0, visibility: "hidden" }}
-        animate={{
-          height: isOpen ? "auto" : 0,
-          opacity: isOpen ? 1 : 0,
-          visibility: isOpen ? "visible" : "hidden",
+        variants={variants}
+        initial='closed'
+        animate={isOpen ? "open" : "closed"}
+        style={{ overflow: "hidden" }}
+        // Restore scroll position after closing animation is complete
+        onAnimationComplete={() => {
+          if (!isOpen) {
+            window.scrollTo({
+              top: previousScrollPosition.current,
+              behavior: "smooth",
+            });
+          }
         }}
-        transition={{ duration: 0.3 }}
-        className="toggle-content"
+        className='toggle-content'
       >
         {description}
       </motion.div>
 
-      <div className="toggle-header" onClick={toggleDescription}>
+      <div
+        className='toggle-header'
+        onClick={toggleDescription}
+        role='button'
+        aria-expanded={isOpen}
+        style={{ cursor: "pointer", display: "flex", alignItems: "center" }}
+      >
+        {/* {title && <span className='toggle-title'>{title}</span>} */}
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="toggle-icon"
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className='toggle-icon'
         >
           <ChevronDown size={25} />
         </motion.div>

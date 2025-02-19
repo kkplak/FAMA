@@ -223,142 +223,150 @@ const Home: React.FC = () => {
           <ToggleDescription
             title='See more'
             description={
-              <div className='video-portfolio'>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port5Credits")}
-                    videoSrc={t("port5Src")}
-                    thumbnailSrc={t("port5Img")}
-                    thumbnailAlt={t("port5")}
-                    title={t("port5")}
-                  />{" "}
+              <>
+                <div className='video-portfolio'>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port5Credits")}
+                      videoSrc={t("port5Src")}
+                      thumbnailSrc={t("port5Img")}
+                      thumbnailAlt={t("port5")}
+                      title={t("port5")}
+                    />{" "}
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port6Credits")}
+                      videoSrc={t("port6Src")}
+                      thumbnailSrc={t("port6Img")}
+                      thumbnailAlt={t("port6")}
+                      title={t("port6")}
+                    />
+                  </div>
                 </div>
 
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port6Credits")}
-                    videoSrc={t("port6Src")}
-                    thumbnailSrc={t("port6Img")}
-                    thumbnailAlt={t("port6")}
-                    title={t("port6")}
-                  />
+                <BlurFade delay={0.25} inView>
+                  <div className='text-container smaller-margin '>
+                    <h1>{t("homePorfolioCollab")}</h1>
+                  </div>
+                </BlurFade>
+                <div className='video-portfolio'>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port7Credits")}
+                      videoSrc={t("port7Src")}
+                      thumbnailSrc={t("port7Img")}
+                      thumbnailAlt={t("port7")}
+                      title={t("port7")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port8Credits")}
+                      videoSrc={t("port8Src")}
+                      thumbnailSrc={t("port8Img")}
+                      thumbnailAlt={t("port8")}
+                      title={t("port8")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port9Credits")}
+                      videoSrc={t("port9Src")}
+                      thumbnailSrc={t("port9Img")}
+                      thumbnailAlt={t("port9")}
+                      title={t("port9")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port10Credits")}
+                      videoSrc={t("port10Src")}
+                      thumbnailSrc={t("port10Img")}
+                      thumbnailAlt={t("port10")}
+                      title={t("port10")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port11Credits")}
+                      videoSrc={t("port11Src")}
+                      thumbnailSrc={t("port11Img")}
+                      thumbnailAlt={t("port11")}
+                      title={t("port11")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port12Credits")}
+                      videoSrc={t("port12Src")}
+                      thumbnailSrc={t("port12Img")}
+                      thumbnailAlt={t("port12")}
+                      title={t("port12")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port13Credits")}
+                      videoSrc={t("port13Src")}
+                      thumbnailSrc={t("port13Img")}
+                      thumbnailAlt={t("port13")}
+                      title={t("port13")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port14Credits")}
+                      videoSrc={t("port14Src")}
+                      thumbnailSrc={t("port14Img")}
+                      thumbnailAlt={t("port14")}
+                      title={t("port14")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port15Credits")}
+                      videoSrc={t("port15Src")}
+                      thumbnailSrc={t("port15Img")}
+                      thumbnailAlt={t("port15")}
+                      title={t("port15")}
+                    />
+                  </div>
+                  <div className='relative '>
+                    <HeroVideoDialog
+                      className='hidden dark:block '
+                      animationStyle='from-center'
+                      credits={t("port16Credits")}
+                      videoSrc={t("port16Src")}
+                      thumbnailSrc={t("port16Img")}
+                      thumbnailAlt={t("port16")}
+                      title={t("port16")}
+                    />
+                  </div>
                 </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port7Credits")}
-                    videoSrc={t("port7Src")}
-                    thumbnailSrc={t("port7Img")}
-                    thumbnailAlt={t("port7")}
-                    title={t("port7")}
-                  />
-                </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port8Credits")}
-                    videoSrc={t("port8Src")}
-                    thumbnailSrc={t("port8Img")}
-                    thumbnailAlt={t("port8")}
-                    title={t("port8")}
-                  />
-                </div>
-
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port9Credits")}
-                    videoSrc={t("port9Src")}
-                    thumbnailSrc={t("port9Img")}
-                    thumbnailAlt={t("port9")}
-                    title={t("port9")}
-                  />
-                </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port10Credits")}
-                    videoSrc={t("port10Src")}
-                    thumbnailSrc={t("port10Img")}
-                    thumbnailAlt={t("port10")}
-                    title={t("port10")}
-                  />
-                </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port11Credits")}
-                    videoSrc={t("port11Src")}
-                    thumbnailSrc={t("port11Img")}
-                    thumbnailAlt={t("port11")}
-                    title={t("port11")}
-                  />
-                </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port12Credits")}
-                    videoSrc={t("port12Src")}
-                    thumbnailSrc={t("port12Img")}
-                    thumbnailAlt={t("port12")}
-                    title={t("port12")}
-                  />
-                </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port13Credits")}
-                    videoSrc={t("port13Src")}
-                    thumbnailSrc={t("port13Img")}
-                    thumbnailAlt={t("port13")}
-                    title={t("port13")}
-                  />
-                </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port14Credits")}
-                    videoSrc={t("port14Src")}
-                    thumbnailSrc={t("port14Img")}
-                    thumbnailAlt={t("port14")}
-                    title={t("port14")}
-                  />
-                </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port15Credits")}
-                    videoSrc={t("port15Src")}
-                    thumbnailSrc={t("port15Img")}
-                    thumbnailAlt={t("port15")}
-                    title={t("port15")}
-                  />
-                </div>
-                <div className='relative '>
-                  <HeroVideoDialog
-                    className='hidden dark:block '
-                    animationStyle='from-center'
-                    credits={t("port16Credits")}
-                    videoSrc={t("port16Src")}
-                    thumbnailSrc={t("port16Img")}
-                    thumbnailAlt={t("port16")}
-                    title={t("port16")}
-                  />
-                </div>
-              </div>
+              </>
             }
           />
 

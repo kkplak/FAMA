@@ -227,7 +227,7 @@ const Home: React.FC = () => {
                 <div className='video-portfolio'>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className=' dark:block '
                       animationStyle='from-center'
                       credits={t("port5Credits")}
                       videoSrc={t("port5Src")}
@@ -238,7 +238,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className=' dark:block '
                       animationStyle='from-center'
                       credits={t("port6Credits")}
                       videoSrc={t("port6Src")}
@@ -256,7 +256,7 @@ const Home: React.FC = () => {
                 <div className='video-portfolio'>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className=' dark:block '
                       animationStyle='from-center'
                       credits={t("port7Credits")}
                       videoSrc={t("port7Src")}
@@ -267,7 +267,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className='dark:block '
                       animationStyle='from-center'
                       credits={t("port8Credits")}
                       videoSrc={t("port8Src")}
@@ -278,7 +278,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className='dark:block '
                       animationStyle='from-center'
                       credits={t("port9Credits")}
                       videoSrc={t("port9Src")}
@@ -289,7 +289,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className='dark:block '
                       animationStyle='from-center'
                       credits={t("port10Credits")}
                       videoSrc={t("port10Src")}
@@ -300,7 +300,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className=' dark:block '
                       animationStyle='from-center'
                       credits={t("port11Credits")}
                       videoSrc={t("port11Src")}
@@ -311,7 +311,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className=' dark:block '
                       animationStyle='from-center'
                       credits={t("port12Credits")}
                       videoSrc={t("port12Src")}
@@ -322,7 +322,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className='dark:block '
                       animationStyle='from-center'
                       credits={t("port13Credits")}
                       videoSrc={t("port13Src")}
@@ -333,7 +333,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className='dark:block '
                       animationStyle='from-center'
                       credits={t("port14Credits")}
                       videoSrc={t("port14Src")}
@@ -344,7 +344,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className='dark:block '
                       animationStyle='from-center'
                       credits={t("port15Credits")}
                       videoSrc={t("port15Src")}
@@ -355,7 +355,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className='relative '>
                     <HeroVideoDialog
-                      className='hidden dark:block '
+                      className=' dark:block '
                       animationStyle='from-center'
                       credits={t("port16Credits")}
                       videoSrc={t("port16Src")}

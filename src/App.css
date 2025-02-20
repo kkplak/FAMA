@@ -460,7 +460,7 @@ h1 {
 }
 /* test that on mobile */
 .smaller-margin {
-  margin-top: 5rem;
+  margin-top: 1.5rem !important;
 }
 @media (max-width: 1450px) {
 }

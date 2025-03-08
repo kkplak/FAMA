@@ -221,7 +221,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <ToggleDescription
-            title='See more'
+            title=''
             description={
               <>
                 <div className='video-portfolio'>

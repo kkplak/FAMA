@@ -1,20 +1,20 @@
 import React, { useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ToggleDescription = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
   const previousScrollPosition = useRef(0);
+  const { t, i18n } = useTranslation();
 
   const toggleDescription = useCallback(() => {
     if (!isOpen) {
-      // Save the current scroll position before opening
       previousScrollPosition.current = window.scrollY;
     }
     setIsOpen((prev) => !prev);
   }, [isOpen]);
 
-  // Define variants for open and closed states with easing
   const variants = {
     open: {
       height: "auto",
@@ -41,7 +41,6 @@ const ToggleDescription = ({ title, description }) => {
         initial='closed'
         animate={isOpen ? "open" : "closed"}
         style={{ overflow: "hidden" }}
-        // Restore scroll position after closing animation is complete
         onAnimationComplete={() => {
           if (!isOpen) {
             window.scrollTo({
@@ -60,16 +59,18 @@ const ToggleDescription = ({ title, description }) => {
         onClick={toggleDescription}
         role='button'
         aria-expanded={isOpen}
-        style={{ cursor: "pointer", display: "flex", alignItems: "center" }}
+        style={{ cursor: "pointer", display: "block", alignItems: "center" }}
       >
-        {/* {title && <span className='toggle-title'>{title}</span>} */}
-        <motion.div
+        <span className='toggle-title'>
+          {isOpen ? t("toggleMore") : t("toggleLess")}
+        </span>
+        {/* <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className='toggle-icon'
         >
           <ChevronDown size={25} />
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

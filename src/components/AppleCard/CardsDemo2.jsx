@@ -67,7 +67,7 @@ export function AppleCardsCarouselDemo2() {
   // Create the items array for the Carousel based on the viewport.
   const items = mobileData.map((data, index) => (
     // Wrap each Box slide in a div that forces a wider width (e.g., 90% of viewport width)
-    <div key={index} className='w-[400px]'>
+    <div key={index} className='w-[300px] sm:w-[400px]'>
       <Box
         iconPath={data.iconPath}
         title={data.title}

@@ -59,18 +59,18 @@ const ToggleDescription = ({ title, description }) => {
         onClick={toggleDescription}
         role='button'
         aria-expanded={isOpen}
-        style={{ cursor: "pointer", display: "block", alignItems: "center" }}
+        style={{ cursor: "pointer", alignItems: "center" }}
       >
         <span className='toggle-title'>
           {isOpen ? t("toggleMore") : t("toggleLess")}
         </span>
-        {/* <motion.div
+        <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className='toggle-icon'
         >
           <ChevronDown size={25} />
-        </motion.div> */}
+        </motion.div>
       </div>
     </div>
   );

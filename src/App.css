@@ -462,6 +462,13 @@ h1 {
 .smaller-margin {
   margin-top: 1.5rem !important;
 }
+
+.toggle-icon {
+  display: grid;
+}
+.toggle-icon svg {
+  justify-self: center;
+}
 @media (max-width: 1450px) {
 }
 @media (max-width: 1200px) {

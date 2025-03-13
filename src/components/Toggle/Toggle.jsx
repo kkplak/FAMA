@@ -59,7 +59,7 @@ const ToggleDescription = ({ title, description }) => {
         onClick={toggleDescription}
         role='button'
         aria-expanded={isOpen}
-        style={{ cursor: "pointer", alignItems: "center" }}
+        style={{ cursor: "pointer", display: "block", alignItems: "center" }}
       >
         <span className='toggle-title'>
           {isOpen ? t("toggleMore") : t("toggleLess")}

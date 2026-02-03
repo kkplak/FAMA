@@ -104,7 +104,8 @@ const fragmentShader = `
   const vec3 COLOR_2 = vec3(0.05, 0.15, 0.35);  // Navy blue
   const vec3 COLOR_3 = vec3(0.1, 0.5, 0.6);     // Teal/cyan
   const vec3 COLOR_4 = vec3(0.9, 0.7, 0.2);     // Warm yellow
-  const vec3 COLOR_5 = vec3(1.0, 0.4, 0.15);    // Orange/red
+  const vec3 COLOR_5 = vec3(1.0, 0.4, 0.15);    // Orange/red 
+  
   
   // ========================================
   // 2D VALUE NOISE (Lightweight)

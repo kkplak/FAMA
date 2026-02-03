@@ -18,6 +18,8 @@ import AboutUs from "./pages/AboutUs";
 import "./App.css";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/ScrollToTop";
+import { Canvas } from "@react-three/fiber";
+import OrganicBackground from "./components/OrganicBackground";
 
 const resources = {
   en: { translation: translationEN },
@@ -50,12 +52,23 @@ const App = () => {
     <I18nextProvider i18n={i18next}>
       <Router>
         {/* <ScrollToTop /> */}
+        <Canvas
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+          }}
+          camera={{ position: [0, 0, 5], fov: 50 }}
+        >
+          <OrganicBackground />
+        </Canvas>
         <NavBar />
         <Routes>
-          <Route path="/" element={<RedirectToDefaultLanguage />} />
-          <Route path="/:lang/home" element={<Home />} />
-          <Route path="/:lang/aboutus" element={<AboutUs />} />
-
+          <Route path='/' element={<RedirectToDefaultLanguage />} />
+          <Route path='/:lang/home' element={<Home />} />
+          <Route path='/:lang/aboutus' element={<AboutUs />} />
         </Routes>
         <Footer />
       </Router>

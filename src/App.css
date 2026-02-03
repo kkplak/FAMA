@@ -247,7 +247,9 @@ h1 {
 .video-box {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 .video-title {
   position: absolute;
@@ -280,7 +282,9 @@ h1 {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .modal-overlay.show {
@@ -344,7 +348,9 @@ h1 {
 .button-box-container {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition:
+    opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
 }
 
 .button-box-container.visible {
@@ -512,8 +518,6 @@ h1 {
   #offer .container-home {
     margin: 0;
     padding: 0;
-  }
-  .magic-text h1 {
   }
   h1 {
     font-size: 30px;

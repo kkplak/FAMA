@@ -62,7 +62,7 @@ const App = () => {
           }}
           camera={{ position: [0, 0, 5], fov: 50 }}
         >
-          <OrganicBackground />
+          {/* <OrganicBackground /> */}
         </Canvas>
         <NavBar />
         <Routes>
